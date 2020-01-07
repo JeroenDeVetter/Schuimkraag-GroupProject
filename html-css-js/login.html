@@ -11,10 +11,50 @@
     <title>Document</title>
 </head>
 
+
+
 <body>
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a href="./" class="navbar-brand">De Schuimkraag</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Over Ons <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Missie</a></li>
+                            <li><a href="#">Visie</a></li>
+                            <li><a href="#">Jobs</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">E-Shop</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+
+
+    <!--========================-->
     <div id="form">
         <div class="container">
-            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-md-8 col-md-offset-2">
+            <div class="col-sm-6">
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
                         <li class="active"><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
@@ -28,71 +68,58 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Voornaam <span class="req">*</span> </label>
-                                            <input type="text" name="firstName-sing" class="form-control"
-                                                id="first_name" required data-validation-required-message="Voornaam."
-                                                autocomplete="off">
+                                            <input type="text" name="firstName-sing" class="form-control" id="first_name" required data-validation-required-message="Voornaam." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
-                                    
+
 
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Familienaam <span class="req">*</span> </label>
-                                            <input type="text" class="form-control" id="last_name" required
-                                                data-validation-required-message="Achternaam." autocomplete="off">
+                                            <input type="text" class="form-control" id="last_name" required data-validation-required-message="Achternaam." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Bedrijf (optioneel)<span class="req"></span> </label>
-                                            <input type="text" class="form-control" id="last_name" required
-                                                data-validation-required-message="Bedrijf." autocomplete="off">
+                                            <input type="text" class="form-control" id="last_name" required data-validation-required-message="Bedrijf." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Btw-nr (optioneel). <span class="req"></span> </label>
-                                            <input type="text" class="form-control" id="last_name" required
-                                                data-validation-required-message="Btw-nr." autocomplete="off">
+                                            <input type="text" class="form-control" id="last_name" required data-validation-required-message="Btw-nr." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                 </div>
-                                
+
 
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
-                                    <input type="email" class="form-control" id="email" required
-                                        data-validation-required-message="Gelieve hier emailadres in te geven."
-                                        autocomplete="off">
+                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Gelieve hier emailadres in te geven." autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
                                     <label> Telefoonnummer <span class="req">*</span> </label>
-                                    <input type="tel" class="form-control" id="phone" required
-                                        data-validation-required-message="Gelieve hier telefoonnummer in te geven."
-                                        autocomplete="off">
+                                    <input type="tel" class="form-control" id="phone" required data-validation-required-message="Gelieve hier telefoonnummer in te geven." autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-9">
                                         <div class="form-group">
                                             <label> Straatnaam <span class="req">*</span> </label>
-                                            <input type="street" class="form-control" id="street" required
-                                                data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven."
-                                                autocomplete="off">
+                                            <input type="street" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label> Huisnummer <span class="req">*</span> </label>
-                                            <input type="street" class="form-control" id="street" required
-                                                data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven."
-                                                autocomplete="off">
+                                            <input type="street" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -100,30 +127,24 @@
 
                                 <div class="form-group">
                                     <label> Postcode <span class="req">*</span> </label>
-                                    <input type="PC" class="form-control" id="postcode" required
-                                        data-validation-required-message="Gelieve hier Uw Postcode in te geven."
-                                        autocomplete="off">
+                                    <input type="PC" class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                
+
 
 
                                 <div class="row">
                                     <div class=" col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Paswoord <span class="req">*</span> </label>
-                                            <input type="password" class="form-control" id="password" required
-                                                data-validation-required-message="Gelieve hier paswoord in te geven"
-                                                autocomplete="off">
+                                            <input type="password" class="form-control" id="password" required data-validation-required-message="Gelieve hier paswoord in te geven" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Paswoord controle <span class="req">*</span> </label>
-                                            <input type="password" class="form-control" id="password-control" required
-                                                data-validation-required-message=" Paswoorden komen niet overeen"
-                                                autocomplete="off">
+                                            <input type="password" class="form-control" id="password-control" required data-validation-required-message=" Paswoorden komen niet overeen" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -140,21 +161,16 @@
                             <form id="login">
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
-                                    <input type="email" class="form-control" id="email" required
-                                        data-validation-required-message="Gelieve hier Uw emailadres in te geven"
-                                        autocomplete="off">
+                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Gelieve hier Uw emailadres in te geven" autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
                                     <label> Paswoord <span class="req">*</span> </label>
-                                    <input type="password" class="form-control" id="password" required
-                                        data-validation-required-message="Please enter your password"
-                                        autocomplete="off">
+                                    <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="mrgn-30-top">
-                                    <button type="submit" class="btn btn-larger btn-block" />
-                                    Log in
+                                    <button type="submit" class="btn btn-larger btn-block"> Log in
                                     </button>
                                 </div>
                             </form>
@@ -166,6 +182,47 @@
         </div>
         <!-- /.container -->
     </div>
+    <footer class="flex-rw">
+
+        <ul class="footer-list-top">
+            <li>
+                <h4 class="footer-list-header">OVER DE SCHUIMKRAAG</h4>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">MEER OVER ONS</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">PROMOS</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">WORDT VERKOPER</a></li>
+
+            <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">JOBS</a></li>
+
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">EVENEMENTEN</a></li>
+        </ul>
+        <ul class="footer-list-top">
+            <li>
+                <h4 class="footer-list-header">Geschenken Hoekje</h4>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor">Biermanden</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">Cadeaubonnen</a></li>
+        </ul>
+        <ul class="footer-list-top">
+            <li id='help'>
+                <h4 class="footer-list-header">Help Me A.U.B</h4>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
+            <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Zoek Winkel</a></li>
+            <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">Nieuwe Gebrukers</a></li>
+            <li id='order-tracking'><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Track and Trace</a></li>
+        </ul>
+
+        <section class="footer-bottom-section flex-rw">
+            <div class="footer-bottom-wrapper">
+                2019 De Schuimkraag <address class="footer-address" role="company address">Gent, BE</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
+            </div>
+            <div class="footer-bottom-wrapper">
+                <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+            </div>
+        </section>
+    </footer>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -173,5 +230,6 @@
 
 
 </body>
+
 
 </html>
