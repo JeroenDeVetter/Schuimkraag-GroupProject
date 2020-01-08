@@ -11,10 +11,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../html-css-js/login.css">
-    <link rel="stylesheet" href="../html-css-js/EasyAutocomplete-1.3.5/easy-autocomplete.min.css">
-    <link rel="stylesheet" href="../html-css-js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#postcode" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
     <title>Document</title>
 </head>
 
@@ -107,7 +138,7 @@
 
                                 <div class="form-group">
                                     <label> Postcode <span class="req">*</span> </label>
-                                    <input type="PC" class="form-control" id="postcode" required
+                                    <input  class="form-control" id="postcode" required
                                         data-validation-required-message="Gelieve hier Uw Postcode in te geven."
                                         autocomplete="off">
                                     <p class="help-block text-danger"></p>
@@ -173,12 +204,10 @@
         </div>
         <!-- /.container -->
     </div>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
     <script src="../html-css-js/login.js"></script>
-    <script src="../html-css-js/Autocomplite.js"></script>
+
 
 </body>
 
