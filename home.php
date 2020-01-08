@@ -1,3 +1,4 @@
+<?php?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,12 +10,12 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="MDB-Pro_4.7.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="MDB-Pro_4.7.1/css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
-  <link href="css/customer.css" rel="stylesheet">
-  <link href="css/customer.min.css" rel="stylesheet">
+  <link href="MDB-Pro_4.7.1/css/customer.css" rel="stylesheet">
+  <link href="MDB-Pro_4.7.1/css/customer.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,13 +48,13 @@
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="MDB-Pro_4.7.1/js/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="MDB-Pro_4.7.1/js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="MDB-Pro_4.7.1/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.js"></script>
+  <script type="text/javascript" src="MDB-Pro_4.7.1/js/mdb.js"></script>
 </body>
 
 </html>
