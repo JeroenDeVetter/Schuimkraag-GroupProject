@@ -1,3 +1,18 @@
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.9)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+}
+
+
+
+
 $('#form').find('input, textarea').on('keyup blur focus', function(e) {
 
     var $this = $(this),
@@ -23,20 +38,5 @@ $('#form').find('input, textarea').on('keyup blur focus', function(e) {
             label.addClass('highlight');
         }
     }
-
-});
-
-$('.tab a').on('click', function(e) {
-
-    e.preventDefault();
-
-    $(this).parent().addClass('active');
-    $(this).parent().siblings().removeClass('active');
-
-    target = $(this).attr('href');
-
-    $('.tab-content > div').not(target).hide();
-
-    $(target).fadeIn(800);
 
 });
