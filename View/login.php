@@ -11,40 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../html-css-js/login.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../html-css-js/json/schuimkraag_gemeente.json"></script>
     <script>
-  $( function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#postcode" ).autocomplete({
-      source: availableTags
-    });
-  } );
   </script>
     <title>Document</title>
 </head>
@@ -55,6 +26,7 @@
             <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-md-8 col-md-offset-2">
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
+                 
                         <li class="active"><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
                         <li><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
                     </ul>
@@ -191,7 +163,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="mrgn-30-top">
-                                    <button type="submit" class="btn btn-larger btn-block" />
+                                    <button type="submit" class="btn btn-larger btn-block">
                                     Log in
                                     </button>
                                 </div>
