@@ -1,0 +1,105 @@
+section {}
+
+section .container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section [data-model='product-card'] {}
+
+section [data-model='product-card']>.inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 380px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+section [data-model='product-card']>.inner [class|='layer-'] {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%
+}
+
+section [data-model='product-card']>.inner [class='layer-image'] {
+    bottom: initial;
+    height: 240px;
+    background-color: #F0F0F0;
+    z-index: 11;
+}
+
+section [data-model='product-card']>.inner [class='layer-image']>img {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+section [data-model='product-card']>.inner [class='layer-interface'] {
+    height: 140px;
+    padding: 20px 10px 10px 10px;
+    z-index: 12;
+}
+
+section [data-model='product-card']>.inner [class='layer-interface'] [data-field] {
+    float: left;
+    width: 40%;
+    height: 30px;
+    clear: left;
+    border: 0px;
+    outline: 0px;
+    background-color: #F6F6F6;
+    line-height: 30px;
+    margin: 4px 0px 2px 0px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 2px;
+}
+
+section [data-model='product-card']>.inner [class='layer-interface'] [data-field='item-base-price'] {
+    cursor: default;
+}
+
+section [data-model='product-card']>.inner [class='layer-interface'] [data-field='item-total-price'] {
+    font-weight: 600;
+    cursor: default;
+}
+
+section [data-model='product-card']>.inner [class='layer-interface'] [data-command] {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 40%;
+    clear: both;
+}
+
+
+/*BS4_PATCH*/
+
+[class='layer-interface'] .input-group {
+    position: relative;
+    width: 40%;
+    float: left;
+    clear: both;
+}
+
+[class='layer-interface'] .input-group input {
+    position: relative;
+}
+
+[class='layer-interface'] .input-group-btn-vertical {
+    top: 4px;
+    /*equal to [class='layer-interface'] margin-top*/
+    height: 30px;
+}
+
+[class='layer-interface'] .input-group-btn-vertical button,
+[class='layer-interface'] .input-group-btn-vertical i {
+    height: 15px;
+    font-size: 10px;
+    line-height: 15px;
+}
