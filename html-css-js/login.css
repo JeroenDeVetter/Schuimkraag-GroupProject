@@ -548,3 +548,12 @@ footer {
         font-size: 1.3em
     }
 }
+
+.warning {
+    border: solid 1px red;
+}
+
+.warning-text {
+    padding-left: 2;
+    padding-top: 2;
+}
