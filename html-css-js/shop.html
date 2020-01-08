@@ -11,61 +11,111 @@
 </head>
 
 <body>
-    <section data-model="products">
-        <div class="container">
-            <div class="row">
+    <!DOCTYPE html>
+    <html lang="en">
 
-                <div id="PRD_12345" data-model="product-card" class="col-xs-6 col-sm-4">
-                    <div class="inner" data-pricing="1:25.00|3:23.10|5:18.90|10:12.90">
-                        <div class="layer-image">
-                            <img src="#" alt="" />
-                        </div>
-                        <div class="layer-interface">
-                            <input data-field="item-base-price" type="text" value="0.00" readonly>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> Item Card </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
 
-                            <input data-field="item-base-quantity" type="number" value="1" input[data-interface="TouchSpin" data-interface="TouchSpin" data-decimals="0" data-min="1" data-max="100" data-step="1">
+    </head>
 
-                            <input data-field="item-total-price" type=text value="0.00" readonly>
-                            <button data-command="item-add" class="btn btn-sm btn-success">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
+    <body>
+        <div class="card">
+            <div class="title">
+                Product Name
+            </div>
+            <div class="info">
+                Php <span class="price">99.00</span>
+                <span class="unit">/kg</span>
 
-                <div id="PRD_67890" data-model="product-card" class="col-xs-6 col-sm-4">
-                    <div class="inner" data-pricing="1:12.00|3:11.00|5:9.80">
-                        <div class="layer-image">
-                            <img src="#" alt="" />
-                        </div>
-                        <div class="layer-interface">
-                            <input data-field="item-base-price" type="text" value="0.00" readonly>
-                            <input data-field="item-base-quantity" type="number" value="1" input[data-interface="TouchSpin" data-interface="TouchSpin" data-decimals="0" data-min="1" data-max="100" data-step="1">
-                            <input data-field="item-total-price" type=text value="0.00" readonly>
-                            <button data-command="item-add" class="btn btn-sm btn-success">Aggiungi</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="PRD_45678" data-model="product-card" class="col-xs-6 col-sm-4">
-                    <div class="inner" data-pricing="1:17.00|3:15.60|5:13.50">
-                        <div class="layer-image">
-                            <img src="#" alt="" />
-                        </div>
-                        <div class="layer-interface">
-                            <input data-field="item-base-price" type="text" value="0.00" readonly>
-                            <input data-field="item-base-quantity" type="number" value="1" input[data-interface="TouchSpin" data-interface="TouchSpin" data-decimals="0" data-min="1" data-max="100" data-step="1">
-                            <input data-field="item-total-price" type=text value="0.00" readonly>
-                            <button data-command="item-add" class="btn btn-sm btn-success">Aggiungi</button>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="action">
+                <a href="#" class="action-link add-fav" title="Favorites">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="action-link add-cart" title="Add to Cart">
+                    <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="action-link delete" title="Delete">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
 
             </div>
         </div>
-    </section>
+        <div class="card">
+            <div class="title">
+                Product Name
+            </div>
+            <div class="info">
+                Php <span class="price">99.00</span>
+                <span class="unit">/kg</span>
 
+            </div>
+            <div class="action">
+                <a href="#" class="action-link add-fav" title="Favorites">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="action-link add-cart" title="Add to Cart">
+                    <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="action-link delete" title="Delete">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
 
+            </div>
+        </div>
+        <div class="card">
+            <div class="title">
+                Product Name
+            </div>
+            <div class="info">
+                Php <span class="price">99.00</span>
+                <span class="unit">/kg</span>
 
+            </div>
+            <div class="action">
+                <a href="#" class="action-link add-fav" title="Favorites">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="action-link add-cart" title="Add to Cart">
+                    <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="action-link delete" title="Delete">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
 
+            </div>
+        </div>
+        <div class="card">
+            <div class="title">
+                Product Name
+            </div>
+            <div class="info">
+                Php <span class="price">99.00</span>
+                <span class="unit">/kg</span>
+
+            </div>
+            <div class="action">
+                <a href="#" class="action-link add-fav" title="Favorites">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="action-link add-cart" title="Add to Cart">
+                    <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="action-link delete" title="Delete">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </a>
+
+            </div>
+        </div>
+    </body>
+
+    </html>
 
 
 
