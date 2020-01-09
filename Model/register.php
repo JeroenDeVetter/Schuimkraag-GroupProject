@@ -2,7 +2,7 @@
 
 require 'local.php';
 
-function sendToDb($firmanaam ,$firstname , $lastname , $btNo , $straat , $straatNo , $gemeenteId , $email , $phoneNo , $pass) {
+function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $straatNo , $gemeenteId , $email , $phoneNo , $pass) {
     $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
     $db = openConnection();
     $select = $db->query("INSERT INTO

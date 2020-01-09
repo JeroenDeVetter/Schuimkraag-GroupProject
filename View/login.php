@@ -1,28 +1,33 @@
 <?php
 
-require 'local.php';
+require '../Model/local.php';
 
+if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['register']))
+    {
+        registerUser($_POST[''],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],);
+    }
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../html-css-js/login.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="../html-css-js/json/schuimkraag_gemeente.json"></script>
     <script>
-  </script>
+    </script>
     <title>Document</title>
 </head>
 
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -31,16 +36,15 @@ require 'local.php';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="./" class="navbar-brand">De Schuimkraag</a>
+                <a href="" class="navbar-brand">De Schuimkraag</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="about.html">Home</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Over Ons <b class="caret"></b></a>
-
+                    <li>
+                        <a href="#">Over Ons</b> </a>
                     </li>
                     <li>
                         <a href="#">E-Shop</a>
@@ -53,33 +57,36 @@ require 'local.php';
         </div>
 
     </div>
-    <!-- I have to work in here -->
+
+
+    <!--========================-->
     <div id="form">
         <div class="container">
             <div class="col-lg-6">
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
                         <li class="active"><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
-                        <li><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
+                        <li ><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade active in" id="signup">
                             <h2 class="text-uppercase text-center"> </h2>
+                            <div class="warning">
+                                <p class="warning-text">Voornaam is vereist</p>
+                            </div>
                             <form id="signup">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Voornaam <span class="req">*</span> </label>
-                                            <input type="text" name="firstName-sing" class="form-control" id="first_name" required data-validation-required-message="Voornaam." autocomplete="off">
+                                            <input type="text" name="firstName" class="form-control" id="first_name" required data-validation-required-message="Voornaam." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
-
-
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Familienaam <span class="req">*</span> </label>
-                                            <input type="text" name="lastName-sing" class="form-control" id="last_name" required data-validation-required-message="Achternaam." autocomplete="off">
+                                            <input type="text" name="lastName" class="form-control" id="last_name" required data-validation-required-message="Achternaam." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -93,35 +100,33 @@ require 'local.php';
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Btw-nr (optioneel). <span class="req"></span> </label>
-                                            <input type="text" name="btwNr" class="form-control" id="last_name" required data-validation-required-message="Btw-nr." autocomplete="off">
+                                            <input type="text" name="btw" class="form-control" id="btw-nr" required data-validation-required-message="Btw-nr." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
-                                    <input type="email" name="email-sing" class="form-control" id="email" required data-validation-required-message="Gelieve hier emailadres in te geven." autocomplete="off">
+                                    <input type="email" name="emailRegister" class="form-control" id="email" required data-validation-required-message="Gelieve hier emailadres in te geven." autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
                                     <label> Telefoonnummer <span class="req">*</span> </label>
-                                    <input type="tel" name="telphone" class="form-control" id="phone" required data-validation-required-message="Gelieve hier telefoonnummer in te geven." autocomplete="off">
+                                    <input type="tel" name="phoneNum" class="form-control" id="phone" required data-validation-required-message="Gelieve hier telefoonnummer in te geven." autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-9">
                                         <div class="form-group">
                                             <label> Straatnaam <span class="req">*</span> </label>
-                                            <input type="street" name="streetName" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
+                                            <input type="street" name="streedName" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label> Huisnummer <span class="req">*</span> </label>
-                                            <input type="street" name="houseNr" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
+                                            <input type="street" name="houseNum" class="form-control" id="streetnumber" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -130,17 +135,17 @@ require 'local.php';
                                 <div class="row">
                                     <div class="form-group col-sm-3">
                                         <label> Postcode <span class="req">*</span> </label>
-                                        <input type="PC" name class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." autocomplete="off">
+                                        <input type="PC" name="postcode" class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." autocomplete="off">
                                         <p class="help-block text-danger"></p>
                                     </div>
 
                                     <div class="form-group col-sm-9">
-                                        <select class="form-control" style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;">
-                                        <option value=" volvo ">Volvo</option>
-                                        <option value="saab ">Saab</option>
-                                        <option value="mercedes ">Mercedes</option>
-                                        <option value="audi ">Audi</option>
-                                    </select>
+                                        <select name="gemeente" class="form-control" {# style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;" #}>
+                                            <option value=" volvo">Volvo</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
 
                                     </div>
 
@@ -151,7 +156,7 @@ require 'local.php';
                                     <div class=" col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Paswoord <span class="req">*</span> </label>
-                                            <input type="password" class="form-control" id="password" required data-validation-required-message="Gelieve hier paswoord in te geven" autocomplete="off">
+                                            <input type="password" name="registerPass" class="form-control" id="password" required data-validation-required-message="Gelieve hier paswoord in te geven" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -164,7 +169,7 @@ require 'local.php';
                                     </div>
                                 </div>
                                 <div class="mrgn-30-top">
-                                    <button type="submit" class="btn btn-larger btn-block">
+                                    <button name="register" type="submit" class="btn btn-larger btn-block">
                                         Registreer
                                     </button>
                                 </div>
@@ -184,7 +189,7 @@ require 'local.php';
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="mrgn-30-top">
-                                    <button type="submit" class="btn btn-larger btn-block"> Log in
+                                    <button type="submit" class="btn btn-larger btn-block" /> Log in
                                     </button>
                                 </div>
                             </form>
@@ -239,12 +244,13 @@ require 'local.php';
             </div>
         </section>
     </footer>
-    <!-- And here -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="../html-css-js/login.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
+    <script src="../html-css-js/login.js "></script>
 
 
 </body>
+
 
 </html>
