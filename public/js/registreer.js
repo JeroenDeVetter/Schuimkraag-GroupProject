@@ -1,7 +1,8 @@
 window.onload = function() {
-    // declarations
-    let voornaamInput = document.querySelector('#first-name');
-    let achternaamInput = document.querySelector('#last-name');
+    alert("test");
+    
+    let voornaamInput = document.querySelector('#first_name');
+    let achternaamInput = document.querySelector('#last_name');
     let firmanaamInput = document.querySelector('#company-name');
     let btwnrInput = document.querySelector('#vat-nr');
     let emailInput = document.querySelector('#email');
@@ -13,10 +14,6 @@ window.onload = function() {
     let paswoord2Input = document.querySelector('#password-control');
     let foutboodschap = document.querySelector('error-message');
 
-
-    let htmlyear = document.querySelector("#htmlYear");
-    let year = new Date().getFullYear();
-    htmlyear.textContent = year;
 
     function firstNameInputVerify() {
         if (this.value !== "") {
@@ -96,7 +93,6 @@ window.onload = function() {
         this.classList.remove("show");
         this.classList.add("hide");
     }
-
 
     voornaamInput.addEventListener('blur', firstNameInputVerify);
     foutboodschap.addEventListener("click", removeErrorMessage);
