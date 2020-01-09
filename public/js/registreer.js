@@ -122,10 +122,7 @@ window.onload=function() {
 
   
   
-  lastNameInput.addEventListener('blur',lastNameInputVerify );
-  lastNameErrorMessage.addEventListener('click', removeErrorMessage);
-  addressInput.addEventListener('blur',addressInputVerify);
-  addressErrorMessage.addEventListener('click',removeErrorMessage); */
+  
 
 
 }
