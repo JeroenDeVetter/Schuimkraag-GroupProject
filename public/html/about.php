@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <title>Document</title>
 </head>
 <header>
@@ -16,11 +18,11 @@
         <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a href="../../html-css-js" class="navbar-brand">De Schuimkraag</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
@@ -30,12 +32,13 @@
                     </li>
                     <li class="active"><a href="#">Over Ons</a>
                     </li>
-
+                    <li><a href="login.html">Login</a>
+                    </li>
                     <li>
                         <a href="#">E-Shop</a>
                     </li>
                     <li class="">
-                        <a href="#">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -80,8 +83,7 @@
                 de stad te weren en de ecologische voetafdruk te verkleinen maar ook om de productie te bewaren waar het al die jaren al hoort. Natuurlijk gaan we in de toekomst verder met het bedenken en uitvoeren van ecologisch vriendelijke uitbreidingen</p>
         </div>
     </div>
-
-    <div id="slide4" class="slide header">
+    <div id="slide4" class="slideT">
         <footer class="flex-rw">
 
             <ul class="footer-list-top">
@@ -118,15 +120,63 @@
             </ul>
 
             <section class="footer-bottom-section flex-rw">
-                <div class="footer-bottom-wrapper">
-                    2019 De Schuimkraag <address class="footer-address" role="company address">Gent, BE</address><span class="footer-bottom-rights"> - Alle Rechten Voorbehouden - </span>
+                <div class="footer-bottom-wrapper ">
+                    &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address><span class="footer-bottom-rights "> - Alle Rechten Voorbehouden - </span>
                 </div>
                 <div class="footer-bottom-wrapper">
                     <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
                 </div>
             </section>
         </footer>
+
     </div>
+
+
+    <!-- <footer class="flex-rw">
+
+        <ul class="footer-list-top">
+            <li>
+                <h4 class="footer-list-header">Over De Schuimkraag</h4>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Meer Over Ons</a>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Promos</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Wordt Verkoper</a>
+            </li>
+
+            <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Jobs</a></li>
+
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Evenementen</a>
+            </li>
+        </ul>
+        <ul class="footer-list-top">
+            <li>
+                <h4 class="footer-list-header">Geschenken Hoekje</h4>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor">Biermanden</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">Cadeaubonnen</a></li>
+        </ul>
+        <ul class="footer-list-top">
+            <li id='help'>
+                <h4 class="footer-list-header">Hulp Sectie</h4>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Contact</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
+            <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Zoek Winkel</a></li>
+            <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">Nieuwe Gebrukers</a></li>
+            <li id='order-tracking'><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Track and Trace</a></li>
+        </ul>
+
+        <section class="footer-bottom-section flex-rw">
+            <div class="footer-bottom-wrapper">
+                2019 De Schuimkraag <address class="footer-address" role="company address">Gent, BE</address><span class="footer-bottom-rights"> - Alle Rechten Voorbehouden - </span>
+            </div>
+            <div class="footer-bottom-wrapper">
+                <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+            </div>
+        </section>
+    </footer>
+ -->
 
 </body>
 
