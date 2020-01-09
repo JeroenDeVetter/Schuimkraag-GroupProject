@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="login.css">
-    <title>Document</title>
+    <title>Login-or-Registration</title>
+    <script></script>
 </head>
-
-
 
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
@@ -23,16 +22,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="./" class="navbar-brand">De Schuimkraag</a>
+                <a href="" class="navbar-brand">De Schuimkraag</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="about.html">Home</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Over Ons <b class="caret"></b></a>
-
+                    <li>
+                        <a href="#">Over Ons</b> </a>
                     </li>
                     <li>
                         <a href="#">E-Shop</a>
@@ -54,13 +52,13 @@
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
                         <li class="active"><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
-                        <li><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
+                        <li ><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade active in" id="signup">
                             <h2 class="text-uppercase text-center"> </h2>
-                            <div class="mt-5 warning">
-                                <p class="warning-text">Blablabla</p>
+                            <div class="warning">
+                                <p class="warning-text">Voornaam is vereist</p>
                             </div>
                             <form id="signup">
                                 <div class="row">
@@ -71,9 +69,6 @@
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
-
-
-
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Familienaam <span class="req">*</span> </label>
@@ -91,13 +86,11 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Btw-nr (optioneel). <span class="req"></span> </label>
-                                            <input type="text" class="form-control" id="last_name" required data-validation-required-message="Btw-nr." autocomplete="off">
+                                            <input type="text" class="form-control" id="btw-nr" required data-validation-required-message="Btw-nr." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
                                     <input type="email" class="form-control" id="email" required data-validation-required-message="Gelieve hier emailadres in te geven." autocomplete="off">
@@ -119,7 +112,7 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label> Huisnummer <span class="req">*</span> </label>
-                                            <input type="street" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
+                                            <input type="street" class="form-control" id="streetnumber" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -133,7 +126,7 @@
                                     </div>
 
                                     <div class="form-group col-sm-9">
-                                        <select class="form-control" style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;">
+                                        <select class="form-control" {# style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;" #}>
                                             <option value=" volvo ">Volvo</option>
                                             <option value="saab ">Saab</option>
                                             <option value="mercedes ">Mercedes</option>
