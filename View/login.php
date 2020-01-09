@@ -1,5 +1,6 @@
 <?php
 
+require 'local.php';
 
 
 ?>
@@ -78,21 +79,21 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Familienaam <span class="req">*</span> </label>
-                                            <input type="text" class="form-control" id="last_name" required data-validation-required-message="Achternaam." autocomplete="off">
+                                            <input type="text" name="lastName-sing" class="form-control" id="last_name" required data-validation-required-message="Achternaam." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Bedrijf (optioneel)<span class="req"></span> </label>
-                                            <input type="text" class="form-control" id="last_name" required data-validation-required-message="Bedrijf." autocomplete="off">
+                                            <input type="text" name="company" class="form-control" id="last_name" required data-validation-required-message="Bedrijf." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Btw-nr (optioneel). <span class="req"></span> </label>
-                                            <input type="text" class="form-control" id="last_name" required data-validation-required-message="Btw-nr." autocomplete="off">
+                                            <input type="text" name="btwNr" class="form-control" id="last_name" required data-validation-required-message="Btw-nr." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -101,26 +102,26 @@
 
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
-                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Gelieve hier emailadres in te geven." autocomplete="off">
+                                    <input type="email" name="email-sing" class="form-control" id="email" required data-validation-required-message="Gelieve hier emailadres in te geven." autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
                                     <label> Telefoonnummer <span class="req">*</span> </label>
-                                    <input type="tel" class="form-control" id="phone" required data-validation-required-message="Gelieve hier telefoonnummer in te geven." autocomplete="off">
+                                    <input type="tel" name="telphone" class="form-control" id="phone" required data-validation-required-message="Gelieve hier telefoonnummer in te geven." autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-9">
                                         <div class="form-group">
                                             <label> Straatnaam <span class="req">*</span> </label>
-                                            <input type="street" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
+                                            <input type="street" name="streetName" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label> Huisnummer <span class="req">*</span> </label>
-                                            <input type="street" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
+                                            <input type="street" name="houseNr" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -129,7 +130,7 @@
                                 <div class="row">
                                     <div class="form-group col-sm-3">
                                         <label> Postcode <span class="req">*</span> </label>
-                                        <input type="PC" class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." autocomplete="off">
+                                        <input type="PC" name class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." autocomplete="off">
                                         <p class="help-block text-danger"></p>
                                     </div>
 
@@ -183,7 +184,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="mrgn-30-top">
-                                    <button type="submit" class="btn btn-larger btn-block" /> Log in
+                                    <button type="submit" class="btn btn-larger btn-block"> Log in
                                     </button>
                                 </div>
                             </form>
