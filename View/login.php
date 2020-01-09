@@ -1,11 +1,27 @@
 <?php
 
-require '../Model/local.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['register']))
+require '../src/Model/register.php';
+require '../src/Model/login.php';
+
+session_start();
+
+if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register']))
     {
-        registerUser($_POST[''],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],$_POST[],);
+        registerUser($_POST['company'],$_POST['firstName'],$_POST['lastName'],$_POST['btw'],$_POST['streedName'],$_POST['houseNum'],$_POST['gemeente'],$_POST['emailRegister'],$_POST['phoneNum'],$_POST['registerPass']);
     }
+
+
+if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
+{
+    login($_POST['emailLog'],$_POST['passLog']);
+}
+
+
+var_dump($_SESSION);
 
 ?>
 
@@ -19,8 +35,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['register']))
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/login.css">
-    <link rel="stylesheet" href="../html-css-js/EasyAutocomplete-1.3.5/easy-autocomplete.min.css">
-    <link rel="stylesheet" href="../html-css-js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css">
     <title>Document</title>
 </head>
 
@@ -55,8 +69,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['register']))
         </div>
 
     </div>
-
-
     <!--========================-->
     <div id="form">
         <div class="container">
@@ -72,7 +84,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['register']))
                             <div class="warning">
                                 <p class="warning-text">Voornaam is vereist</p>
                             </div>
-                            <form id="signup">
+                            <form action="" method="post" id="signup">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
@@ -175,19 +187,19 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['register']))
                         </div>
                         <div class="tab-pane fade in" id="login">
                             <h2 class="text-uppercase text-center"> Log in</h2>
-                            <form id="login">
+                            <form action="" method="post" id="login">
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
-                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Gelieve hier Uw emailadres in te geven" autocomplete="off">
+                                    <input type="email" name="emailLog" class="form-control" id="email" required data-validation-required-message="Gelieve hier Uw emailadres in te geven" autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
                                     <label> Paswoord <span class="req">*</span> </label>
-                                    <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off">
+                                    <input type="password" name="passLog" class="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="mrgn-30-top">
-                                    <button type="submit" class="btn btn-larger btn-block" /> Log in
+                                    <button type="submit" name="logIN" class="btn btn-larger btn-block" > Log in
                                     </button>
                                 </div>
                             </form>
@@ -245,7 +257,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['register']))
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
-    <script src="../html-css-js/login.js "></script>
+    <script src="../public/js/login.js "></script>
 
 
 </body>

@@ -6,16 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Latest compiled and minified CSS -->
-<<<<<<< HEAD:html-css-js/login.html
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="login.css">
-    <title>Login-or-Registration</title>
-    <script></script>
-=======
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
->>>>>>> 3c0d6860155a3a300f20006a69f8cccaaf49ae0d:public/html/login.html
 </head>
 
 <body>
@@ -28,11 +21,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-<<<<<<< HEAD:html-css-js/login.html
-                <a href="" class="navbar-brand">De Schuimkraag</a>
-=======
-                <a href="../../html-css-js" class="navbar-brand">De Schuimkraag</a>
->>>>>>> 3c0d6860155a3a300f20006a69f8cccaaf49ae0d:public/html/login.html
+                <a href="./" class="navbar-brand">De Schuimkraag</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right">
@@ -40,12 +29,8 @@
                         <a href="about.html">Home</a>
                     </li>
                     <li>
-<<<<<<< HEAD:html-css-js/login.html
-                        <a href="#">Over Ons</b> </a>
-=======
                         <a href="#">Over Ons </a>
 
->>>>>>> 3c0d6860155a3a300f20006a69f8cccaaf49ae0d:public/html/login.html
                     </li>
                     <a href="#">E-Shop</a>
                     </li>

@@ -1,21 +1,24 @@
 <?php
 
+
+
 require 'local.php';
 
 function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $straatNo , $gemeenteId , $email , $phoneNo , $pass) {
-    $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
     $db = openConnection();
+    $shadPass = password_hash($pass, PASSWORD_DEFAULT);
+    $num = 2317;
     $select = $db->query("INSERT INTO
-    Students (
+    klant (
       firmanaam,
-      klant_voorname,
+      klant_voornaam,
       klant_achternaam,
       btwnummer,
       klantstraat,
       klantstraatnummer,
       gemeente_id,
       email,
-      telefoonummer,
+      telefoonnummer,
       hashed_wachtwoord
     )
   VALUES
@@ -26,10 +29,10 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
       '$btNo',
       '$straat',
       '$straatNo',
-      '$gemeenteId',
+      '$num',
       '$email',
-      '$telefoonummer',
-      '$hashed_pass'
+      '$phoneNo',
+      '$shadPass'
     )
   ");
 }
