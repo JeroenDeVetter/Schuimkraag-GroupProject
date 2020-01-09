@@ -18,11 +18,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['register']))
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../html-css-js/login.css">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="../html-css-js/json/schuimkraag_gemeente.json"></script>
-    <script>
-    </script>
+    <link rel="stylesheet" href="../public/css/login.css">
+    <link rel="stylesheet" href="../html-css-js/EasyAutocomplete-1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="../html-css-js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css">
     <title>Document</title>
 </head>
 
