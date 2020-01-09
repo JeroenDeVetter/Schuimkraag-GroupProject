@@ -1,3 +1,18 @@
+<?php
+require "../../src/Model/connection.php";
+
+function getBier(){
+    $sql = "SELECT etiketafbeelding, biernaam, prijs FROM bier";
+    $stmt = openConnection()->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+   // var_dump($result);
+}
+
+getBier();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="../css/test.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <title>Document</title>
@@ -20,7 +35,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-                <a href="./" class="navbar-brand">De Schuimkraag</a>
+                <a href="../../html-css-js" class="navbar-brand">De Schuimkraag</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right">
@@ -73,6 +88,7 @@
             </div>
 
             <div id="grid">
+                <template id="productTemplate">
                 <div class="product">
                     <div class="info-large">
                         <h4>FLUTED HEM DRESS</h4>
@@ -92,7 +108,7 @@
                     <div class="make3D">
                         <div class="product-front">
                             <div class="shadow"></div>
-                            <img class="biergroot" src="brugsezotgroot.png" alt="brugse zot">
+                            <img class="biergroot" src="../images/brugsezotgroot.png" alt="brugse zot">
                             <div class="image_overlay"></div>
                             <div class="add_to_cart">Add to cart</div>
                             <div class="view_gallery">View gallery</div>
@@ -136,11 +152,11 @@
                         </div>
                     </div>
                 </div>
-
+                </template>
 
 
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-                <script src="test.js"></script>
+                <script src="../js/test.js"></script>
 </body>
 
 </html>

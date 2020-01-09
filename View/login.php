@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../html-css-js/login.css">
+    <link rel="stylesheet" href="../public/css/login.css">
     <link rel="stylesheet" href="../html-css-js/EasyAutocomplete-1.3.5/easy-autocomplete.min.css">
     <link rel="stylesheet" href="../html-css-js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css">
     <title>Document</title>
@@ -41,7 +41,7 @@
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
-                                    
+
 
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
@@ -68,7 +68,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
 
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
@@ -112,7 +112,7 @@
                                         autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                
+
 
 
                                 <div class="row">
@@ -177,8 +177,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="../html-css-js/login.js"></script>
-    <script src="../html-css-js/Autocomplite.js"></script>
+    <script src="../public/js/login.js"></script>
+    <script src="../public/js/Autocomplite.js"></script>
 
 </body>
 
