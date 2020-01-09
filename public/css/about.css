@@ -35,6 +35,16 @@ p {
     transform-style: inherit;
 }
 
+.slideT {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;
+    padding-top: 50%;
+}
+
 img {
     top: 50%;
     left: 100%;
@@ -125,8 +135,13 @@ img:last-of-type {
     background-size: cover;
 }
 
+footer {
+    width: 100vw;
+}
 
-/* @import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
+
+/*
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
 .navbar-brand {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase
@@ -235,7 +250,8 @@ img:last-of-type {
 
 .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
     border-bottom-color: #FFFFFF
-} */
+}
+*/
 
 ul {
     list-style: none;
@@ -247,9 +263,12 @@ a {
     color: darkgreen;
 }
 
-.flex-rw {
+
+/* .flex-rw {
     display: flex;
     flex-flow: row wrap;
+    width: 100%;
+    margin-bottom: 0;
 }
 
 footer {
@@ -283,7 +302,7 @@ footer {
 .footer-bottom-section {
     width: 100%;
     padding: 10px;
-    border-top: 1px solid
+    border-top: 1px solid;
 }
 
 .footer-bottom-section>div:first-child {
@@ -292,7 +311,7 @@ footer {
 
 .footer-bottom-wrapper {
     font-size: 1.5em;
-    color: darkgreen;
+    color: white;
     text-align: center;
     width: 100%;
 }
@@ -362,4 +381,4 @@ footer {
     .footer-bottom-wrapper {
         font-size: 1.3em
     }
-}
+} */
