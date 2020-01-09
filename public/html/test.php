@@ -2,14 +2,19 @@
 require "../../src/Model/connection.php";
 
 function getBier(){
-    $sql = "SELECT etiketafbeelding, biernaam, prijs FROM bier";
+    $sql = "SELECT bierbeschrijving, biernaam, prijs FROM bier";
     $stmt = openConnection()->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-   // var_dump($result);
+  // return var_dump($result);
+    return $result;
 }
 
 getBier();
+
+foreach (getBier() as $bier) {
+    echo "biernaam: " . $bier["biernaam"] . "<br/>" .  "prijs :" . $bier["prijs"] . "<br/>" . "beschrijving: " . $bier["bierbeschrijving"];
+}
 
 ?>
 
@@ -35,7 +40,7 @@ getBier();
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-                <a href="../../html-css-js" class="navbar-brand">De Schuimkraag</a>
+                <a href="./" class="navbar-brand">De Schuimkraag</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right">
@@ -88,7 +93,6 @@ getBier();
             </div>
 
             <div id="grid">
-                <template id="productTemplate">
                 <div class="product">
                     <div class="info-large">
                         <h4>FLUTED HEM DRESS</h4>
@@ -152,7 +156,7 @@ getBier();
                         </div>
                     </div>
                 </div>
-                </template>
+
 
 
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
