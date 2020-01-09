@@ -79,7 +79,7 @@ fieldset[disabled] .btn-larger.active {
 div#form {
     color: #fff;
     background-attachment: scroll;
-    background: #1c1e21 url(bier.jpg);
+    background: #1c1e21 url(../images/bier.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -558,6 +558,7 @@ footer {
     padding: 0.75em;
     background-color: rgba(237, 235, 250, 0.1);
 }
+<<<<<<< HEAD:html-css-js/login.css
 .warning p{
     margin-bottom: 0!important;
     color: red;
@@ -580,3 +581,10 @@ footer {
     margin-top: 25px;
     height: 43px;
 }
+=======
+
+.warning-text {
+    padding-left: 2;
+    padding-top: 2;
+}
+>>>>>>> 82586e120d98ae3c4845935149c8623335b46e31:public/css/login.css

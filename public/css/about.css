@@ -94,7 +94,7 @@ img:last-of-type {
 }
 
 #title {
-    background-image: url("hopenglas.jpg");
+    background-image: url("../images/hopenglas.jpg");
     z-index: 2;
 }
 
@@ -104,23 +104,23 @@ img:last-of-type {
 }
 
 #slide1:before {
-    background-image: url("brouwerij1.jpg");
+    background-image: url("../images/brouwerij1.jpg");
     transform: translateZ(-1px) scale(2);
 }
 
 #slide2 {
-    background-image: url("bierton.jpg");
+    background-image: url("../images/bierton.jpg");
     z-index: 4;
 }
 
 #slide3:before {
-    background-image: url("ondergronds.jpg");
+    background-image: url("../images/ondergronds.jpg");
     transform: translateZ(-1px) scale(2);
 }
 
 #slide4 {
     background: #222;
-    background-image: url("hop2.jpg");
+    background-image: url("../images/hop2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
