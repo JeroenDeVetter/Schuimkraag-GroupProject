@@ -28,7 +28,7 @@ footer {
 
 .footer-list-anchor {
     font: 1.3em "Open Sans", sans-serif;
-    color: white;
+    color: #86c232 !important;
 }
 
 .footer-bottom-section {
@@ -117,10 +117,10 @@ footer {
 
 a:hover,
 a:focus {
-    color: black;
+    color: black !important;
     text-decoration: none;
 }
 
 .generic-anchor {
-    color: white;
+    color: #86c232 !important;
 }
