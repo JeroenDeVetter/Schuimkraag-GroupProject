@@ -125,7 +125,8 @@ img:last-of-type {
     background-size: cover;
 }
 
-@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
+
+/* @import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
 .navbar-brand {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase
@@ -234,7 +235,7 @@ img:last-of-type {
 
 .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
     border-bottom-color: #FFFFFF
-}
+} */
 
 ul {
     list-style: none;
