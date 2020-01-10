@@ -7,12 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/footer.css">
     <title>Login-or-Registration</title>
-    <script src="../js/registreer.js "></script>
-    <script src="../js/footer.js "></script>
 </head>
 
 <body>
@@ -57,13 +55,14 @@
             <div class="col-lg-6">
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
-                        <li class="active"><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
+                        <li class="active"><a href="#signup" role="tab" data-toggle="tab">Registreer</a></li>
                         <li><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade active in" id="signup">
-                            <h2 class="text-uppercase text-center"> </h2>
-                            <div class="warning hide" id="error-message">Voornaam is vereist
+                            <h2 class="text-uppercase text-center">Registreer</h2>
+                            
+                            <div class="warning hide" id="error_message">
                             </div>
                             <form id="signup" novalidate>
                                 <div class="row">
@@ -91,7 +90,7 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Btw-nr (optioneel). <span class="req"></span> </label>
-                                            <input type="text" class="form-control" id="vat-nr" required data-validation-required-message="Btw-nr." autocomplete="off">
+                                            <input type="text" class="form-control" id="vat_nr" required data-validation-required-message="Btw-nr." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -153,8 +152,8 @@
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
-                                            <label> Paswoord controle <span class="req">*</span> </label>
-                                            <input type="password" class="form-control" id="password-control" required data-validation-required-message=" Paswoorden komen niet overeen" autocomplete="off">
+                                            <label> Herhaal paswoord <span class="req">*</span> </label>
+                                            <input type="password" class="form-control" id="password_control" required data-validation-required-message=" Paswoorden komen niet overeen" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -165,9 +164,10 @@
                                     </button>
                                 </div>
                             </form>
+                            
                         </div>
                         <div class="tab-pane fade in" id="login">
-                            <h2 class="text-uppercase text-center"> Log in</h2>
+                            <h2 class="text-uppercase text-center">Log in</h2>
                             <form id="login">
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
@@ -184,7 +184,9 @@
                                     </button>
                                 </div>
                             </form>
-
+                            <div class = "link">
+                                <a href="#">Wachtwoord vergeten?</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -234,6 +236,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
     <script src="../js/login.js "></script>
+    <script src="../js/footer.js "></script>
+    <script src="../js/registreer.js "></script>
 
 
 </body>

@@ -79,7 +79,7 @@ fieldset[disabled] .btn-larger.active {
 div#form {
     color: #fff;
     background-attachment: scroll;
-    background: #1c1e21 url(bier.jpg);
+    background: #1c1e21 url(../images/bier.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -415,147 +415,27 @@ ul {
 
 a {
     text-decoration: none;
-    color: darkgreen;
+    color:#86c232;
 }
 
-
-/* .flex-rw {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-footer {
-    background: #86c232;
-    opacity: 70%;
-    margin-top: auto;
-    width: 100%;
+.link{
+    padding-top: 2rem;
     text-align: center;
 }
 
-.footer-list-top {
-    width: 33.333%
+.link a:hover{
+    color: #FFF !important;
 }
-
-.footer-list-top>li {
-    text-align: center;
-    padding-bottom: 10px
-}
-
-.footer-list-header {
-    padding: 10px 0 5px 0;
-    color: #fff;
-    font: 2.3vw "Oswald", sans-serif
-}
-
-.footer-list-anchor {
-    font: 1.3em "Open Sans", sans-serif;
-    color: darkgreen;
-}
-
-.footer-bottom-section {
-    width: 100%;
-    padding: 10px;
-    border-top: 1px solid
-}
-
-.footer-bottom-section>div:first-child {
-    margin-right: auto
-}
-
-.footer-bottom-wrapper {
-    font-size: 1.5em;
-    color: darkgreen;
-    text-align: center;
-    width: 100%;
-}
-
-.footer-address {
-    display: inline;
-    font-style: normal;
-    text-align: center;
-    color: darkgreen;
-}
-
-@media only screen and (max-width: 768px) {
-    .footer-list-header {
-        font-size: 2em
-    }
-    .footer-list-anchor {
-        font-size: 1.1em;
-        color: darkgreen;
-    }
-    .footer-bottom-wrapper {
-        font-size: 1.3em;
-        color: darkgreen;
-    }
-}
-
-@media only screen and (max-width: 568px) {
-    main {
-        font-size: 5em
-    }
-    .footer-list-top {
-        width: 100%
-    }
-    .footer-list-header {
-        font-size: 3em;
-    }
-    .footer-list-anchor {
-        font-size: 1.5em
-    }
-    .footer-bottom-section {
-        padding: 0 5px 10px 5px
-    }
-    .footer-bottom-wrapper {
-        text-align: center;
-        width: 100%;
-        margin-top: 30px
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .footer-bottom-rights {
-        display: block
-    }
-    .footer-bottom-wrapper {
-        text-align: center;
-        width: 100%;
-        margin-top: 30px
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .footer-list-header {
-        font-size: 2.2em
-    }
-    .footer-list-anchor {
-        font-size: 1.2em
-    }
-    .footer-bottom-wrapper {
-        font-size: 1.3em
-    }
-} */
 
 .warning {
+    
     border: solid 1px red;
     padding: 0.75em;
     background-color: rgba(237, 235, 250, 0.1);
     color: red;
+    margin-bottom: 0.5rem;
 }
 
-
-/* .navbar-inverse .navbar-brand:hover {
-    background-color: rgb(55, 94, 9);
-    color: #FFF!important;
-}
-
-.navbar-inverse .navbar-nav>li>a:hover,
-.navbar-inverse .navbar-nav>li>a:focus {
-    background-color: rgb(55, 94, 9);
-    color: #FFF;
-    border: solid 1px rgb(55, 94, 9);
-}
- */
 
 .select {
     background-color: rgba(90, 90, 90, 0.5);
@@ -574,5 +454,6 @@ footer {
 }
 
 .show {
-    display: block;
+    display: flex !important;
+    justify-content: space-between !important;
 }
