@@ -1,3 +1,4 @@
+<?php?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +10,9 @@
     <link rel="stylesheet" href="../css/testshop.css">
     <title>Document</title>
 </head>
+
+
+<body>
 <header>
     <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
@@ -19,7 +23,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../../html-css-js" class="navbar-brand">De Schuimkraag</a>
+                <a href="./" class="navbar-brand">De Schuimkraag</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right">
@@ -42,24 +46,6 @@
     </div>
     </div>
 </header>
-
-<body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="../js/testshop.js"></script>
 </body>
 

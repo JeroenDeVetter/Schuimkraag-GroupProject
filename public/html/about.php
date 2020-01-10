@@ -1,3 +1,5 @@
+<?php?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,13 +32,13 @@
                     </li>
                     <li class="active"><a href="#">Over Ons</a>
                     </li>
-                    <li><a href="login.html">Login</a>
+                    <li><a href="../../View/login.php">Login</a>
                     </li>
                     <li>
                         <a href="#">E-Shop</a>
                     </li>
                     <li class="">
-                        <a href="#">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </nav>
