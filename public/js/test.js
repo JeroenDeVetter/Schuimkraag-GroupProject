@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
     $(".largeGrid").click(function() {
@@ -125,7 +126,7 @@ $(document).ready(function() {
                 $("body").removeClass("MakeFloatingCart");
 
 
-                var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + img.src + "' alt='' /></div><span>" + productName + "</span><strong>$39</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
+                var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + img.src + "' alt='' /></div><span>" + productName + "</span><strong><?php echo $result[$i]->prijs ?></strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
 
                 $("#cart .empty").hide();
                 $("#cart").append(cartItem);
@@ -238,7 +239,7 @@ $(document).ready(function() {
             $("body").removeClass("MakeFloatingCart");
 
 
-            var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>$39</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
+            var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>phpPrijs</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
 
             $("#cart .empty").hide();
             $("#cart").append(cartItem);
