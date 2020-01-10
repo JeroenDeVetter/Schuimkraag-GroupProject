@@ -1,3 +1,4 @@
+<?php?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -12,6 +13,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <title>Document</title>
 </head>
+
+
+<body>
 <header>
     <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
@@ -45,6 +49,7 @@
     </div>
     </div>
 </header>
+<<<<<<< HEAD:public/html/testshop.html
 
 <body>
     <div class="sidebar">
@@ -188,6 +193,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../js/test.js"></script>
+=======
+    <script src="../js/testshop.js"></script>
+>>>>>>> f63eb643bedaa934ca29038733e9eebaffd16edf:public/html/testshop.php
 </body>
 
 </html>

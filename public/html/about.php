@@ -1,3 +1,5 @@
+<?php?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +11,7 @@
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <title>Document</title>
+    <title>About</title>
 </head>
 <header>
     <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
@@ -30,7 +32,7 @@
                     </li>
                     <li class="active"><a href="#">Over Ons</a>
                     </li>
-                    <li><a href="login.html">Login</a>
+                    <li><a href="../../View/login.php">Login</a>
                     </li>
                     <li>
                         <a href="#">E-Shop</a>
@@ -91,8 +93,7 @@
                 <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Meer Over Ons</a>
                 </li>
                 <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Promos</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Wordt Verkoper</a>
-                </li>
+            
 
                 <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Jobs</a></li>
 
@@ -114,68 +115,21 @@
                 <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
                 <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Zoek Winkel</a></li>
                 <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">Nieuwe Gebrukers</a></li>
-                <li id='order-tracking'><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Track and Trace</a></li>
             </ul>
 
             <section class="footer-bottom-section flex-rw">
                 <div class="footer-bottom-wrapper ">
-                    &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address><span class="footer-bottom-rights "> - Alle Rechten Voorbehouden - </span>
+                    &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
                 </div>
                 <div class="footer-bottom-wrapper">
-                    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+                    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor" rel="nofollow">Privacy Beleid</a>
                 </div>
             </section>
         </footer>
 
     </div>
 
-
-    <!-- <footer class="flex-rw">
-
-        <ul class="footer-list-top">
-            <li>
-                <h4 class="footer-list-header">Over De Schuimkraag</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Meer Over Ons</a>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Promos</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Wordt Verkoper</a>
-            </li>
-
-            <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Jobs</a></li>
-
-            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Evenementen</a>
-            </li>
-        </ul>
-        <ul class="footer-list-top">
-            <li>
-                <h4 class="footer-list-header">Geschenken Hoekje</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor">Biermanden</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">Cadeaubonnen</a></li>
-        </ul>
-        <ul class="footer-list-top">
-            <li id='help'>
-                <h4 class="footer-list-header">Hulp Sectie</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Contact</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
-            <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Zoek Winkel</a></li>
-            <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">Nieuwe Gebrukers</a></li>
-            <li id='order-tracking'><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Track and Trace</a></li>
-        </ul>
-
-        <section class="footer-bottom-section flex-rw">
-            <div class="footer-bottom-wrapper">
-                2019 De Schuimkraag <address class="footer-address" role="company address">Gent, BE</address><span class="footer-bottom-rights"> - Alle Rechten Voorbehouden - </span>
-            </div>
-            <div class="footer-bottom-wrapper">
-                <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
-            </div>
-        </section>
-    </footer>
- -->
-
+ <script src="../js/footer.js "></script>
 </body>
 
 </html>

@@ -86,6 +86,22 @@ foreach (getBier() as $bier) {
 
 
 
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <div id="wrapper">
+        <div class="cart-icon-top">
+        </div>
+
+        <div class="cart-icon-bottom">
+        </div>
+
+        <div class="checkout" id="checkout">
+            CHECKOUT
+        </div>
+
+
+
+
+
         <div id="sidebar">
             <h3>CART</h3>
             <div id="cart">
