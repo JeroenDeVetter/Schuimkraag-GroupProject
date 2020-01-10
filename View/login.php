@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 }
 
 
-var_dump($_SESSION);
+
 
 ?>
 
@@ -103,14 +103,14 @@ var_dump($_SESSION);
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Bedrijf (optioneel)<span class="req"></span> </label>
-                                            <input type="text" name="company" class="form-control" id="last_name" required data-validation-required-message="Bedrijf." autocomplete="off">
+                                            <input type="text" name="company" class="form-control" id="last_name" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Btw-nr (optioneel). <span class="req"></span> </label>
-                                            <input type="text" name="btw" class="form-control" id="btw-nr" required data-validation-required-message="Btw-nr." autocomplete="off">
+                                            <input type="text" name="btw" class="form-control" id="btw-nr" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -258,7 +258,7 @@ var_dump($_SESSION);
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
     <script src="../public/js/login.js "></script>
-
+ 
 
 </body>
 
