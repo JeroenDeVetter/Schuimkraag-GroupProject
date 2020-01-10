@@ -58,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                             <a href="#">E-Shop</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="../public/html/contact.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
