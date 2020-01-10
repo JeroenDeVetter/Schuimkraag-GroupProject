@@ -1,21 +1,5 @@
 <?php
 require "../../src/Model/connection.php";
-function getBierNames()
-{
-    $sql = "SELECT biernaam FROM bier";
-    $stmt = openConnection()->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    for ($i = 1; $i < count($result) + 1; $i++) {
-        $updatedName = str_replace(" ", "_", $result[$i]["biernaam"]);
-        $newImagePath = "../images/" . $updatedName . ".jpg";
-        $sql = "UPDATE bier SET etiketafbeelding=:newImagePath WHERE biernaam=:biernaam";
-        $stmt = openConnection()->prepare($sql);
-        $stmt->bindValue(':newImagePath', $newImagePath);
-        $stmt->bindValue(':biernaam', $result[$i]["biernaam"]);
-        $stmt->execute();
-    }
-}
 
 function createBierCards()
 {
@@ -24,7 +8,6 @@ function createBierCards()
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_OBJ);
     for ($i = 0; $i < count($result); $i++) {
-$jsprijs = $result[$i]->prijs;
 
 echo "
     <div class=\"product\">
@@ -92,11 +75,6 @@ echo "
     }
 }
 
-//createBierCards();
-
-
-//updateEtiketNames();
-
 ?>
 
 <!DOCTYPE html>
@@ -151,10 +129,12 @@ echo "
 </div>
 
 
+
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 <div id="wrapper">
     <div class="cart-icon-top">
     </div>
+
 
     <div class="cart-icon-bottom">
     </div>
