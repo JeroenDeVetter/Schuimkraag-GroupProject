@@ -1,28 +1,20 @@
+  
 <?php
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
 require '../src/Model/register.php';
 require '../src/Model/login.php';
-
 session_start();
-
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register']))
     {
         registerUser($_POST['company'],$_POST['firstName'],$_POST['lastName'],$_POST['btw'],$_POST['streedName'],$_POST['houseNum'],$_POST['gemeente'],$_POST['emailRegister'],$_POST['phoneNum'],$_POST['registerPass']);
     }
-
-
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 {
     login($_POST['emailLog'],$_POST['passLog']);
 }
-
-
-
-
+var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +27,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/login.css">
+    <link rel="stylesheet" href="../public/css/navbar.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
     <title>Document</title>
 </head>
 

@@ -8,7 +8,11 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/login.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Login-or-Registration</title>
+    <script src="../js/registreer.js "></script>
+    <script src="../js/footer.js "></script>
 </head>
 
 <body>
@@ -21,20 +25,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="./" class="navbar-brand">De Schuimkraag</a>
+                <a href="" class="navbar-brand">De Schuimkraag</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="about.html">Home</a>
+                        <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="#">Over Ons </a>
-
-                    </li>
-                    <a href="#">E-Shop</a>
+                        <a href="about.html">Over Ons</b> </a>
                     </li>
                     <li class="active">
+                        <a href="#">Login</b> </a>
+                    </li>
+                    <li>
+                        <a href="#">E-Shop</a>
+                    </li>
+                    <li>
                         <a href="#">Contact</a>
                     </li>
                 </ul>
@@ -51,20 +58,19 @@
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
                         <li class="active"><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
-                        <li ><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
+                        <li><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade active in" id="signup">
                             <h2 class="text-uppercase text-center"> </h2>
-                            <div class="warning">
-                                <p class="warning-text">Voornaam is vereist</p>
+                            <div class="warning hide" id="error-message">Voornaam is vereist
                             </div>
-                            <form id="signup">
+                            <form id="signup" novalidate>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Voornaam <span class="req">*</span> </label>
-                                            <input type="text" name="firstName-sing" class="form-control" id="first_name" required data-validation-required-message="Voornaam." autocomplete="off">
+                                            <input type="text" name="firstName" class="form-control" id="first_name" required data-validation-required-message="Voornaam." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -78,14 +84,14 @@
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Bedrijf (optioneel)<span class="req"></span> </label>
-                                            <input type="text" class="form-control" id="last_name" required data-validation-required-message="Bedrijf." autocomplete="off">
+                                            <input type="text" class="form-control" id="company_name" required data-validation-required-message="Bedrijf." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Btw-nr (optioneel). <span class="req"></span> </label>
-                                            <input type="text" class="form-control" id="btw-nr" required data-validation-required-message="Btw-nr." autocomplete="off">
+                                            <input type="text" class="form-control" id="vat-nr" required data-validation-required-message="Btw-nr." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -161,7 +167,7 @@
                             </form>
                         </div>
                         <div class="tab-pane fade in" id="login">
-                            <h2 class="text-uppercase text-center">Log in</h2>
+                            <h2 class="text-uppercase text-center"> Log in</h2>
                             <form id="login">
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
@@ -195,11 +201,7 @@
             <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
             </li>
             <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Wordt Verkoper</a>
-            </li>
-
             <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
-
             <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
         </ul>
         <ul class="footer-list-top ">
@@ -217,15 +219,14 @@
             <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
             <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
             <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
-            <li id='order-tracking'><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Track and Trace</a></li>
         </ul>
 
-        <section class="footer-bottom-section flex-rw ">
+        <section class="footer-bottom-section flex-rw">
             <div class="footer-bottom-wrapper ">
-                2019 De Schuimkraag <address class="footer-address " role="company address ">Gent, BE</address><span class="footer-bottom-rights "> - Alle Rechten Voorbehouden - </span>
+                &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
             </div>
-            <div class="footer-bottom-wrapper ">
-                <a href="/terms-of-use.html " class="generic-anchor " rel="nofollow ">Terms</a> | <a href="/privacy-policy.html " class="generic-anchor " rel="nofollow ">Privacy</a>
+            <div class="footer-bottom-wrapper">
+                <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor" rel="nofollow">Privacy Beleid</a>
             </div>
         </section>
     </footer>
@@ -236,6 +237,5 @@
 
 
 </body>
-
 
 </html>
