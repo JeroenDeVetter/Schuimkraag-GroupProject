@@ -1,6 +1,4 @@
-/* window.onload = function() { */
-
-    let voornaamInput = document.querySelector('#first_name');
+let voornaamInput = document.querySelector('#first_name');
     let achternaamInput = document.querySelector('#last_name');
     let firmanaamInput = document.querySelector('#company_name');
     let btwnrInput = document.querySelector('#vat_nr');
@@ -314,6 +312,3 @@
     paswoord2Input.addEventListener('blur', passwordVerify2);
     
     foutboodschap.addEventListener("click", removeErrorMessage);
-
-
- /* } */

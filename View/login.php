@@ -99,14 +99,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Bedrijf (optioneel)<span class="req"></span> </label>
-                                            <input type="text" name="company" class="form-control" id="last_name" autocomplete="off">
+                                            <input type="text" name="company" class="form-control" id="company_name" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Btw-nr (optioneel). <span class="req"></span> </label>
-                                            <input type="text" name="btw" class="form-control" id="btw-nr" autocomplete="off">
+                                            <input type="text" name="btw" class="form-control" id="vat_nr" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Herhaal paswoord <span class="req">*</span> </label>
-                                            <input type="password" class="form-control" id="password-control" required data-validation-required-message=" Paswoorden komen niet overeen" autocomplete="off">
+                                            <input type="password" class="form-control" id="password_control" required data-validation-required-message=" Paswoorden komen niet overeen" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
