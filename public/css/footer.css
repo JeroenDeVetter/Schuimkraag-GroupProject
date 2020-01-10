@@ -1,0 +1,127 @@
+.flex-rw {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer {
+    background: rgb(55, 94, 9);
+    opacity: 70%;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-list-top {
+    width: 33.333%
+}
+
+.footer-list-top>li {
+    text-align: center;
+    padding-bottom: 10px
+}
+
+.footer-list-header {
+    padding: 10px 0 5px 0;
+    color: #fff;
+    font: 2.3vw "Oswald", sans-serif
+}
+
+.footer-list-anchor {
+    font: 1.3em "Open Sans", sans-serif;
+    color: #86c232 !important;
+}
+
+.footer-bottom-section {
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid
+}
+
+.footer-bottom-section>div:first-child {
+    margin-right: auto
+}
+
+.footer-bottom-wrapper {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-address {
+    display: inline;
+    font-style: normal;
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-list-header {
+        font-size: 2em
+    }
+    .footer-list-anchor {
+        font-size: 1.1em;
+        color: white;
+    }
+    .footer-bottom-wrapper {
+        font-size: 1.3em;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    main {
+        font-size: 5em
+    }
+    .footer-list-top {
+        width: 100%
+    }
+    .footer-list-header {
+        font-size: 3em;
+    }
+    .footer-list-anchor {
+        font-size: 1.5em
+    }
+    .footer-bottom-section {
+        padding: 0 5px 10px 5px
+    }
+    .footer-bottom-wrapper {
+        text-align: center;
+        width: 100%;
+        margin-top: 30px
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-bottom-rights {
+        display: block
+    }
+    .footer-bottom-wrapper {
+        text-align: center;
+        width: 100%;
+        margin-top: 30px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .footer-list-header {
+        font-size: 2.2em
+    }
+    .footer-list-anchor {
+        font-size: 1.2em
+    }
+    .footer-bottom-wrapper {
+        font-size: 1.3em;
+        width: 100%;
+    }
+}
+
+a:hover,
+a:focus {
+    color: black !important;
+    text-decoration: none;
+}
+
+.generic-anchor {
+    color: #86c232 !important;
+}
