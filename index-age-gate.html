@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="MDB-Pro_4.7.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="MDB-Pro_4.7.1/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="MDB-Pro_4.7.1/css/customer.css" rel="stylesheet">
+    <link href="MDB-Pro_4.7.1/css/customer.min.css" rel="stylesheet">
+    <!--link sass file -->
+    <link href="sass\index-age-gate.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- NIET MEER NODIG DAT FOTO HIER STAAT
+    <div class="img-gradient">
+        <div class="view"
+            style="background-image:url('https://images.hdqwalls.com/download/beer-pic-1680x1050.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        </div>
+    </div>-->
+
+       <div class="text-center  align-items-center  py-5 px-4">
+            <h1 class="text-white  ">Ben je 18 of ouder?</h1>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button  type=submit id="age-confirm" onclick="create_cookie('form_submitted', 'true', 1)"  class="btn dusty-grass-gradient btn-rounded btn-large">Ja </button>
+                <button type="button" onclick="window.location.href='fail.html'" class="btn sunny-morning-gradient btn-rounded btn-large">Nee</button>
+            </div>
+        </div>
+    
+        <!-- wat is dit in bootstrap? : d-flex -->
+       <!-- van ene pagina naar andere verwijzen voorbeeld: 
+        <a href="#">Take a red pill</a>  -->
+
+
+
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="MDB-Pro_4.7.1/js/jquery-3.3.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="MDB-Pro_4.7.1/js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="MDB-Pro_4.7.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="MDB-Pro_4.7.1/js/mdb.js"></script>
+        <script src="index-age-gate.js"></script>
+</body>
+
+</html>
