@@ -14,7 +14,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 {
     login($_POST['emailLog'],$_POST['passLog']);
 }
-var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>

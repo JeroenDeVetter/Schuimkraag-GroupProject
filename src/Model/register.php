@@ -8,6 +8,7 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
     $db = openConnection();
     $shadPass = password_hash($pass, PASSWORD_DEFAULT);
     $num = 2317;
+
     $select = $db->query("INSERT INTO
     klant (
       firmanaam,
@@ -35,4 +36,5 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
       '$shadPass'
     )
   ");
+
 }
