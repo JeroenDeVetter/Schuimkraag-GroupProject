@@ -32,7 +32,7 @@
                     </li>
                     <li class="active"><a href="#">Over Ons</a>
                     </li>
-                    <li><a href="login.html">Login</a>
+                    <li><a href="../../View/login.php">Login</a>
                     </li>
                     <li>
                         <a href="#">E-Shop</a>

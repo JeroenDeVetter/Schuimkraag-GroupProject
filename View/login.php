@@ -29,40 +29,44 @@ var_dump($_SESSION);
     <link rel="stylesheet" href="../public/css/login.css">
     <link rel="stylesheet" href="../public/css/navbar.css">
     <link rel="stylesheet" href="../public/css/footer.css">
-    <title>Document</title>
+    <title>Login-or-Registration</title>
 </head>
 
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="" class="navbar-brand">De Schuimkraag</a>
+                    <a href="" class="navbar-brand">De Schuimkraag</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="../public/html/about.php">Over Ons</b> </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Login</b> </a>
+                        </li>
+                        <li>
+                            <a href="#">E-Shop</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="about.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Over Ons</b> </a>
-                    </li>
-                    <li>
-                        <a href="#">E-Shop</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+
         </div>
 
-    </div>
     <!--========================-->
     <div id="form">
         <div class="container">
@@ -74,11 +78,10 @@ var_dump($_SESSION);
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade active in" id="signup">
-                            <h2 class="text-uppercase text-center"> </h2>
-                            <div class="warning">
-                                <p class="warning-text">Voornaam is vereist</p>
-                            </div>
-                            <form action="" method="post" id="signup">
+                        <h2 class="text-uppercase text-center">Registreer</h2>
+                        <div class="warning hide" id="error_message">
+                                </div>
+                            <form action="" method="post" id="signup" novalidate>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
@@ -166,7 +169,7 @@ var_dump($_SESSION);
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
-                                            <label> Paswoord controle <span class="req">*</span> </label>
+                                            <label> Herhaal paswoord <span class="req">*</span> </label>
                                             <input type="password" class="form-control" id="password-control" required data-validation-required-message=" Paswoorden komen niet overeen" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
@@ -181,7 +184,7 @@ var_dump($_SESSION);
                         </div>
                         <div class="tab-pane fade in" id="login">
                             <h2 class="text-uppercase text-center"> Log in</h2>
-                            <form action="" method="post" id="login">
+                            <form action="" method="post" id="login" novalidate>
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
                                     <input type="email" name="emailLog" class="form-control" id="email" required data-validation-required-message="Gelieve hier Uw emailadres in te geven" autocomplete="off">
@@ -207,52 +210,49 @@ var_dump($_SESSION);
     </div>
     <footer class="flex-rw ">
 
-        <ul class="footer-list-top ">
-            <li>
-                <h4 class="footer-list-header ">Over De Schuimkraag</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Wordt Verkoper</a>
-            </li>
+            <ul class="footer-list-top ">
+                <li>
+                    <h4 class="footer-list-header ">Over De Schuimkraag</h4>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
+                <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
+            </ul>
+            <ul class="footer-list-top ">
+                <li>
+                    <h4 class="footer-list-header ">Geschenken Hoekje</h4>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
+            </ul>
+            <ul class="footer-list-top ">
+                <li id='help'>
+                    <h4 class="footer-list-header ">Hulp Sectie</h4>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
+                <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
+                <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
+            </ul>
 
-            <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
-
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
-        </ul>
-        <ul class="footer-list-top ">
-            <li>
-                <h4 class="footer-list-header ">Geschenken Hoekje</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
-        </ul>
-        <ul class="footer-list-top ">
-            <li id='help'>
-                <h4 class="footer-list-header ">Hulp Sectie</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
-            <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
-            <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
-            <li id='order-tracking'><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Track and Trace</a></li>
-        </ul>
-
-        <section class="footer-bottom-section flex-rw ">
-            <div class="footer-bottom-wrapper ">
-                2019 De Schuimkraag <address class="footer-address " role="company address ">Gent, BE</address><span class="footer-bottom-rights "> - Alle Rechten Voorbehouden - </span>
-            </div>
-            <div class="footer-bottom-wrapper ">
-                <a href="/terms-of-use.html " class="generic-anchor " rel="nofollow ">Terms</a> | <a href="/privacy-policy.html " class="generic-anchor " rel="nofollow ">Privacy</a>
-            </div>
-        </section>
-    </footer>
+            <section class="footer-bottom-section flex-rw">
+                <div class="footer-bottom-wrapper ">
+                    &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
+                </div>
+                <div class="footer-bottom-wrapper">
+                    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
+                        rel="nofollow">Privacy Beleid</a>
+                </div>
+            </section>
+        </footer>
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
     <script src="../public/js/login.js "></script>
- 
+    <script src="../public/js/footer.js "></script>
+    <script src="../public/js/registreer.js "></script>
 
 </body>
 
