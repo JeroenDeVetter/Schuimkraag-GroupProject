@@ -43,7 +43,30 @@
           foutboodschap.innerHTML = "<div>Achternaam is vereist &nbsp;</div><div>&#x274C;</div>";
           toggleErrorMessage(foutboodschap);
         }
+    }
+
+    function firmaNameInputVerify() {
+      console.log(this.value);
+      if (this.value !== "") {
+        firmanaamInput.value = cleanfirmName(this.value);
       }
+    }
+
+    function emailVerify() {
+      if (emailinput.value !== "") {
+          if (regmailCheck(emailinput.value)) {
+          emptyMessage(foutboodschap);
+          emailinput.value = cleanemail(emailinput.value);
+          } else {
+          foutboodschap.innerHTML = "Email heeft verkeerd formaat&nbsp;&#x274C";
+          toggleErrorMessage(foutboodschap);
+          }
+      }
+      else {
+          foutboodschap.innerHTML = "Email is vereist&nbsp;&#x274C;";
+          toggleErrorMessage(foutboodschap);
+      }
+    }
 
     function regfirstandlastnameCheck(nameCheck) {
         let nameRegex = /^[a-zA-Zàâçéèêëîïôûùüÿñæœ /'-]{2,}$/;
@@ -135,6 +158,99 @@
         }
         return string;
       }
+    
+     function BTWnrInputVerify(){
+      if (this.value.match(/^\d+$/)){
+        if (this.value.length == 10) {
+
+          let deel1 = parseInt(this.value.substr(0,8));
+          let deel2 = parseInt(this.value.substr(8));
+          let modulus = deel1%97;
+          if (deel2 + modulus == 97){
+            emptyMessage(foutboodschap);
+          }
+          else {
+            foutboodschap.innerHTML = "<div>BTW-nr is niet correct.&nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschap);
+          }
+        } else {
+          foutboodschap.innerHTML = "<div>BTW-nr dient 10 cijfers te bevatten en begint steeds met O  &nbsp;</div><div>&#x274C</div>";
+          toggleErrorMessage(foutboodschap);
+        }
+      }
+      else{
+        foutboodschap.innerHTML = "<div>BTW-nr dient uitsluitend cijfers te bevatten en begint steeds met O.  &nbsp;</div><div>&#x274C</div>";
+          toggleErrorMessage(foutboodschap);
+      }
+    }
+
+    function emailVerify() {
+      if (this.value !== "") {
+          if (regmailCheck(emailInput.value)) {
+          foutboodschap.innerHTML = "";
+          emailInput.value = cleanemail(emailInput.value);
+          } else {
+          foutboodschap.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
+          toggleErrorMessage(foutboodschap);
+          }
+      }
+      else {
+          foutboodschap.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
+          toggleErrorMessage(foutboodschap);
+      }
+    }
+
+    function passwordVerify() {
+      
+      if (paswoordInput.value !== "") {
+          if (regpasswordCheck(paswoordInput.value)) { // Second Change
+            emptyMessage(foutboodschap);
+          } else {
+              foutboodschap.innerHTML = "<div>Paswoord voldoet niet aan de regels. Minimaal 8 karakters. Min 1 hoofdletter, 1 kleine letter en 1 getal &nbsp;</div><div>&#x274C</div>";
+              toggleErrorMessage(foutboodschap);
+          }
+      }
+      else {
+          foutboodschap.innerHTML = "<div>Paswoord is vereist&nbsp;</div><div>&#x274C;</div>";
+          toggleErrorMessage(foutboodschap);
+      }
+  }
+  
+  function passwordVerify2() {
+      if (paswoord2Input.value !== "") {
+          console.log(this.value);
+          if (regpasswordCheck(paswoord2Input.value)) { // Second Change
+            emptyMessage(foutboodschap);
+          } else {
+              foutboodschap.innerHTML = "<div>Herhaalpaswoord voldoet niet aan de regels. Minimaal 8 karakters. Min 1 hoofdletter, 1 kleine letter en 1 getal &nbsp;</div><div>&#x274C</div>";
+              toggleErrorMessage(foutboodschap);
+          }
+      }
+      else {
+          foutboodschap.innerHTML = "<div>Paswoord is vereist&nbsp;</div><div>&#x274C;</div>";
+          toggleErrorMessage(foutboodschap);
+      }
+      if ((paswoordInput.value === paswoord2Input.value) && (paswoordInput.value.length >7)){
+        emptyMessage(foutboodschap);
+      } 
+      else {
+        if(paswoordInput.value !== paswoord2Input.value){
+          foutboodschap.innerHTML = "<div>Wachtwoorden zijn niet gelijk&nbsp;</div><div>&#x274C</div>";
+          toggleErrorMessage(foutboodschap);
+        }
+        else{
+          foutboodschap.innerHTML = "<div>Paswoorden voldoen niet aan de regels. Minimaal 8 karakters. Min 1 hoofdletter, 1 kleine letter en 1 getal &nbsp;</div><div>&#x274C</div>";
+          toggleErrorMessage(foutboodschap);
+        }
+          
+      }
+    }
+
+    function cleanfirmName(string){
+      string = string.trim();
+      string = string.toUpperCase();
+      return string;
+    }
 
     function emptyMessage(foutboodschap) {
         foutboodschap.innerHTML = "";
@@ -152,6 +268,11 @@
         this.classList.add("hide");
     }
 
+    function cleanemail(string){
+      return string.toLowerCase();
+    }
+  
+
     function addressInputVerify() {
       if (addressInput.value !== "") {
         if (regaddressCheck(this.value)) {
@@ -164,24 +285,34 @@
       }
     }
 
+    function regmailCheck(mailCheck) {
+      let emailRegex = /^(([\-\w]+)\.?)+@(([\-\w]+)\.?)+\.[a-zA-Z]{2,6}$/;
+      return (emailRegex.test(mailCheck));
+    }
+  
+
     function regaddressCheck(addressCheck) {
       let addressRegex = /^([1-9][e][\s])*([a-zA-Zàâçéèêëîïôûùüÿñ\- /']+(([.][\s])?|([\s]))?)+[1-9][0-9]*(([-]|[\/][1-9][[0-9]*)|([\s]?[a-zA-Z 1-9]+))?$/;
       return (addressRegex.test(addressCheck));
     }
 
-    
+    function regpasswordCheck(passwordCheck) {
+      let passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,13}$/;
+      return (passwordRegex.test(passwordCheck));
+    }
+
     voornaamInput.addEventListener('blur', firstNameInputVerify);
     achternaamInput.addEventListener('blur', lastNameInputVerify);
-    /* firmanaamInput.addEventListener('blur', firstNameInputVerify);
-    btwnrInput.addEventListener('blur', firstNameInputVerify);
-    emailInput.addEventListener('blur', firstNameInputVerify);
-    telefoonInput.addEventListener('blur', firstNameInputVerify);
+    firmanaamInput.addEventListener('blur', firmaNameInputVerify);
+    btwnrInput.addEventListener('blur', BTWnrInputVerify);
+    emailInput.addEventListener('blur', emailVerify);
+    /* telefoonInput.addEventListener('blur', firstNameInputVerify);
     straatInput.addEventListener('blur', firstNameInputVerify);
     huisnummerInput.addEventListener('blur', firstNameInputVerify);
-    postnummerInput.addEventListener('blur', firstNameInputVerify);
-    paswoordInput.addEventListener('blur', firstNameInputVerify);
-    paswoord2Input.addEventListener('blur', firstNameInputVerify);
- */
+    postnummerInput.addEventListener('blur', firstNameInputVerify);*/
+    paswoordInput.addEventListener('blur', passwordVerify);
+    paswoord2Input.addEventListener('blur', passwordVerify2);
+    
     foutboodschap.addEventListener("click", removeErrorMessage);
 
 
