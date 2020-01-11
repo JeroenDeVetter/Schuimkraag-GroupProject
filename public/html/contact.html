@@ -28,12 +28,12 @@
                     <li>
                         <a href="#">Home</a>
                     </li>
-                    <li ><a href="#">Over Ons</a>
+                    <li ><a href="about.php">Over Ons</a>
                     </li>
-                    <li><a href="login.html">Login</a>
+                    <li><a href="../../View/login.php">Login</a>
                     </li>
                     <li>
-                        <a href="#">E-Shop</a>
+                        <a href="shop.php">E-Shop</a>
                     </li>
                     <li class="active">
                         <a href="#">Contact</a>
@@ -49,35 +49,37 @@
     HTML CSSResult
     <section id="contact">
 
-        <h1 class="section-header">CONTACT</h1>
 
         <div class="contact-wrapper">
 
-            <!--
-
-      CONTACT PAGE LEFT 
-    
-            -->
+            <!--CONTACT PAGE LEFT -->
 
             <form class="form-horizontal" role="form" method="post" action="contact.php">
-
+                <h2 class="section-header">CONTACT</h2>
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <input type="text" class="form-control" id="name" placeholder="Naam" name="name" value="">
+                        <label> Naam <span class="req">*</span> </label>
+                        <input type="text" class="form-control" id="name" required data-validation-required-message= "Naam." autocomplete="off">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label> Email <span class="req">*</span> </label>
+                        <input type="email" class="form-control" id="email" name="email" required data-validation-required-message= "Email" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label>Uw bericht <span class="req">*</span> </label>
+                        <textarea class="form-control" rows="10" name="message"
+                        required data-validation-required-message= "Uw bericht" autocomplete="off"></textarea>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="">
-                    </div>
-                </div>
-
-                <textarea class="form-control" rows="10" placeholder="Uw Bericht" name="message"></textarea>
-
-                <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                <button class="btn btn-larger send-button" id="submit" type="submit" value="SEND">
         <div class="button">
-          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          <i class="fa fa-paper-plane"></i><span class="send-text">Verzend</span>
         </div>
       
       </button>
@@ -93,11 +95,12 @@
             <div class="direct-contact-container">
 
                 <ul class="contact-list">
+
+                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:+32476321861" title="Give me a call">(+32)0476 32 18 61</a></span></i></li>
+
+                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:deschuimkraag@gmail.com" title="Send me an email">deschumkraag@gmail.com</a></span></i></li>
+
                     <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Gent | BE</span></i></li>
-
-                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:+32476321861" title="Give me a call">(+32) 0476321861</a></span></i></li>
-
-                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:debierkraag@gmail.com" title="Send me an email">debierkraag@gmail.com</a></span></i></li>
 
                 </ul>
 
@@ -129,8 +132,7 @@
 
 
 
-</body>
-<div id="slide4" class="slideT"></div>
+
 <footer class="flex-rw ">
 
     <ul class="footer-list-top ">
@@ -170,6 +172,8 @@
         </div>
     </section>
 </footer>
+<script src="../js/footer.js "></script>
+</body>
 
 </div>
 
