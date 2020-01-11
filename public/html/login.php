@@ -50,16 +50,16 @@ var_dump($_SESSION);
                             <a href="#">Home</a>
                         </li>
                         <li>
-                            <a href="about.html">Over Ons</b> </a>
+                            <a href="about.php">Over Ons</b> </a>
                         </li>
                         <li class="active">
                             <a href="#">Login</b> </a>
                         </li>
                         <li>
-                            <a href="#">E-Shop</a>
+                            <a href="shop.php">E-Shop</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -144,7 +144,7 @@ var_dump($_SESSION);
                                     <div class="row">
                                         <div class="form-group col-sm-3">
                                             <label> Postcode <span class="req">*</span> </label>
-                                            <input type="PC" class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." autocomplete="off">
+                                            <input type="text" class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
 
@@ -256,7 +256,9 @@ var_dump($_SESSION);
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
         <script src="../js/login.js "></script>
         <script src="../js/footer.js "></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="../js/registreer.js "></script>
+        
 
 
     </body>
