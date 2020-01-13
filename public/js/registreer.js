@@ -10,10 +10,12 @@ let telefoonInput = document.querySelector('#phone');
 let straatInput = document.querySelector('#street');
 let huisnummerInput = document.querySelector('#streetnumber');
 let postnummerInput = document.querySelector('#postcode');
+let target = document.querySelector('#target');
 let paswoordInput = document.querySelector('#password');
 let paswoord2Input = document.querySelector('#password_control');
 let foutboodschap = document.querySelector('#error_message');
 
+const template = document.getElementById("gemeenteTemplate");
 
     function firstNameInputVerify() {
         if (this.value !== "") {
@@ -242,11 +244,36 @@ let foutboodschap = document.querySelector('#error_message');
       }
     }
 
-    function postalnumberVerify() {
+   function postalnumberVerify() {
       if (postnummerInput.value !== "") {
           if (regpostalnumberCheck(postnummerInput.value)) {
             connect_with_json_file(ax, postnummerInput.value);
-            /* emptyMessage(foutboodschap); */
+            if (foutboodschap.className == "warning hide"){
+              var arrayGemeente = [];
+              
+
+
+
+
+              find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente);
+              console.log(arrayGemeente);
+              /* setTimeout(() => { console.log(arrayGemeente); }, 500); */
+
+              
+              
+              
+              
+              
+
+
+
+              
+              arrayGemeente.forEach(buildtemplate);
+
+            }
+            else{
+              console.log("fout");
+            }
           }  else {
               foutboodschap.innerHTML = "<div>Dit is geen Belgisch postnummer.&nbsp;</div><div>&#x274C</div>";
               toggleErrorMessage(foutboodschap);
@@ -258,6 +285,8 @@ let foutboodschap = document.querySelector('#error_message');
           toggleErrorMessage(foutboodschap);
       }
     }
+
+  
 
     function passwordVerify() {
       
@@ -368,22 +397,18 @@ let foutboodschap = document.querySelector('#error_message');
       return (passwordRegex.test(passwordCheck));
     }
 
-    
-    
-    function  connect_with_json_file(ax, postnr){
+    function connect_with_json_file(ax, postnr){
       ax.get("schuimkraag_gemeente.json")
       .then((response) => {	
         let result = response.data;
-        console.log(postnr);
-    
-        for (var i = 0; i < result.length; i++){
-          console.log(result.length)
+        for (let i = 0; i < result.length; i++){
           if (result[i].postnummer == postnr){
-            foutboodschap.innerHTML = "<div>Dit is geen Belgisch postnummer.&nbsp;</div><div>&#x274C</div>";
-            toggleErrorMessage(foutboodschap);
+            emptyMessage(foutboodschap);
+            return;
           }
           else {
-            emptyMessage(foutboodschap);
+            foutboodschap.innerHTML = "<div>Dit is geen Belgisch postnummer.&nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschap); 
           }
         }
         //build template one
@@ -396,6 +421,37 @@ let foutboodschap = document.querySelector('#error_message');
       });
     }
 
+  function find_cities_with_same_postnr(ax, postnr,arrayGemeente){
+      ax.get("schuimkraag_gemeente.json")
+      .then((response) => {	
+        let result2 = response.data;
+        console.log(result2);
+        for (let i = 0; i < result2.length; i++){
+          if (result2[i].postnummer == postnr){
+            console.log(result2[i].gemeente);
+            console.log(typeof(result2[i].gemeente));
+            arrayGemeente.push(result2[i].gemeente); 
+          }
+        }
+        return arrayGemeente;    
+        })
+      .catch((error) => {
+        //catch error
+          console.log( "This path is not found , please try again <span class='stop'>&times;</span>");
+    
+      });
+    }
+
+    function buildtemplate(item){
+      console.log("in buildtemplate");
+      console.log(item);
+      var tmpl = template.content.cloneNode(true);
+      tmpl.value = item;
+      tmpl.innerHTML = item;
+      target.appendChild(tmpl);
+    }
+              
+  
   
 
     

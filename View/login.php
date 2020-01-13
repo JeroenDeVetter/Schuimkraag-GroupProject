@@ -146,11 +146,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                     </div>
 
                                     <div class="form-group col-sm-9">
-                                        <select name="gemeente" class="form-control" {# style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;" #}>
-                                            <option value=" volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
+                                        <select name="gemeente" class="form-control" id="target" {# style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;" #}>
+                                            <template id="gemeenteTemplate">
+                                                <option value=""></option>
+                                            </template>
                                         </select>
 
                                     </div>
