@@ -15,7 +15,7 @@ let paswoordInput = document.querySelector('#password');
 let paswoord2Input = document.querySelector('#password_control');
 let foutboodschap = document.querySelector('#error_message');
 
-const template = document.getElementById("gemeenteTemplate");
+
 
     function firstNameInputVerify() {
         if (this.value !== "") {
@@ -244,49 +244,40 @@ const template = document.getElementById("gemeenteTemplate");
       }
     }
 
-   function postalnumberVerify() {
+
+    function postalnumberVerify() {
       if (postnummerInput.value !== "") {
-          if (regpostalnumberCheck(postnummerInput.value)) {
-            connect_with_json_file(ax, postnummerInput.value);
-            if (foutboodschap.className == "warning hide"){
-              var arrayGemeente = [];
-              
-
-
-
-
-              find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente);
-              console.log(arrayGemeente);
-              /* setTimeout(() => { console.log(arrayGemeente); }, 500); */
-
-              
-              
-              
-              
-              
-
-
-
-              
-              arrayGemeente.forEach(buildtemplate);
-
-            }
-            else{
-              console.log("fout");
-            }
-          }  else {
+      if (regpostalnumberCheck(postnummerInput.value)) {
+      connect_with_json_file(ax, postnummerInput.value);
+      if (foutboodschap.className == "warning hide") {
+        var arrayGemeente = [];
+        
+                  find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente);
+                  target.innerHTML="";
+      
+                  setTimeout(() => {
+                      arrayGemeente.forEach(buildtemplate);
+                  }, 800);
+              } else {
+                  target.innerHTML="";
+                  console.log("fout");
+              }
+          } else {
+              target.innerHTML="";
               foutboodschap.innerHTML = "<div>Dit is geen Belgisch postnummer.&nbsp;</div><div>&#x274C</div>";
               toggleErrorMessage(foutboodschap);
-          } 
-          
-      }
-      else {
+          }
+      } else {
+          target.innerHTML="";
           foutboodschap.innerHTML = "<div>Postnummer is vereist&nbsp;</div><div>&#x274C;</div>";
           toggleErrorMessage(foutboodschap);
       }
-    }
+      
+      }
 
-  
+    function get_gemeentes(){
+       return new Promise(find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente));
+    }
 
     function passwordVerify() {
       
@@ -421,43 +412,48 @@ const template = document.getElementById("gemeenteTemplate");
       });
     }
 
-  function find_cities_with_same_postnr(ax, postnr,arrayGemeente){
+    function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
       ax.get("schuimkraag_gemeente.json")
-      .then((response) => {	
-        let result2 = response.data;
-        console.log(result2);
-        for (let i = 0; i < result2.length; i++){
-          if (result2[i].postnummer == postnr){
-            console.log(result2[i].gemeente);
-            console.log(typeof(result2[i].gemeente));
-            arrayGemeente.push(result2[i].gemeente); 
-          }
-        }
-        return arrayGemeente;    
-        })
+      .then((response) => {
+      let result2 = response.data;
+      for (let i = 0; i < result2.length; i++) {
+      if (result2[i].postnummer == postnr) {
+      console.log(result2[i].gemeente);
+      console.log(typeof(result2[i].gemeente));
+      arrayGemeente.push(result2[i].gemeente);
+      console.log(arrayGemeente);
+      }
+      }
+      return arrayGemeente;
+      })
       .catch((error) => {
-        //catch error
-          console.log( "This path is not found , please try again <span class='stop'>&times;</span>");
-    
-      });
+      //catch error
+      console.log("This path is not found , please try again <span class='stop'>×</span>");
+          });
     }
 
     function buildtemplate(item){
-      console.log("in buildtemplate");
-      console.log(item);
-      var tmpl = template.content.cloneNode(true);
-      tmpl.value = item;
-      tmpl.innerHTML = item;
-      target.appendChild(tmpl);
-    }
-              
-  
-  
-
     
+        var tmpl = document.createElement('option');
+        tmpl.setAttribute("value", item);
+        tmpl.innerHTML = item;
+        target.appendChild(tmpl);
+      
+    }
 
-
-
+    function CheckAll(event){
+      firstNameInputVerify();
+      lastNameInputVerify();
+      emailVerify();
+      phoneVerify();
+      streetInputVerify();
+      postalnumberVerify();
+      passwordVerify();
+      passwordVerify2();
+      if (foutboodschap.innerHTML === "") {
+        event.preventDefault();
+      }
+    }
 
     voornaamInput.addEventListener('blur', firstNameInputVerify);
     achternaamInput.addEventListener('blur', lastNameInputVerify);
@@ -470,5 +466,7 @@ const template = document.getElementById("gemeenteTemplate");
     postnummerInput.addEventListener('blur', postalnumberVerify);
     paswoordInput.addEventListener('blur', passwordVerify);
     paswoord2Input.addEventListener('blur', passwordVerify2);
+
+    form.addEventListener('submit', CheckAll);
     
     foutboodschap.addEventListener("click", removeErrorMessage);
