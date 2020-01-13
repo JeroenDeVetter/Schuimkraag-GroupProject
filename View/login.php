@@ -1,14 +1,13 @@
   
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 require '../src/Model/register.php';
 require '../src/Model/login.php';
+require '../src/Model/checkUser.php';
 session_start();
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register']))
     {
-        registerUser($_POST['company'],$_POST['firstName'],$_POST['lastName'],$_POST['btw'],$_POST['streedName'],$_POST['houseNum'],$_POST['gemeente'],$_POST['emailRegister'],$_POST['phoneNum'],$_POST['registerPass']);
+        checkUser($_POST['company'],$_POST['firstName'],$_POST['lastName'],$_POST['btw'],$_POST['streedName'],$_POST['houseNum'],$_POST['gemeente'],$_POST['emailRegister'],$_POST['phoneNum'],$_POST['registerPass']);
     }
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 {
@@ -70,6 +69,19 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
     <div id="form">
         <div class="container">
             <div class="col-lg-6">
+              <?php
+                 if (isset($_SESSION['Exists'])) {
+                     echo  '<div class="alert alert-danger mb-0"><h3>'. $_SESSION['Exists'] . '</h3></div>';
+                 }
+                 if (isset($_SESSION['success_message'])) {
+                     echo  '<div class="alert alert-danger mb-0"><h3>'. $_SESSION['success_message'] . '</h3></div>';
+                 }
+
+                if (isset($_SESSION['error_message'])) {
+                  echo  '<div class="alert alert-danger mb-0"><h3>'. $_SESSION['error_message'] . '</h3></div>';
+                }
+
+              ?>
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
                         <li class="active"><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
@@ -146,7 +158,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                     </div>
 
                                     <div class="form-group col-sm-9">
-                                        <select name="gemeente" class="form-control" id="target" {# style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;" #}>
+                                        <select name="gemeente" class="form-control" maxlength="4" id="target" {# style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;" #}>
                                         </select>
 
                                     </div>

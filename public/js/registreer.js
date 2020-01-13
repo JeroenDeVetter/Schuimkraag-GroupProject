@@ -246,27 +246,29 @@ function postalnumberVerify() {
                 var arrayGemeente = [];
 
                 find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente);
-
+                target.innerHTML = "";
                 setTimeout(() => {
                     console.log(arrayGemeente);
                     arrayGemeente.forEach(buildtemplate);
-                }, 800);
+                }, 450);
 
 
 
 
             } else {
-                arrayGemeente = "";
+                target.innerHTML = "";
                 console.log("fout");
             }
         } else {
             foutboodschap.innerHTML = "<div>Dit is geen Belgisch postnummer.&nbsp;</div><div>&#x274C</div>";
             toggleErrorMessage(foutboodschap);
+            target.innerHTML = "";
         }
 
     } else {
         foutboodschap.innerHTML = "<div>Postnummer is vereist&nbsp;</div><div>&#x274C;</div>";
         toggleErrorMessage(foutboodschap);
+        target.innerHTML = "";
     }
 }
 
@@ -422,14 +424,12 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
 }
 
 function buildtemplate(item) {
-    if (postnummerInput.length > 2) {
-        var tmpl = document.createElement('option');
-        tmpl.setAttribute("value", item[1]);
-        tmpl.innerHTML = item[0];
-        target.appendChild(tmpl);
-    } else {
-        target.innerHTML = "";
-    }
+
+    var tmpl = document.createElement('option');
+    tmpl.setAttribute("value", item[1]);
+    tmpl.innerHTML = item[0];
+    target.appendChild(tmpl);
+
 }
 
 
