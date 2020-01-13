@@ -14,7 +14,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 {
     login($_POST['emailLog'],$_POST['passLog']);
 }
-var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +58,7 @@ var_dump($_SESSION);
                             <a href="#">E-Shop</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="../public/html/contact.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -100,14 +99,14 @@ var_dump($_SESSION);
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Bedrijf (optioneel)<span class="req"></span> </label>
-                                            <input type="text" name="company" class="form-control" id="last_name" autocomplete="off">
+                                            <input type="text" name="company" class="form-control" id="company_name" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Btw-nr (optioneel). <span class="req"></span> </label>
-                                            <input type="text" name="btw" class="form-control" id="btw-nr" autocomplete="off">
+                                            <input type="text" name="btw" class="form-control" id="vat_nr" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -170,7 +169,7 @@ var_dump($_SESSION);
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label> Herhaal paswoord <span class="req">*</span> </label>
-                                            <input type="password" class="form-control" id="password-control" required data-validation-required-message=" Paswoorden komen niet overeen" autocomplete="off">
+                                            <input type="password" class="form-control" id="password_control" required data-validation-required-message=" Paswoorden komen niet overeen" autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -250,6 +249,7 @@ var_dump($_SESSION);
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../public/js/login.js "></script>
     <script src="../public/js/footer.js "></script>
     <script src="../public/js/registreer.js "></script>

@@ -28,14 +28,14 @@
                     <li>
                         <a href="#">Home</a>
                     </li>
-                    <li class="active"><a href="#">Over Ons</a>
+                    <li ><a href="about.php">Over Ons</a>
                     </li>
-                    <li><a href="login.html">Login</a>
+                    <li><a href="../../View/login.php">Login</a>
                     </li>
                     <li>
-                        <a href="#">E-Shop</a>
+                        <a href="shop.php">E-Shop</a>
                     </li>
-                    <li class="">
+                    <li class="active">
                         <a href="#">Contact</a>
                     </li>
                 </ul>
@@ -49,55 +49,62 @@
     HTML CSSResult
     <section id="contact">
 
-        <h1 class="section-header">CONTACT</h1>
 
         <div class="contact-wrapper">
 
-            <!---------------- 
-
-      CONTACT PAGE LEFT 
-    
-      ----------------->
+            <!--CONTACT PAGE LEFT -->
 
             <form class="form-horizontal" role="form" method="post" action="contact.php">
-
+                <h2 class="section-header">CONTACT</h2>
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <input type="text" class="form-control" id="name" placeholder="Naam" name="name" value="">
+                        <label> Naam <span class="req">*</span> </label>
+                        <input type="text" class="form-control" id="name" required data-validation-required-message= "Naam." autocomplete="off">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label> Email <span class="req">*</span> </label>
+                        <input type="email" class="form-control" id="email" name="email" required data-validation-required-message= "Email" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <label>Uw bericht <span class="req">*</span> </label>
+                        <textarea class="form-control" rows="10" name="message"
+                        required data-validation-required-message= "Uw bericht" autocomplete="off"></textarea>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="">
-                    </div>
-                </div>
-
-                <textarea class="form-control" rows="10" placeholder="Uw Bericht" name="message"></textarea>
-
-                <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                <button class="btn btn-larger send-button" id="submit" type="submit" value="SEND">
         <div class="button">
-          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          <i class="fa fa-paper-plane"></i><span class="send-text">Verzend</span>
         </div>
       
       </button>
 
             </form>
 
-            <!---------------- 
+            <!--
 
       CONTACT PAGE RIGHT 
     
-      ----------------->
+      -->
 
             <div class="direct-contact-container">
 
                 <ul class="contact-list">
-                    <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Gent | BE</span></i></li>
 
-                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:+32476321861" title="Give me a call">(+32) 0476321861</a></span></i></li>
+                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:+32476321861" title="Give me a call">(+32)0476 32 18 61</a></span></i></li>
 
+<<<<<<< HEAD
                     <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:deschuimkraag@gmail.com" title="Send me an email">debierkraag@gmail.com</a></span></i></li>
+=======
+                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:deschuimkraag@gmail.com" title="Send me an email">deschumkraag@gmail.com</a></span></i></li>
+
+                    <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Gent | BE</span></i></li>
+>>>>>>> df04bebd07bb63e484153db3733474807699819a
 
                 </ul>
 
@@ -128,53 +135,56 @@
 
 
 
+<<<<<<< HEAD
     <script src="login.js"></script>
 </body>
 <div id="slide4" class="slideT"></div>
 <footer class="flex-rw">
+=======
 
-    <ul class="footer-list-top">
+>>>>>>> df04bebd07bb63e484153db3733474807699819a
+
+<footer class="flex-rw ">
+
+    <ul class="footer-list-top ">
         <li>
-            <h4 class="footer-list-header">Over De Schuimkraag</h4>
+            <h4 class="footer-list-header ">Over De Schuimkraag</h4>
         </li>
-        <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Meer Over Ons</a>
+        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
         </li>
-        <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Promos</a></li>
-        <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Wordt Verkoper</a>
-        </li>
-
-        <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Jobs</a></li>
-
-        <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Evenementen</a>
-        </li>
+        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
+        <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
+        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
     </ul>
-    <ul class="footer-list-top">
+    <ul class="footer-list-top ">
         <li>
-            <h4 class="footer-list-header">Geschenken Hoekje</h4>
+            <h4 class="footer-list-header ">Geschenken Hoekje</h4>
         </li>
-        <li><a href='#' class="generic-anchor footer-list-anchor">Biermanden</a></li>
-        <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">Cadeaubonnen</a></li>
+        <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
+        <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
     </ul>
-    <ul class="footer-list-top">
+    <ul class="footer-list-top ">
         <li id='help'>
-            <h4 class="footer-list-header">Hulp Sectie</h4>
+            <h4 class="footer-list-header ">Hulp Sectie</h4>
         </li>
-        <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Contact</a></li>
-        <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
-        <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Zoek Winkel</a></li>
-        <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">Nieuwe Gebrukers</a></li>
-        <li id='order-tracking'><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Track and Trace</a></li>
+        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
+        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
+        <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
+        <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
     </ul>
 
     <section class="footer-bottom-section flex-rw">
         <div class="footer-bottom-wrapper ">
-            &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address><span class="footer-bottom-rights "> - Alle Rechten Voorbehouden - </span>
+            &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
         </div>
         <div class="footer-bottom-wrapper">
-            <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+            <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
+                rel="nofollow">Privacy Beleid</a>
         </div>
     </section>
 </footer>
+<script src="../js/footer.js "></script>
+</body>
 
 </div>
 
