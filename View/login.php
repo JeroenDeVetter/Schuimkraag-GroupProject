@@ -146,11 +146,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                     </div>
 
                                     <div class="form-group col-sm-9">
-                                        <select name="gemeente" class="form-control" {# style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;" #}>
-                                            <option value=" volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
+                                        <select name="gemeente" class="form-control" id="target" {# style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;" #}>
                                         </select>
 
                                     </div>
@@ -249,6 +245,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../public/js/login.js "></script>
     <script src="../public/js/footer.js "></script>
     <script src="../public/js/registreer.js "></script>
