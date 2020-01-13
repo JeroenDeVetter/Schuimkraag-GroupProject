@@ -47,6 +47,7 @@ textarea {
     color: #fff;
     letter-spacing: 1px;
     opacity: 70%;
+    font-family: 'Dosis', sans-serif;
 }
 
 .send-button {
@@ -54,7 +55,6 @@ textarea {
     height: 34px;
     width: 400px;
     overflow: hidden;
-    transition: all .2s ease-in-out;
     text-align: center;
     background-color: darkgreen;
     font-size: 15px;
@@ -63,7 +63,6 @@ textarea {
 .button {
     width: 400px;
     height: 34px;
-    transition: all .2s ease-in-out;
 }
 
 .send-text {
@@ -71,10 +70,6 @@ textarea {
     margin-top: 10px;
     font: 300 14px 'Lato', sans-serif;
     letter-spacing: 2px;
-}
-
-.button:hover {
-    transform: translate3d(0px, -29px, 0px);
 }
 
 
@@ -154,12 +149,13 @@ textarea {
     line-height: 70px;
     border-radius: 50%;
     color: #fff;
-    background-color: rgb(27, 27, 27);
+    background-color: black;
     cursor: pointer;
-    transition: all .2s ease-in-out;
+    opacity: 70%;
 }
 
-.social-media-list li:after {
+
+/* .social-media-list li:after {
     content: '';
     position: absolute;
     top: 0;
@@ -171,13 +167,14 @@ textarea {
     opacity: 0;
     box-shadow: 0 0 0 1px #fff;
     transition: all .2s ease-in-out;
-}
+} */
 
 .social-media-list li:hover {
     background-color: #fff;
 }
 
-.social-media-list li:hover:after {
+
+/* .social-media-list li:hover:after {
     opacity: 1;
     transform: scale(1.12);
     transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
@@ -185,7 +182,7 @@ textarea {
 
 .social-media-list li:hover a {
     color: #111;
-}
+} */
 
 .copyright {
     font: 200 14px 'Oswald', sans-serif;

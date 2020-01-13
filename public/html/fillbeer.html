@@ -13,6 +13,52 @@
 
 
 <body>
+    <div class="verify-window">
+
+        <img src="http://freevapekrd.ru/img/bez_imeni-2.png" alt="freevape">
+
+        <p>
+            <font size="2" face="Arial" line-height="1">Om toegang te krijgen tot deze site </font>
+        </p>
+
+        <p>
+            <font size="2" face="Arial" line-height="1">moet je minstens 18 jaar of ouder zijn.</font>
+        </p>
+
+        <div class="button-yes" data-popup-close="popup-1">Ja, ik ben minstens 18 jaar !
+        </div>
+
+        <a href="https://google.com" target="_parent">
+            <div class="button-no">Neen, ik ben nog geen 18 jaar !
+            </div>
+        </a>
+
+    </div>
+    <!-- // verify window -->
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/ageverif.js"></script>
+
+    <!-- Design: https://dribbble.com/shots/5035559-Cookie-Pop-up-Overlay-UI -->
+    <!-- Icon from flaticon -->
+    <div class="popup">
+        <img src="https://image.flaticon.com/icons/svg/2078/2078580.svg" alt="">
+        <h2>Hallo, Deze site maakt gebruik van cookies!</h2>
+        <p>Deze cookies laten de gebruiker toe om zonder zorgen gebruik te maken van deze website.</p>
+        <div class="btn-container">
+            <button class="btn">Lekker... cookies!</button>
+            <button class="btn ghost" id="trick">
+              Nee, Ik ben op dieet !
+              <span>Niet op mij klikken :(</span>
+          </button>
+        </div>
+    </div>
+
+
+    <script src="../js/cookies.js"></script>
 
     <div class="glass">
         <div class="wrapper">
@@ -87,10 +133,8 @@
         </svg>
     </div>
 
-    <div class="instructions">and<br/>hold to pour</div>
-</body>
-<footer>
+    <div class="instructions">en<br/>hou vast om te gieten</div>
 
-</footer>
+</body>
 
 </html>

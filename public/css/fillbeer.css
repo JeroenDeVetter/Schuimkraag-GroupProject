@@ -372,3 +372,154 @@ body {
         opacity: 1;
     }
 }
+
+.popup {
+    background-color: black;
+    box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    color: whitesmoke;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 400px;
+    margin-left: -550px;
+    margin-right: 100px;
+}
+
+.popup p {
+    color: whitesmoke;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #3498db;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 30px;
+    position: relative;
+    margin: 10px;
+}
+
+.btn:active {
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn.ghost {
+    background-color: #fff;
+    color: #3498db;
+    box-shadow: none;
+}
+
+.btn.ghost span {
+    background-color: #3498db;
+    border: 0;
+    border-radius: 5px;
+    /* 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); */
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 7px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    transform: rotate(10deg);
+}
+
+.popup img {
+    width: 70px;
+}
+
+.verify-window {
+    position: absolute;
+    left: 65%;
+    top: 50%;
+    width: 475px;
+    height: 425px;
+    margin-top: -200px;
+    margin-right: -750px;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 40px;
+    background-color: black;
+    box-sizing: border-box;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.verify-window img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.verify-window h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: whitesmoke;
+    line-height: 1.7;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.verify-window p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: whitesmoke;
+    margin-top: 10px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.button-yes,
+.button-no {
+    background: #fff;
+    color: #ADCC21;
+    width: 30%;
+    margin-top: 20px;
+    border: 2px solid #ADCC21;
+    padding: 12px 17px;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1em;
+}
+
+.button-no {
+    float: right;
+    margin-right: 40px;
+    border: 2px solid #95969a;
+    color: #95969a;
+    display: block;
+}
+
+.button-yes {
+    float: left;
+    margin-left: 40px;
+}
+
+.button-yes:hover {
+    background: #ADCC21;
+    color: #fff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.button-no:hover {
+    background: #95969a;
+    color: #fff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
