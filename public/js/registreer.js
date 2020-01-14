@@ -10,9 +10,12 @@ let telefoonInput = document.querySelector('#phone');
 let straatInput = document.querySelector('#street');
 let huisnummerInput = document.querySelector('#streetnumber');
 let postnummerInput = document.querySelector('#postcode');
+let target = document.querySelector('#target');
 let paswoordInput = document.querySelector('#password');
 let paswoord2Input = document.querySelector('#password_control');
+
 let foutboodschap = document.querySelector('#error_message');
+
 
 
     function firstNameInputVerify() {
@@ -53,10 +56,10 @@ let foutboodschap = document.querySelector('#error_message');
     }
 
     function emailVerify() {
-      if (emailinput.value !== "") {
-          if (regmailCheck(emailinput.value)) {
+      if (emailInput.value !== "") {
+          if (regmailCheck(emailInput.value)) {
           emptyMessage(foutboodschap);
-          emailinput.value = cleanemail(emailinput.value);
+          emailInput.value = cleanemail(emailInput.value);
           } else {
           foutboodschap.innerHTML = "Email heeft verkeerd formaat&nbsp;&#x274C";
           toggleErrorMessage(foutboodschap);
@@ -242,25 +245,40 @@ let foutboodschap = document.querySelector('#error_message');
       }
     }
 
+
     function postalnumberVerify() {
       if (postnummerInput.value !== "") {
-          if (regpostalnumberCheck(postnummerInput.value)) {
-            connect_with_json_file(ax, postnummerInput.value);
-            /* emptyMessage(foutboodschap); */
-          }  else {
+      if (regpostalnumberCheck(postnummerInput.value)) {
+      connect_with_json_file(ax, postnummerInput.value);
+      if (foutboodschap.className == "warning hide") {
+        var arrayGemeente = [];
+                  find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente);
+                  target.innerHTML="";
+                  setTimeout(() => {
+                      arrayGemeente.forEach(buildtemplate);
+                  }, 450);
+              } else {
+                  target.innerHTML="";
+                  console.log("fout");
+              }
+          } else {
+              target.innerHTML="";
               foutboodschap.innerHTML = "<div>Dit is geen Belgisch postnummer.&nbsp;</div><div>&#x274C</div>";
               toggleErrorMessage(foutboodschap);
-          } 
-          
-      }
-      else {
+          }
+      } else {
+          target.innerHTML="";
           foutboodschap.innerHTML = "<div>Postnummer is vereist&nbsp;</div><div>&#x274C;</div>";
           toggleErrorMessage(foutboodschap);
       }
+      
+      }
+
+    function get_gemeentes(){
+       return new Promise(find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente));
     }
 
-    function passwordVerify() {
-      
+    function passwordVerify() { 
       if (paswoordInput.value !== "") {
           if (regpasswordCheck(paswoordInput.value)) { // Second Change
             emptyMessage(foutboodschap);
@@ -273,9 +291,9 @@ let foutboodschap = document.querySelector('#error_message');
           foutboodschap.innerHTML = "<div>Paswoord is vereist&nbsp;</div><div>&#x274C;</div>";
           toggleErrorMessage(foutboodschap);
       }
-  }
+    }
   
-  function passwordVerify2() {
+    function passwordVerify2() {
       if (paswoord2Input.value !== "") {
           if (regpasswordCheck(paswoord2Input.value)) { // Second Change
             emptyMessage(foutboodschap);
@@ -368,22 +386,18 @@ let foutboodschap = document.querySelector('#error_message');
       return (passwordRegex.test(passwordCheck));
     }
 
-    
-    
-    function  connect_with_json_file(ax, postnr){
+    function connect_with_json_file(ax, postnr){
       ax.get("schuimkraag_gemeente.json")
       .then((response) => {	
         let result = response.data;
-        console.log(postnr);
-    
-        for (var i = 0; i < result.length; i++){
-          console.log(result.length)
+        for (let i = 0; i < result.length; i++){
           if (result[i].postnummer == postnr){
-            foutboodschap.innerHTML = "<div>Dit is geen Belgisch postnummer.&nbsp;</div><div>&#x274C</div>";
-            toggleErrorMessage(foutboodschap);
+            emptyMessage(foutboodschap);
+            return;
           }
           else {
-            emptyMessage(foutboodschap);
+            foutboodschap.innerHTML = "<div>Dit is geen Belgisch postnummer.&nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschap); 
           }
         }
         //build template one
@@ -396,12 +410,50 @@ let foutboodschap = document.querySelector('#error_message');
       });
     }
 
-  
+    function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
+      ax.get("schuimkraag_gemeente.json")
+      .then((response) => {
+      let result = response.data;
+      for (let i = 0; i < result.length; i++) {
+      if (result[i].postnummer == postnr) {
+      console.log(result[i].gemeente);
+      console.log(typeof(result[i].gemeente));
+      let gemeente = result[i].gemeente.toLowerCase();
+      let gemeenteFirstLetterCapitalize = gemeente.charAt(0).toUpperCase() + gemeente.slice(1);
+      arrayGemeente.push(gemeenteFirstLetterCapitalize);
+      console.log(arrayGemeente);
+      }
+      }
+      return arrayGemeente;
+      })
+      .catch((error) => {
+      //catch error
+      console.log("This path is not found , please try again <span class='stop'>×</span>");
+          });
+    }
 
+    function buildtemplate(item){
     
+        var tmpl = document.createElement('option');
+        tmpl.setAttribute("value", item);
+        tmpl.innerHTML = item;
+        target.appendChild(tmpl);
+      
+    }
 
-
-
+    function CheckAll(event){
+      firstNameInputVerify();
+      lastNameInputVerify();
+      emailVerify();
+      phoneVerify();
+      streetInputVerify();
+      postalnumberVerify();
+      passwordVerify();
+      passwordVerify2();
+      if (foutboodschap.innerHTML === "") {
+        event.preventDefault();
+      }
+    }
 
     voornaamInput.addEventListener('blur', firstNameInputVerify);
     achternaamInput.addEventListener('blur', lastNameInputVerify);
@@ -414,5 +466,7 @@ let foutboodschap = document.querySelector('#error_message');
     postnummerInput.addEventListener('blur', postalnumberVerify);
     paswoordInput.addEventListener('blur', passwordVerify);
     paswoord2Input.addEventListener('blur', passwordVerify2);
+
+    form.addEventListener('submit', CheckAll);
     
     foutboodschap.addEventListener("click", removeErrorMessage);
