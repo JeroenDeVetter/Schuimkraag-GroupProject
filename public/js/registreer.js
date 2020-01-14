@@ -15,7 +15,6 @@ let target = document.getElementById('target');
 let paswoordInput = document.querySelector('#password');
 let paswoord2Input = document.querySelector('#password_control');
 let foutboodschap = document.querySelector('#error_message');
-
 const template = document.querySelector("#gemeenteTemplate");
 
 function firstNameInputVerify() {
@@ -433,10 +432,48 @@ function buildtemplate(item) {
 }
 
 
+function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
+    ax.get("schuimkraag_gemeente.json")
+        .then((response) => {
+            let result2 = response.data;
+            for (let i = 0; i < result2.length; i++) {
+                if (result2[i].postnummer == postnr) {
+                    console.log(result2[i].gemeente);
+                    console.log(typeof(result2[i].gemeente));
+                    arrayGemeente.push(result2[i].gemeente);
+                    console.log(arrayGemeente);
+                }
+            }
+            return arrayGemeente;
+        })
+        .catch((error) => {
+            //catch error
+            console.log("This path is not found , please try again <span class='stop'>×</span>");
+        });
+}
 
+function buildtemplate(item) {
 
+    var tmpl = document.createElement('option');
+    tmpl.setAttribute("value", item);
+    tmpl.innerHTML = item;
+    target.appendChild(tmpl);
 
+}
 
+function CheckAll(event) {
+    firstNameInputVerify();
+    lastNameInputVerify();
+    emailVerify();
+    phoneVerify();
+    streetInputVerify();
+    postalnumberVerify();
+    passwordVerify();
+    passwordVerify2();
+    if (foutboodschap.innerHTML === "") {
+        event.preventDefault();
+    }
+}
 
 voornaamInput.addEventListener('blur', firstNameInputVerify);
 achternaamInput.addEventListener('blur', lastNameInputVerify);
@@ -449,5 +486,7 @@ huisnummerInput.addEventListener('blur', streetNumberInputVerify);
 postnummerInput.addEventListener('blur', postalnumberVerify);
 paswoordInput.addEventListener('blur', passwordVerify);
 paswoord2Input.addEventListener('blur', passwordVerify2);
+
+//form.addEventListener('submit', CheckAll);
 
 foutboodschap.addEventListener("click", removeErrorMessage);

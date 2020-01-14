@@ -153,7 +153,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                 <div class="row">
                                     <div class="form-group col-sm-3">
                                         <label> Postcode <span class="req">*</span> </label>
-                                        <input type="PC" name="postcode" class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." autocomplete="off">
+                                        <input type="PC" name="postcode" class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." maxlength ="4" autocomplete="off">
                                         <p class="help-block text-danger"></p>
                                     </div>
 
