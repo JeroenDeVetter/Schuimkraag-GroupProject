@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    background: black;
     height: 100%;
     display: flex;
     align-items: center;
@@ -84,7 +83,6 @@ body {
     padding-bottom: 15%;
     margin-top: -5%;
     border-radius: 50%;
-    background: #000;
     opacity: 0.35;
 }
 
@@ -374,7 +372,6 @@ body {
 }
 
 .popup {
-    background-color: black;
     box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.3);
     border-radius: 25px;
     color: whitesmoke;
@@ -452,7 +449,6 @@ body {
     overflow: hidden;
     border-radius: 25px;
     padding: 40px;
-    background-color: black;
     box-sizing: border-box;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }

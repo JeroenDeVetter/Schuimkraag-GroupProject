@@ -19,7 +19,6 @@
     overflow: hidden;
     border-radius: 10px;
     padding: 40px;
-    background-color: grey;
     box-sizing: border-box;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
@@ -85,7 +84,6 @@
 }
 
 .button-no:hover {
-    background: #95969a;
     color: #fff;
     transition: all 0.2s ease;
     cursor: pointer;

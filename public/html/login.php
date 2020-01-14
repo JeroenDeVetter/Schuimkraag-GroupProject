@@ -254,7 +254,7 @@ var_dump($_SESSION);
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
-    <script src="../js/login.js "></script>
+    <script src="../js/input.js "></script>
     <script src="../js/footer.js "></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../js/registreer.js "></script>
