@@ -17,8 +17,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 var_dump($_SESSION);
 
 ?>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
+=======
+   <!--  <!DOCTYPE html>
+    <html lang="en">
+>>>>>>> 080505541600c5afda101b157ff334d85e8f7e00
 
 <head>
     <meta charset="UTF-8">
@@ -32,11 +37,19 @@ var_dump($_SESSION);
     <title>Login-or-Registration</title>
 </head>
 
+<<<<<<< HEAD
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+=======
+    <body> -->
+        <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+>>>>>>> 080505541600c5afda101b157ff334d85e8f7e00
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>

@@ -89,9 +89,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade active in" id="signup">
-                        <h2 class="text-uppercase text-center">Registreer</h2>
-                        <div class="warning hide" id="error_message">
-                                </div>
+                            <h2 class="text-uppercase text-center">Registreer</h2>
+                            <div class="warning hide" id="error_message"></div>
                             <form action="" method="post" id="signup" novalidate>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6">
@@ -191,15 +190,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                         </div>
                         <div class="tab-pane fade in" id="login">
                             <h2 class="text-uppercase text-center"> Log in</h2>
+                            <div class="warning hide" id="error_message_login"></div>
                             <form action="" method="post" id="login" novalidate>
                                 <div class="form-group">
                                     <label> Emailadres <span class="req">*</span> </label>
-                                    <input type="email" name="emailLog" class="form-control" id="email" required data-validation-required-message="Gelieve hier Uw emailadres in te geven" autocomplete="off">
+                                    <input type="email" name="emailLog" class="form-control" id="email_login" required data-validation-required-message="Gelieve hier Uw emailadres in te geven" autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
                                     <label> Paswoord <span class="req">*</span> </label>
-                                    <input type="password" name="passLog" class="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off">
+                                    <input type="password" name="passLog" class="form-control" id="password_login" required data-validation-required-message="Please enter your password" autocomplete="off">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="mrgn-30-top">
@@ -264,6 +264,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
     <script src="../public/js/input.js "></script>
     <script src="../public/js/footer.js "></script>
     <script src="../public/js/registreer.js "></script>
+    <script src="../public/js/login.js"></script>
 
 </body>
 
