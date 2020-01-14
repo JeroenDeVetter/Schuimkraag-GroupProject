@@ -37,4 +37,5 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
     )
   ");
 
+
 }

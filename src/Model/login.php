@@ -10,9 +10,9 @@ function login($email,$pass) {
     $userEmail = trim($email);
     $password = trim($pass);
     
-    $sql = "SELECT email, hashed_wachtwoord,klant_voornaam , klant_achternaam FROM klant WHERE email = :email";
+    $sql = "SELECT email, hashed_wachtwoord FROM klant WHERE email = :email";
     $stmt = openConnection()->prepare($sql);
-    $stmt->bindValue(':email', $userEmail);
+    $stmt->bindValue(':email', $userEmail );
         //Execute sql
     $stmt->execute();
 
@@ -22,14 +22,22 @@ function login($email,$pass) {
      
     } 
     if (password_verify($pass, $row['hashed_wachtwoord']) == true) {
-            $var = $row;
-            $_SESSION['success_message'] = "you are loged in";
-            $_SESSION['voornaam'] = $row['klant_voornaam'];
-            $_SESSION['email'] = $row['email'];
-
-            $test = $row['hashed_wachtwoord'];
+            $_SESSION['success_message'] = "U bent aangemeld";
+            if (isset($_SESSION['error_message'])) {
+                unset($_SESSION['error_message']);
+                if ($_SESSION['Exists']) {
+                    unset($_SESSION['Exists']);
+                }
+            }
     }
     else {
+        if (isset($_SESSION['success_message'])) {
+            unset($_SESSION['success_message']);
+            if ($_SESSION['Exists']) {
+                unset($_SESSION['Exists']);
+            }
+        }
+
         $_SESSION['error_message'] = "user and/or password are not correct";
     }
 
