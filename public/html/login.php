@@ -19,10 +19,6 @@ var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-=======
-
->>>>>>> a5ed1d4bafc423ba6791b506876a88e16985e331
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,23 +30,6 @@ var_dump($_SESSION);
     <link rel="stylesheet" href="../css/footer.css">
     <title>Login-or-Registration</title>
 </head>
-<<<<<<< HEAD
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-=======
-
->>>>>>> a5ed1d4bafc423ba6791b506876a88e16985e331
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>

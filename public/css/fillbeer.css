@@ -1,9 +1,6 @@
-html {
-    height: 100%;
-}
-
 body {
     height: 100%;
+    background-color: black;
     /* display: flex;
     align-items: center;
     justify-content: center;
@@ -438,23 +435,24 @@ body {
     width: 70px;
 }
 
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .verify-window {
-    margin: auto;
-    width: 500px;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 25px;
-    padding: 40px;
     background-color: black;
-    box-sizing: border-box;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+    display: inline-flex;
+    align-items: flex-start;
+    align-content: center;
 }
 
 .verify-window img {
-    display: block;
     width: 5em;
     height: 5em;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
 }
 
@@ -472,7 +470,6 @@ body {
     font-size: 1em;
     color: whitesmoke;
     text-align: center;
-    margin: 0;
 }
 
 .button-yes,
@@ -489,16 +486,8 @@ body {
 }
 
 .button-no {
-    float: right;
-    margin-right: 40px;
     border: 2px solid #95969a;
     color: #95969a;
-    display: block;
-}
-
-.button-yes {
-    float: left;
-    margin-left: 40px;
 }
 
 .button-yes:hover {
@@ -521,4 +510,10 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.middle {
+    display: block;
+    width: 60%;
+    text-align: center;
 }
