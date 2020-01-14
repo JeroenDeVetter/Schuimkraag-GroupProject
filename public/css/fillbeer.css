@@ -443,6 +443,7 @@ body {
 
 .verify-window {
     margin: auto;
+    display: inline;
     
     width: 500px;
     height: 500px;
