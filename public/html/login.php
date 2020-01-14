@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 var_dump($_SESSION);
 
 ?>
-    <!DOCTYPE html>
+   <!--  <!DOCTYPE html>
     <html lang="en">
 
     <head>
@@ -32,7 +32,7 @@ var_dump($_SESSION);
         <title>Login-or-Registration</title>
     </head>
 
-    <body>
+    <body> -->
         <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
             <div class="container">
                 <div class="navbar-header">

@@ -176,7 +176,7 @@ div#form {
         transition: all .6s;
     }
     #userform .nav-tabs.nav-justified>li>a:hover {
-        background-color: #86c232;
+        background-color: rgb(55, 94, 9);
         border-color: transparent;
         border: 0;
         -webkit-transition: all .6s;
@@ -454,4 +454,14 @@ a {
 .show {
     display: flex !important;
     justify-content: space-between !important;
+}
+
+option{
+    color: white;
+    background: rgba(0, 0, 0, 0.75);
+    
+}
+element{
+    color: white;
+    opacity: 100%!important;
 }

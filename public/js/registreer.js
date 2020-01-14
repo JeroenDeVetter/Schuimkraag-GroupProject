@@ -13,6 +13,7 @@ let postnummerInput = document.querySelector('#postcode');
 let target = document.querySelector('#target');
 let paswoordInput = document.querySelector('#password');
 let paswoord2Input = document.querySelector('#password_control');
+
 let foutboodschap = document.querySelector('#error_message');
 
 
@@ -55,10 +56,10 @@ let foutboodschap = document.querySelector('#error_message');
     }
 
     function emailVerify() {
-      if (emailinput.value !== "") {
-          if (regmailCheck(emailinput.value)) {
+      if (emailInput.value !== "") {
+          if (regmailCheck(emailInput.value)) {
           emptyMessage(foutboodschap);
-          emailinput.value = cleanemail(emailinput.value);
+          emailInput.value = cleanemail(emailInput.value);
           } else {
           foutboodschap.innerHTML = "Email heeft verkeerd formaat&nbsp;&#x274C";
           toggleErrorMessage(foutboodschap);
@@ -257,7 +258,7 @@ let foutboodschap = document.querySelector('#error_message');
       
                   setTimeout(() => {
                       arrayGemeente.forEach(buildtemplate);
-                  }, 800);
+                  }, 450);
               } else {
                   target.innerHTML="";
                   console.log("fout");
@@ -279,8 +280,7 @@ let foutboodschap = document.querySelector('#error_message');
        return new Promise(find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente));
     }
 
-    function passwordVerify() {
-      
+    function passwordVerify() { 
       if (paswoordInput.value !== "") {
           if (regpasswordCheck(paswoordInput.value)) { // Second Change
             emptyMessage(foutboodschap);
@@ -293,9 +293,9 @@ let foutboodschap = document.querySelector('#error_message');
           foutboodschap.innerHTML = "<div>Paswoord is vereist&nbsp;</div><div>&#x274C;</div>";
           toggleErrorMessage(foutboodschap);
       }
-  }
+    }
   
-  function passwordVerify2() {
+    function passwordVerify2() {
       if (paswoord2Input.value !== "") {
           if (regpasswordCheck(paswoord2Input.value)) { // Second Change
             emptyMessage(foutboodschap);
@@ -415,12 +415,14 @@ let foutboodschap = document.querySelector('#error_message');
     function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
       ax.get("schuimkraag_gemeente.json")
       .then((response) => {
-      let result2 = response.data;
-      for (let i = 0; i < result2.length; i++) {
-      if (result2[i].postnummer == postnr) {
-      console.log(result2[i].gemeente);
-      console.log(typeof(result2[i].gemeente));
-      arrayGemeente.push(result2[i].gemeente);
+      let result = response.data;
+      for (let i = 0; i < result.length; i++) {
+      if (result[i].postnummer == postnr) {
+      console.log(result[i].gemeente);
+      console.log(typeof(result[i].gemeente));
+      let gemeente = result[i].gemeente.toLowerCase();
+      let gemeenteFirstLetterCapitalize = gemeente.charAt(0).toUpperCase() + gemeente.slice(1);
+      arrayGemeente.push(gemeenteFirstLetterCapitalize);
       console.log(arrayGemeente);
       }
       }
