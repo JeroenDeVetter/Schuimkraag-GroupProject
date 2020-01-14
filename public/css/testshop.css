@@ -8,7 +8,11 @@
 
 body {
     font-family: "Open Sans", sans-serif;
+<<<<<<< HEAD
+    overflow: auto;
+=======
     overflow: hidden;
+>>>>>>> df04bebd07bb63e484153db3733474807699819a
 }
 
 #wrapper {

@@ -1,0 +1,92 @@
+#popup {
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.verify-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    margin-left: -300px;
+    margin-top: -175px;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 40px;
+    background-color: grey;
+    box-sizing: border-box;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.verify-window img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.verify-window h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #4d4d4d;
+    line-height: 1.7;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.verify-window p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #4d4d4d;
+    margin-top: 10px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.button-yes,
+.button-no {
+    background: #fff;
+    color: #ADCC21;
+    width: 30%;
+    margin-top: 20px;
+    border: 2px solid #ADCC21;
+    padding: 12px 17px;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1em;
+}
+
+.button-no {
+    float: right;
+    margin-right: 40px;
+    border: 2px solid #95969a;
+    color: #95969a;
+    display: block;
+}
+
+.button-yes {
+    float: left;
+    margin-left: 40px;
+}
+
+.button-yes:hover {
+    background: #ADCC21;
+    color: #fff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.button-no:hover {
+    background: #95969a;
+    color: #fff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}

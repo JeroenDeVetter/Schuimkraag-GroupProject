@@ -206,6 +206,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                     <button type="submit" name="logIN" class="btn btn-larger btn-block" > Log in
                                     </button>
                                 </div>
+                                <div class="link">
+                                    <a href="#">Wachtwoord vergeten?</a>
+                                </div>
                             </form>
 
                         </div>

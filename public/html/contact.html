@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/contact.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>contact</title>
 </head>
-<header>
+
+<body>
     <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
             <div class="navbar-header">
@@ -21,160 +24,175 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../../html-css-js" class="navbar-brand">De Schuimkraag</a>
+                <a href="" class="navbar-brand">De Schuimkraag</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#">Home</a>
                     </li>
-                    <li ><a href="about.php">Over Ons</a>
+                    <li>
+                        <a href="about.php">Over Ons</b> </a>
                     </li>
-                    <li><a href="../../View/login.php">Login</a>
+                    <li class="active">
+                        <a href="#">Login</b> </a>
                     </li>
                     <li>
                         <a href="shop.php">E-Shop</a>
                     </li>
-                    <li class="active">
-                        <a href="#">Contact</a>
+                    <li>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
+
     </div>
-    </div>
-</header>
-
-<body>
-    HTML CSSResult
-    <section id="contact">
 
 
-        <div class="contact-wrapper">
+    <!--========================-->
+    <div id="form">
+        <div class="container">
+            <div class="col-lg-6">
+                <div id="userform">
 
-            <!--CONTACT PAGE LEFT -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="signup">
+                            <h2 class="text-uppercase text-center">Contacteer Ons</h2>
 
-            <form class="form-horizontal" role="form" method="post" action="contact.php">
-                <h2 class="section-header">CONTACT</h2>
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <label> Naam <span class="req">*</span> </label>
-                        <input type="text" class="form-control" id="name" required data-validation-required-message= "Naam." autocomplete="off">
+                            <div class="warning hide" id="error_message">
+                            </div>
+                            <form id="signup" novalidate>
+                                <div class="row">
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label> Naam <span class="req">*</span> </label>
+                                    <input type="text" class="form-control" id="naam" required data-validation-required-message="Gelieve hier emailadres in te geven." autocomplete="off">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label> Email <span class="req">*</span> </label>
+                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Gelieve hier telefoonnummer in te geven." autocomplete="off">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="bericht"> Uw Bericht<span class="req">*</span> </label>
+                                    <!-- <input type="text" class="form-control" id="bericht" required data-validation-required-message="Gelieve hier telefoonnummer in te geven." autocomplete="off"> -->
+                                    <textarea class="form-control" rows="10" name="message" required data-validation-required-message="Uw bericht" autocomplete="off"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+
+
+
+
+                        </div>
+
+                        <div class="mrgn-30-top">
+                            <button type="submit" class="btn btn-larger btn-block">
+                                Verzend Bericht
+                            </button>
+                        </div>
+                        </form>
+
+
                     </div>
+
                 </div>
-                
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <label> Email <span class="req">*</span> </label>
-                        <input type="email" class="form-control" id="email" name="email" required data-validation-required-message= "Email" autocomplete="off">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <label>Uw bericht <span class="req">*</span> </label>
-                        <textarea class="form-control" rows="10" name="message"
-                        required data-validation-required-message= "Uw bericht" autocomplete="off"></textarea>
-                    </div>
-                </div>
-
-                <button class="btn btn-larger send-button" id="submit" type="submit" value="SEND">
-        <div class="button">
-          <i class="fa fa-paper-plane"></i><span class="send-text">Verzend</span>
-        </div>
-      
-      </button>
-
-            </form>
-
-            <!--
-
-      CONTACT PAGE RIGHT 
-    
-      -->
-
-            <div class="direct-contact-container">
-
-                <ul class="contact-list">
-
-                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:+32476321861" title="Give me a call">(+32)0476 32 18 61</a></span></i></li>
-
-                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:deschuimkraag@gmail.com" title="Send me an email">deschumkraag@gmail.com</a></span></i></li>
-
-                    <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Gent | BE</span></i></li>
-
-                </ul>
-
-                <hr>
-                <ul class="social-media-list">
-                    <li>
-                        <a href="#" target="_blank" class="contact-icon">
-                            <i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank" class="contact-icon">
-                            <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank" class="contact-icon">
-                            <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-
-                </ul>
-
-
             </div>
+            <div class="col-lg-6">
+                <div class="direct-contact-container">
 
+                    <ul class="contact-list">
+
+                        <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                                        href="tel:+32476321861" title="Give me a call">(+32)0476 32 18 61</a></span></i>
+                        </li>
+
+                        <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
+                                        href="mailto:deschuimkraag@gmail.com"
+                                        title="Send me an email">deschuimkraag@gmail.com</a></span></i></li>
+
+                        <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Gent |
+                                    BE</span></i></li>
+
+                    </ul>
+
+                    <hr>
+                    <ul class="social-media-list">
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact-icon">
+                                <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
         </div>
+    </div>
+    <!-- /.container -->
+    </div>
+    <footer class="flex-rw ">
 
-    </section>
+        <ul class="footer-list-top ">
+            <li>
+                <h4 class="footer-list-header ">Over De Schuimkraag</h4>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
+            <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
+        </ul>
+        <ul class="footer-list-top ">
+            <li>
+                <h4 class="footer-list-header ">Geschenken Hoekje</h4>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
+        </ul>
+        <ul class="footer-list-top ">
+            <li id='help'>
+                <h4 class="footer-list-header ">Hulp Sectie</h4>
+            </li>
+            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
+            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
+            <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
+            <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
+        </ul>
+
+        <section class="footer-bottom-section flex-rw">
+            <div class="footer-bottom-wrapper ">
+                &copy; De Schuimkraag <span id="htmlYear">year </span>
+                <address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
+            </div>
+            <div class="footer-bottom-wrapper">
+                <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
+                    rel="nofollow">Privacy Beleid</a>
+            </div>
+        </section>
+    </footer>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
+    <script src="../js/login.js "></script>
+    <script src="../js/footer.js "></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/registreer.js "></script>
 
 
 
-
-
-
-<footer class="flex-rw ">
-
-    <ul class="footer-list-top ">
-        <li>
-            <h4 class="footer-list-header ">Over De Schuimkraag</h4>
-        </li>
-        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
-        </li>
-        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
-        <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
-        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
-    </ul>
-    <ul class="footer-list-top ">
-        <li>
-            <h4 class="footer-list-header ">Geschenken Hoekje</h4>
-        </li>
-        <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
-        <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
-    </ul>
-    <ul class="footer-list-top ">
-        <li id='help'>
-            <h4 class="footer-list-header ">Hulp Sectie</h4>
-        </li>
-        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
-        <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
-        <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
-        <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
-    </ul>
-
-    <section class="footer-bottom-section flex-rw">
-        <div class="footer-bottom-wrapper ">
-            &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
-        </div>
-        <div class="footer-bottom-wrapper">
-            <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
-                rel="nofollow">Privacy Beleid</a>
-        </div>
-    </section>
-</footer>
-<script src="../js/footer.js "></script>
 </body>
-
-</div>
 
 </html>
