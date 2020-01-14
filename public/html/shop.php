@@ -2,7 +2,7 @@
 require "../../src/Model/connection.php";
 function createBierCards()
 {
-    $sql = "SELECT biernaam, prijs, etiketafbeelding, bierstijlnaam FROM bier
+    $sql = "SELECT bier_ID, biernaam, prijs, etiketafbeelding, bierstijlnaam FROM bier
 JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 
     $stmt = openConnection()->prepare($sql);
@@ -10,81 +10,14 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
     $result = $stmt->fetchAll(PDO::FETCH_OBJ);
     for ($i = 0; $i < count($result); $i++) {
 
-    /*    echo "
-    <div class=\"product\">
-                <div class=\"info-large\">
-                    <h4>" .$result[$i]->biernaam ."</h4>
-                    <div class=\"sku\">
-        PRODUCT SKU: <strong>". "SKUTOTDO" ."</strong>
-                    </div>
-
-                    <div class=\"price-big\">
-                        <span>" . $result[$i]->prijs."</span>" . $result[$i]->prijs ."
-        </div>
-
-
-                    <button class=\"add-cart-large\">Add To Cart</button>
-
-                </div>
-                <div class=\"make3D\">
-                    <div class=\"product-front\">
-                        <div class=\"shadow\"></div>
-                        <img class=\"biergroot\" src=\"" . $result[$i]->etiketafbeelding ."\" alt=\"" .$result[$i]->biernaam ."\">
-                        <div class=\"image_overlay\"></div>
-                        <div class=\"add_to_cart\">Add to cart</div>
-                        <div class=\"view_gallery\">View gallery</div>
-                        <div class=\"stats\">
-                            <div class=\"stats-container\">
-                                <span class=\"product_price\">" .$result[$i]->prijs . "€</span>
-                                <span class=\"product_name\">". $result[$i]->biernaam ."</span>
-                                <p>Blonde Ale</p>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=\"product-back\">
-                        <div class=\"shadow\"></div>
-                        <div class=\"carousel\">
-                            <ul class=\"carousel-container\">
-                                <li><img src=\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/1.jpg\" alt=\"\"/>
-                                </li>
-                                <li><img src=\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/2.jpg\" alt=\"\"/>
-                                </li>
-                                <li><img src=\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/3.jpg\" alt=\"\"/>
-                                </li>
-                            </ul>
-                            <div class=\"arrows-perspective\">
-                                <div class=\"carouselPrev\">
-                                    <div class=\"y\"></div>
-                                    <div class=\"x\"></div>
-                                </div>
-                                <div class=\"carouselNext\">
-                                    <div class=\"y\"></div>
-                                    <div class=\"x\"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"flip-back\">
-                            <div class=\"cy\"></div>
-                            <div class=\"cx\"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>";*/
     echo
-         "<div class=\"product\">
+         "<div class=\"product\" id=\"product_" . $result[$i]->bier_ID. "\">
                     <div class=\"info-large\">
                         <h4>" . $result[$i]->biernaam . "</h4>
 
                         <div class=\"price-big\">
                             <span>€" . $result[$i]->prijs ."</span> 
         </div>
-
-                 
-
-                  
 
                         <button class=\"add-cart-large\">Add To Cart</button>
 
@@ -95,7 +28,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                             <img src=\"" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . " \" />
                             <div class=\"image_overlay\"></div>
                             <div class=\"add_to_cart\">Add to cart</div>
-                            <div class=\"view_gallery\">View Details</div>
+                            <div class=\"view_gallery\" onclick=\"getBeerDetails(" .$result[$i]->bier_ID.")\">View Details</div>
                             <div class=\"stats\">
                                 <div class=\"stats-container\">
                                     <span class=\"product_price\">€" . $result[$i]->prijs. "</span>
@@ -108,7 +41,21 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                         </div>
 
                         <div class=\"product-back\">
-                            <div class=\"shadow\"></div>
+                    
+                         
+                            <div class=\"shadow\">
+                               <span class=\"product_price\">€" . "danny". "</span>
+                                    <span class=\"product_name\">" . $result[$i]->biernaam . "</span>
+                             <div class=\"stats\">
+                                <div class=\"stats-container\">
+                                    <span class=\"product_price\">€" . "danny". "</span>
+                                    <span class=\"product_name\">" . $result[$i]->biernaam . "</span>
+                                    <p>" .  $result[$i]->bierstijlnaam. "</p>
+
+                               
+                                </div>
+                            </div>
+</div>
             
                             <div class=\"flip-back\">
                                 <div class=\"cy\"></div>
@@ -160,6 +107,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 
 
             <div id="grid">
+                <div id="test"></div>
 <?php createBierCards(); ?>
             </div>
         </div>
@@ -169,6 +117,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 
 
         <script src="../js/shop.js"></script>
+        <script src="../js/geert.js"></script>
 </body>
 
 </html>

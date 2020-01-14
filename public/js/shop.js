@@ -113,7 +113,7 @@ $(document).ready(function() {
 
             var productName = $(this).parent().find('h4').get(0).innerHTML;
             var productPrice = $(this).parent().find('h4').get(0).innerHTML;
-l
+
             $("body").append('<div class="floating-cart"></div>');
             var cart = $('div.floating-cart');
             $("<img src='" + img.src + "' class='floating-image-large' />").appendTo(cart);
