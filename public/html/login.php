@@ -3,8 +3,8 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require '../src/Model/register.php';
-require '../src/Model/login.php';
+require '../../src/Model/register.php';
+require '../../src/Model/login.php';
 session_start();
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register']))
     {
@@ -17,9 +17,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 var_dump($_SESSION);
 
 ?>
-   <!--  <!DOCTYPE html>
-    <html lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,8 +30,13 @@ var_dump($_SESSION);
     <link rel="stylesheet" href="../css/footer.css">
     <title>Login-or-Registration</title>
 </head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
 
-    <body> -->
+    <body>
         <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -67,6 +71,7 @@ var_dump($_SESSION);
 
     </div>
 
+ 
 
     <!--========================-->
     <div id="form">
@@ -198,7 +203,7 @@ var_dump($_SESSION);
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="mrgn-30-top">
-                                    <button type="submit" class="btn btn-larger btn-block" /> Log in
+                                    <button type="submit" class="btn btn-larger btn-block" > Log in
                                     </button>
                                 </div>
                             </form>
