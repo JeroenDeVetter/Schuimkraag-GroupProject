@@ -8,18 +8,14 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-<<<<<<< HEAD
     overflow: auto;
-=======
-    overflow: hidden;
->>>>>>> df04bebd07bb63e484153db3733474807699819a
 }
 
 #wrapper {
     overflow: hidden;
-    height: 1153px;
+    height: 600vh;
     width: 1643px;
-    background: #fff;
+    background-color: grey;
 }
 
 #header {
@@ -117,7 +113,7 @@ body {
 
 #sidebar {
     float: left;
-    background: #fff;
+    background: gray;
     width: 275px;
     padding: 13px 0 0 45px;
     height: 1400px;
