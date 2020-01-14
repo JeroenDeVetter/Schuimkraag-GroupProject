@@ -17,14 +17,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 var_dump($_SESSION);
 
 ?>
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
-=======
-   <!--  <!DOCTYPE html>
-    <html lang="en">
->>>>>>> 080505541600c5afda101b157ff334d85e8f7e00
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,28 +30,11 @@ var_dump($_SESSION);
     <link rel="stylesheet" href="../css/footer.css">
     <title>Login-or-Registration</title>
 </head>
-
-<<<<<<< HEAD
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-=======
-    <body> -->
-        <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
->>>>>>> 080505541600c5afda101b157ff334d85e8f7e00
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
                 <a href="" class="navbar-brand">De Schuimkraag</a>
             </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#">Home</a>
@@ -268,7 +245,7 @@ var_dump($_SESSION);
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
-    <script src="../js/login.js "></script>
+    <script src="../js/input.js "></script>
     <script src="../js/footer.js "></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../js/registreer.js "></script>

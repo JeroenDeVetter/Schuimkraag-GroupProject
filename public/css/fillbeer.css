@@ -1,10 +1,6 @@
-html {
-    height: 100%;
-}
-
 body {
-    background: black;
     height: 100%;
+    background-color: black;
     /* display: flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +80,6 @@ body {
     padding-bottom: 15%;
     margin-top: -5%;
     border-radius: 50%;
-    background: #000;
     opacity: 0.35;
 }
 
@@ -291,20 +286,19 @@ body {
 .instructions {
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 25vw;
     color: #fff;
     text-align: center;
     font-family: sans-serif;
     font-size: 3vmin;
     opacity: 0.5;
-    text-transform: uppercase;
     transform: translate(-50%, -50%);
     animation-name: instructions;
 }
 
 @media (pointer: fine) {
     .instructions::before {
-        content: "Click ";
+        content: "klik, ";
     }
 }
 
@@ -374,7 +368,6 @@ body {
 }
 
 .popup {
-    background-color: black;
     box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.3);
     border-radius: 25px;
     color: whitesmoke;
@@ -441,23 +434,24 @@ body {
     width: 70px;
 }
 
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .verify-window {
-    margin: auto;
-    display: inline;
-    
-    width: 500px;
-    height: 500px;
-    overflow: hidden;
     background-color: black;
-    box-sizing: border-box;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+    display: inline-flex;
+    align-items: flex-start;
+    align-content: center;
 }
 
 .verify-window img {
-    display: block;
     width: 5em;
     height: 5em;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
 }
 
@@ -475,17 +469,15 @@ body {
     font-size: 1em;
     color: whitesmoke;
     text-align: center;
-    margin: 0;
 }
 
 .button-yes,
 .button-no {
-    background: #fff;
-    color: #ADCC21;
+    background: black;
+    color: #86c232;
     width: 32%;
-    margin-top: 20px;
-
-    border: 2px solid #ADCC21;
+    margin-top: 30px;
+    border: 2px solid#86c232;
     padding: 12px 17px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -493,35 +485,48 @@ body {
 }
 
 .button-no {
-    float: right;
-    margin-right: 40px;
-    border: 2px solid #95969a;
+    border: 2px solid red;
     color: #95969a;
-    display: block;
 }
-
-.button-yes {
-    float: left;
-    margin-left: 40px;
+a{
+    color:red;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
 }
 
 .button-yes:hover {
-    background: #ADCC21;
+    background: rgb(55, 94, 9);
     color: #fff;
     transition: all 0.2s ease;
     cursor: pointer;
 }
 
 .button-no:hover {
-    background: #95969a;
+    background: red;
     color: #fff;
     transition: all 0.2s ease;
     cursor: pointer;
 }
+
 .box {
     display: flex;
     margin: 3em 5em 0 5em;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.middle {
+    display: block;
+    width: 60%;
+    text-align: center;
+}
+
+
+.logo{
+    color: #86c232;
+    opacity: 1!important;
+    font-size: 1em;
 }

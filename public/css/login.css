@@ -456,12 +456,12 @@ a {
     justify-content: space-between !important;
 }
 
-option{
+option {
     color: white;
     background: rgba(0, 0, 0, 0.75);
-    
 }
-element{
+
+element {
     color: white;
     opacity: 100%!important;
 }
