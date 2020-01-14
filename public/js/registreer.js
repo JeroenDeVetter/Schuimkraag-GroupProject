@@ -252,10 +252,8 @@ let foutboodschap = document.querySelector('#error_message');
       connect_with_json_file(ax, postnummerInput.value);
       if (foutboodschap.className == "warning hide") {
         var arrayGemeente = [];
-        
                   find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente);
                   target.innerHTML="";
-      
                   setTimeout(() => {
                       arrayGemeente.forEach(buildtemplate);
                   }, 450);
