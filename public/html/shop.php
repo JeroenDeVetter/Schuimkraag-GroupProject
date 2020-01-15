@@ -46,18 +46,13 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 
                         <span class=\"product_price\">€" . $result[$i]->prijs . "</span>
                         <span class=\"product_name\">" . $result[$i]->biernaam . "</span>
-                        
+                        <span class=\"product_alcoholdeg\">" . $result[$i]->alcoholgehalte . "</span>
                         </div>
                           
                             <div class=\"shadow\">
                               
                              <div class=\"stats\">
                                 <div class=\"stats-container\">
-                                    <span class=\"product_price\">€" . $result[$i]->prijs . "</span>
-                                    <span class=\"product_name\">" . $result[$i]->biernaam . "</span>
-                                    <p>" .  $result[$i]->bierstijlnaam. "</p>
-
-                               
                                 </div>
                             </div>
 </div>
@@ -90,39 +85,24 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
     <div id="wrapper">
         <div class="cart-icon-top">
         </div>
-
         <div class="cart-icon-bottom">
         </div>
-
         <div id="checkout">
             CHECKOUT
         </div>
-
-
-
-
-
         <div id="sidebar">
             <h3>CART</h3>
             <div id="cart">
                 <span class="empty">No items in cart.</span>
             </div>
-
-
-
-
             <div id="grid">
                 <div id="test"></div>
-<?php createBierCards(); ?>
+                <?php createBierCards(); ?>
             </div>
         </div>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="menu.js"></script>
-
-
-
         <script src="../js/shop.js"></script>
         <script src="../js/geert.js"></script>
 </body>
-
 </html>

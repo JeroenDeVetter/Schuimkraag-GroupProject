@@ -4,9 +4,6 @@ async function getBeerDetails(bierID) {
     if (response.ok){
         const jsonResponse = await response.json();
         console.log(jsonResponse);
-
-
-
     }
 };
 
@@ -19,7 +16,6 @@ if (event.target.matches(".view_gallery")){
     let alcoholgehalteBox = document.createElement("span");
     alcoholgehalteBox.classList.add("tesbygeert");
     setTimeout(alcoholgehalteBox.innerHTML= jsonResponse.alcoholgehalte,500);
-
     backstats.appendChild(alcoholgehalteBox);
 }
     //let target=  event.target;
