@@ -8,7 +8,7 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    overflow: hidden;
+    overflow: auto;
 }
 
 #wrapper {
@@ -527,7 +527,7 @@ div.large .make3D {
     transition: all 200ms ease-out;
 }
 
-.view_gallery {
+.view_details {
     position: absolute;
     top: 144px;
     left: 50%;
@@ -547,13 +547,13 @@ div.large .make3D {
     transition: all 200ms ease-out;
 }
 
-.view_gallery:hover {
+.view_details:hover {
     background: #fff;
     color: #5ff7d2;
     cursor: pointer;
 }
 
-.make3D.animate .view_gallery {
+.make3D.animate .view_details {
     opacity: 1;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
