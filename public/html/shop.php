@@ -28,7 +28,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                             <img src=\"" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . " \" />
                             <div class=\"image_overlay\"></div>
                             <div class=\"add_to_cart\">Add to cart</div>
-                            <div class=\"view_datails\">View Details</div>
+                            <div class=\"view_details\">View Details</div>
                             <div class=\"stats\">
                                 <div class=\"stats-container\">
                                     <span class=\"product_price\">€" . $result[$i]->prijs. "</span>
@@ -41,19 +41,12 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                         </div>
 
                         <div class=\"product-back\">
-<div class=\"stats-container\">
-<span class=\"product_des\"></span>
-<span class=\"product_alco\"></span>
-</div>                    
-                        <div class=\"test\">
-
-                        <span class=\"product_price\">€" . $result[$i]->prijs . "</span>
-                        <span class=\"product_name\">" . $result[$i]->biernaam . "</span>
-                        <span class=\"product_des\"></span>
-                        </div>
-                          
+                        <div class=\"backCardStyling stats-container\">
+                    <span class=\"product_alco\"> </span><br>
+                    <span class=\"product_description\"> </span>
+                         </div>
                             <div class=\"shadow\">
-                              
+                               
                              <div class=\"stats\">
                                 <div class=\"stats-container\">
                                 </div>
@@ -79,7 +72,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../css/testshop.css">
+    <link rel="stylesheet" href="../css/shop.css">
 
     <title>Document</title>
 </head>
@@ -99,13 +92,13 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                 <span class="empty">No items in cart.</span>
             </div>
             <div id="grid">
-                <div id="test"></div>
+
                 <?php createBierCards(); ?>
             </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="../js/shop.js"></script>
-        <script src="../js/geert.js"></script>
+        <script src="../js/beerdetails.js"></script>
 </body>
 </html>
