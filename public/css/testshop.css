@@ -9,7 +9,10 @@
 body {
     font-family: "Open Sans", sans-serif;
     overflow: auto;
+<<<<<<< HEAD
     background-color: #111;
+=======
+>>>>>>> e80a6b925130b7c3b40e2b5748300950fc176f61
 }
 
 #wrapper {
