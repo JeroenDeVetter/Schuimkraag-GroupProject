@@ -28,7 +28,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                             <img src=\"" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . " \" />
                             <div class=\"image_overlay\"></div>
                             <div class=\"add_to_cart\">Add to cart</div>
-                            <div class=\"view_gallery\" onclick=\"getBeerDetails(" .$result[$i]->bier_ID.")\">View Details</div>
+                            <div class=\"view_gallery\">View Details</div>
                             <div class=\"stats\">
                                 <div class=\"stats-container\">
                                     <span class=\"product_price\">€" . $result[$i]->prijs. "</span>
@@ -41,12 +41,14 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                         </div>
 
                         <div class=\"product-back\">
-                    
+<div class=\"stats-container\">
+<span class=\"product_des\"></span>
+<span class=\"product_alco\"></span>
+</div>                    
                         <div class=\"test\">
 
                         <span class=\"product_price\">€" . $result[$i]->prijs . "</span>
                         <span class=\"product_name\">" . $result[$i]->biernaam . "</span>
-                        <span class=\"product_alcoholdeg\">" . $result[$i]->alcoholgehalte . "</span>
                         </div>
                           
                             <div class=\"shadow\">

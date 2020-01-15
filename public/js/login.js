@@ -80,13 +80,13 @@ paswoordInputLogin.addEventListener('blur', passwordVerifyLogin);
 
 foutboodschapLogin.addEventListener("click", removeErrorMessage);
 
-form.addEventListener('submit', CheckAllLogin);
+//form.addEventListener('submit', CheckAllLogin);
 
 function CheckAllLogin(event){
   
   passwordVerifyLogin();
   emailVerifyLogin();
-  console.log(foutboodschapLogin.innerHTML)
+
   if (foutboodschapLogin.innerHTML !== "") {
     
     event.preventDefault();
