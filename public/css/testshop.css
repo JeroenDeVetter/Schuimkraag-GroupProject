@@ -14,7 +14,7 @@ body {
 
 #wrapper {
     overflow: hidden;
-    height: 600vh;
+    height: 500vh;
     width: 1643px;
     background-color: #111;
 }
@@ -418,9 +418,8 @@ div.large .make3D {
 .stats-container {
     position: absolute;
     top: 382px;
-    left: 0;
-    width: 246px;
-    height: 50px;
+    width: 295px;
+    height: 77px;
     padding: 8px 26px 16px 28px;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
@@ -442,12 +441,14 @@ div.large .make3D {
     font-size: 15px;
     color: green;
     font-weight: 700;
+    padding: 30px 0 0 0;
 }
 
 .stats-container p {
     font-size: 15px;
-    color: #b1b1b3;
-    padding: 2px 0 0px 0;
+    color: #86c232;
+    text-align: center;
+    padding: 15px 0 0 20px;
 }
 
 .stats-container .product_price {
@@ -934,7 +935,7 @@ body.MakeFloatingCart div.cart-icon-bottom {
 .cart-item {
     padding: 11px 0 5px 110px;
     height: 62px;
-    width: 210px;
+    width: 230px;
     margin-left: -45px;
     position: relative;
     background: #fff;
@@ -976,6 +977,7 @@ body.MakeFloatingCart div.cart-icon-bottom {
 .cart-item strong {
     color: #86c232;
     font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .cart-item span {
@@ -1022,7 +1024,7 @@ body.MakeFloatingCart div.cart-icon-bottom {
     font-weight: 700;
     padding: 3px 9px;
     position: absolute;
-    top: 46px;
+    top: 63px;
     left: 173px;
     color: #86c232;
     display: none;
@@ -1205,8 +1207,12 @@ div.sku strong {
     }
 }
 
-h2 {
-    color: white;
+h1 {
+    color: #86c232;
     text-align: center;
     text-transform: uppercase;
+}
+
+p {
+    color: white;
 }
