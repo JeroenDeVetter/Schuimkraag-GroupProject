@@ -1,5 +1,5 @@
-<?php
-require "../../src/Model/connection.php";
+ <?php
+require "../../src/Model/local.php";
 function createBierCards()
 {
     $sql = "SELECT biernaam, prijs, etiketafbeelding, bierstijlnaam FROM bier
@@ -8,7 +8,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
     $stmt = openConnection()->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_OBJ);
-    for ($i = 0; $i < count($result); $i++) {
+    for ($i = 0; $i < count($result); $i++) { 
 
     /*    echo "
     <div class=\"product\">
@@ -86,7 +86,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 
                   
 
-                        <button class=\"add-cart-large\">Add To Cart</button>
+                         <button class=\"add-cart-large\">Add To Cart</button>
 
                     </div>
                     <div class=\"make3D\">
@@ -103,7 +103,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                                     <p>" .  $result[$i]->bierstijlnaam. "</p>
 
                                
-                                </div>
+                           </div>
                             </div>
                         </div>
 
@@ -116,7 +116,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                             </div>
                         </div>
                     </div>
-                </div>";
+                </div>"; 
     }
 }
 
@@ -160,7 +160,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 
 
             <div id="grid">
-<?php createBierCards(); ?>
+            <?php createBierCards(); ?> 
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
