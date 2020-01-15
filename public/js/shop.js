@@ -10,7 +10,7 @@ $(document).ready(function() {
         }, 200);
         setTimeout(function() {
 
-            $('.view_gallery').trigger("click");
+            $('.view_datails').trigger("click");
         }, 400);
 
         return false;
@@ -51,7 +51,7 @@ $(document).ready(function() {
         });
 
         // Flip card to the back side
-        $(el).find('.view_gallery').click(function() {
+        $(el).find('.view_datails').click(function() {
 
             $(el).find('div.carouselNext, div.carouselPrev').removeClass('visible');
             $(el).find('.make3D').addClass('flip-10');
