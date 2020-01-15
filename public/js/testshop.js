@@ -56,16 +56,18 @@ $(document).ready(function() {
             $(el).find('div.carouselNext, div.carouselPrev').removeClass('visible');
             $(el).find('.make3D').addClass('flip-10');
             setTimeout(function() {
-                $(el).find('.make3D').removeClass('flip-10').addClass('flip90').find('div.shadow').show().fadeTo(80, 1, function() {
-                    $(el).find('.product-front, .product-front div.shadow').hide();
+                $(el).find('.make3D').removeClass('flip-10').addClass('flip90').find('div.shadow').show().fadeTo(function() {
+                    $(el).find('.product-front, .product-front').hide();
                 });
             }, 50);
 
             setTimeout(function() {
                 $(el).find('.make3D').removeClass('flip90').addClass('flip190');
-                $(el).find('.product-back').show().find('div.shadow').show().fadeTo(90, 0);
+                $(el).find('.product-back div.shadow').show();
                 setTimeout(function() {
-                    $(el).find('.make3D').removeClass('flip190').addClass('flip180').find('div.shadow').hide();
+                    $(el).find('.make3D').removeClass('flip190').addClass('flip180').find('div.shadow').show().show().fadeTo(function() {
+                        $(el).find('.product-front, .product-front').hide();
+                    });
                     setTimeout(function() {
                         $(el).find('.make3D').css('transition', '100ms ease-out');
                         $(el).find('.cx, .cy').addClass('s1');
@@ -87,6 +89,7 @@ $(document).ready(function() {
                 $(el).find('.product-back div.shadow').css('opacity', 0).fadeTo(100, 1, function() {
                     $(el).find('.product-back, .product-back div.shadow').hide();
                     $(el).find('.product-front, .product-front div.shadow').show();
+                    $(el).find('shadow').css("display", "block")
                 });
             }, 50);
 

@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="d98c078a-dc0b-47b1-bf00-f711dd5c5bad" name="BeCode" url="http://becode.local/">
-        <fileTransfer port="0" mountedRoot="$PROJECT_DIR$/.." accessType="MOUNT" />
+        <fileTransfer port="0" accessType="LOCAL" />
       </webServer>
     </option>
   </component>
