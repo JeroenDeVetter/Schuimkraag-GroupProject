@@ -1,3 +1,4 @@
+<?php?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,21 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="../css/fillbeer.css">
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
-
-
+    <title>index</title>
 
     <title>Document</title>
 </head>
 
 
 <body>
-
-    <!-- // verify window -->
-
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="../js/ageverif.js"></script>
@@ -117,39 +110,27 @@
         </svg>
         </div>
 
-        <div class="instructions">en<br/>hou vast<br> om te gieten</div>
+        <div class="instructions">hou vast <br/> en <br/> ondek <br/> <br/><span class="logo">DE SCHUIMKRAAG</span></div>
     </div>
 
     <div class="container">
         <div class="verify-window">
-            <div class="button-yes" data-popup-close="popup-1">Ja, ik ben minstens 18 jaar !
+
+            <div class="button-yes">
+                <a href="shop.php">Ja, ik ben minstens 18 jaar !</a>
             </div>
             <div class="middle">
                 <img src="http://freevapekrd.ru/img/bez_imeni-2.png" alt="freevape">
-
-                <p>
-                    Om toegang te krijgen tot deze site
-                </p>
-
-                <p>
-                    <!-- <font size="2" face="Arial"> -->moet je minstens 18 jaar of ouder zijn.
-                    <!-- </font> -->
-                </p>
+                <p>Om toegang te krijgen tot deze site</p>
+                <p>moet je minstens 18 jaar of ouder zijn.</p>
             </div>
-
-
-
 
             <div class="button-no">
-                <a href="https://google.com" target="_parent">Neen, ik ben nog geen 18 jaar !</a>
+                <a href="https://google.com">Neen, ik ben nog geen 18 jaar !</a>
             </div>
-
 
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 </body>
 

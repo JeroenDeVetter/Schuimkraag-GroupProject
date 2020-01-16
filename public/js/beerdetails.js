@@ -12,7 +12,6 @@ viewDetailsButtons.forEach(function() {
             let bierId = ProductId.substr(8);
             let response = await fetch(`getbeerdetails.php?q=${bierId}`);
             const jsonResponse = await response.json();
-            console.log(jsonResponse);
             alcoholgehalteBox.innerHTML = "alcoholgehalte: " + jsonResponse.alcoholgehalte + "°";
             descriptionBox.innerHTML = "<em>" + jsonResponse.bierbeschrijving + "</em>";
 

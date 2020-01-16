@@ -101,16 +101,16 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="../public/html/about.php">Over Ons</b> </a>
+                    <a href="about.php">Over Ons</b> </a>
+                </li>
+                <li >
+                    <a href="../../View/login.php">Login</b> </a>
                 </li>
                 <li class="active">
-                    <a href="#">Login</b> </a>
-                </li>
-                <li>
                     <a href="#">E-Shop</a>
                 </li>
                 <li>
-                    <a href="../public/html/contact.html">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
         </nav>

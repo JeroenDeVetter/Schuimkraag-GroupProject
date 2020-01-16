@@ -286,20 +286,19 @@ body {
 .instructions {
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 25vw;
     color: #fff;
     text-align: center;
     font-family: sans-serif;
     font-size: 3vmin;
     opacity: 0.5;
-    text-transform: uppercase;
     transform: translate(-50%, -50%);
     animation-name: instructions;
 }
 
 @media (pointer: fine) {
     .instructions::before {
-        content: "Klik ";
+        content: "klik, ";
     }
 }
 
@@ -478,7 +477,7 @@ body {
     color: #86c232;
     width: 32%;
     margin-top: 30px;
-    border: 2px solid #86c232;
+    border: 2px solid#86c232;
     padding: 12px 17px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -486,8 +485,17 @@ body {
 }
 
 .button-no {
-    border: 2px solid darkred;
-    color: darkred;
+    border: 2px solid red;
+    color: #95969a;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
 }
 
 .button-yes:hover {
@@ -498,7 +506,7 @@ body {
 }
 
 .button-no:hover {
-    background: darkred;
+    background: red;
     color: #fff;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -518,11 +526,8 @@ body {
     text-align: center;
 }
 
-a {
-    color: darkred;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #fff;
+.logo {
+    color: #86c232;
+    opacity: 1!important;
+    font-size: 1em;
 }
