@@ -25,7 +25,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                     <div class=\"make3D\">
                         <div class=\"product-front\">
                             <div class=\"shadow\"></div>
-                            <img src=\"" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . " \" />
+                            <img src=\"../images/front/" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . "_front \" />
                             <div class=\"image_overlay\"></div>
                             <div class=\"add_to_cart\">Add to cart</div>
                             <div class=\"view_details\">View Details</div>
@@ -41,6 +41,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                         </div>
 
                         <div class=\"product-back\">
+                          <img src=\"../images/back/" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . "_back \" />
                         <div class=\"backCardStyling stats-container\">
                     <span class=\"product_alco\"> </span><br>
                     <span class=\"product_description\"> </span>
