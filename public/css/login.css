@@ -147,7 +147,7 @@ div#form {
 }
 
 #userform .nav-tabs.nav-justified>li>a:hover {
-    background: #86c232;
+    background: rgb(55, 94, 9);
     color: #FFF;
     border-radius: 0;
     border: 0;
@@ -176,7 +176,7 @@ div#form {
         transition: all .6s;
     }
     #userform .nav-tabs.nav-justified>li>a:hover {
-        background-color: #86c232;
+        background-color: rgb(55, 94, 9);
         border-color: transparent;
         border: 0;
         -webkit-transition: all .6s;
@@ -413,18 +413,19 @@ ul {
     list-style: none
 }
 
-a {
+.link a {
     text-decoration: none;
-    color: #86c232;
+    color: white;
+}
+
+.link a:hover {
+    text-decoration: none;
+    color: #86c232!important;
 }
 
 .link {
     padding-top: 2rem;
     text-align: center;
-}
-
-.link a:hover {
-    color: #FFF !important;
 }
 
 .warning {
@@ -454,4 +455,14 @@ a {
 .show {
     display: flex !important;
     justify-content: space-between !important;
+}
+
+option {
+    color: white;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+element {
+    color: white;
+    opacity: 100%!important;
 }

@@ -35,15 +35,15 @@
                     <li><a href="../../View/login.php">Login</a>
                     </li>
                     <li>
-                        <a href="#">E-Shop</a>
+                        <a href="fillbeer.php">E-Shop</a>
                     </li>
-                    <li class="">
-                        <a href="contact.html">Contact</a>
+                    <li>
+                        <a href="contact.php">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
-    </div>
+    </div>http://becode.local/Schuimkraag-GroupProject/public/html/shop.php
     </div>
 </header>
 

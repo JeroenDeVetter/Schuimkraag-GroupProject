@@ -1,12 +1,18 @@
 .flex-rw {
     display: flex;
     flex-flow: row wrap;
+    bottom: 0;
+    position: relative;
+}
+
+* html #footer {
+    position: absolute;
+    top: expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight: document.body.clientHeight)+(ignoreMe=document.documentElement.scrollTop ? document.documentElement.scrollTop: document.body.scrollTop))+'px');
 }
 
 footer {
     background: rgb(55, 94, 9);
-    opacity: 70%;
-    margin-top: auto;
+    /* opacity: 80%; */
     width: 100%;
     text-align: center;
 }
@@ -34,7 +40,7 @@ footer {
 .footer-bottom-section {
     width: 100%;
     padding: 10px;
-    border-top: 1px solid
+    border-top: 1px solid rgb(55, 94, 9);
 }
 
 .footer-bottom-section>div:first-child {

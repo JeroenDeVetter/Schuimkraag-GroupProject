@@ -1,6 +1,6 @@
 <?php
-require "../../src/Model/connection.php";
-$phpPrijs = "Geert";
+require "../../src/Model/local.php";
+
 function createBierCards()
 {
     $sql = "SELECT biernaam, prijs, etiketafbeelding FROM bier";

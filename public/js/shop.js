@@ -107,7 +107,7 @@ $(document).ready(function() {
 
     $('.add-cart-large').each(function(i, el) {
         $(el).click(function() {
-          //  var carousel = $(this).parent().parent().find(".carousel-container");
+            //  var carousel = $(this).parent().parent().find(".carousel-container");
             var img = carousel.find('img').eq(carousel.attr("rel"))[0];
             var position = $(img).offset();
 

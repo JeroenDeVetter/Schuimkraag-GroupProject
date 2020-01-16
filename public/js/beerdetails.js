@@ -23,4 +23,3 @@ viewDetailsButtons.forEach(function (detailbutton) {
 
 
 
-
