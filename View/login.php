@@ -86,11 +86,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
               ?>
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
-                        <li class="active"><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
-                        <li ><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
+                        <li class="active"><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
+                        <li ><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane fade active in" id="signup">
+                        <div class="tab-pane fade  in" id="signup">
                             <h2 class="text-uppercase text-center">Registreer</h2>
                             <div class="warning hide" id="error_message"></div>
                             <form action="" method="post" id="signup" novalidate>
@@ -190,7 +190,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                 </div>
                             </form>
                         </div>
-                        <div class="tab-pane fade in" id="login">
+                        <div class="tab-pane fade active in" id="login">
                             <h2 class="text-uppercase text-center"> Log in</h2>
                             <div class="warning hide" id="error_message_login"></div>
                             <form action="" method="post" id="login" novalidate>

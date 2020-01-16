@@ -103,7 +103,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                 <li>
                     <a href="about.php">Over Ons</b> </a>
                 </li>
-                <li >
+                http://becode.local/Schuimkraag-GroupProject/public/images/back/deliriumtremens.png  <li >
                     <a href="../../View/login.php">Login</b> </a>
                 </li>
                 <li class="active">
