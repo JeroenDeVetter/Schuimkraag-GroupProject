@@ -6,11 +6,22 @@
     padding: 0px;
 }
 
+.product_description {
+    color: white;
+}
+
+.product_alco {
+    color: white;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     overflow: auto;
-    background-color: black;
+    background-color: #111;
+    height: 100%;
 }
+
+#wrapper {}
 
 #header {
     height: 92px;
@@ -98,20 +109,22 @@ body {
 }
 
 #grid {
-    width: 1500px;
-    position: relative;
-    left: 420px;
-    height: 1200px;
-    top: 180px;
+    grid-column-start: 2;
+}
+
+#main_grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 
 #sidebar {
     float: left;
+    position: absolute;
     background: black;
     width: 275px;
     padding: 13px 0 0 45px;
-    height: 1400px;
-    border-right: 1px solid #eee;
+    height: 300%;
+    border-right: 1px solid gray;
 }
 
 #sidebar h3 {
@@ -522,7 +535,7 @@ div.large .make3D {
     transition: all 200ms ease-out;
 }
 
-.view_gallery {
+.view_details {
     position: absolute;
     background-color: rgba(20, 20, 20, 0.5);
     top: 144px;
@@ -543,14 +556,14 @@ div.large .make3D {
     transition: all 200ms ease-out;
 }
 
-.view_gallery:hover {
+.view_details:hover {
     background: rgb(55, 94, 9);
     border: 2px solid lightgreen;
     color: white;
     cursor: pointer;
 }
 
-.make3D.animate .view_gallery {
+.make3D.animate .view_details {
     opacity: 1;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
@@ -1208,9 +1221,4 @@ h1 {
 
 p {
     color: white;
-}
-
-.flex-rw {
-    position: fixed;
-    bottom: 0;
 }

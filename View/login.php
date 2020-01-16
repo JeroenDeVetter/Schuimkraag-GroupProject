@@ -1,6 +1,7 @@
   
 <?php
-
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 require '../src/Model/register.php';
 require '../src/Model/login.php';
 require '../src/Model/checkUser.php';
@@ -8,6 +9,7 @@ session_start();
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register']))
     {
         checkUser($_POST['company'],$_POST['firstName'],$_POST['lastName'],$_POST['btw'],$_POST['streedName'],$_POST['houseNum'],$_POST['gemeente'],$_POST['emailRegister'],$_POST['phoneNum'],$_POST['registerPass']);
+        var_dump($_POST['postcode']);
     }
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 {

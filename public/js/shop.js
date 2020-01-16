@@ -10,7 +10,7 @@ $(document).ready(function() {
         }, 200);
         setTimeout(function() {
 
-            $('.view_gallery').trigger("click");
+            $('.view_details').trigger("click");
         }, 400);
 
         return false;
@@ -51,7 +51,7 @@ $(document).ready(function() {
         });
 
         // Flip card to the back side
-        $(el).find('.view_gallery').click(function() {
+        $(el).find('.view_details').click(function() {
 
             $(el).find('div.carouselNext, div.carouselPrev').removeClass('visible');
             $(el).find('.make3D').addClass('flip-10');
@@ -107,7 +107,7 @@ $(document).ready(function() {
 
     $('.add-cart-large').each(function(i, el) {
         $(el).click(function() {
-          //  var carousel = $(this).parent().parent().find(".carousel-container");
+            //  var carousel = $(this).parent().parent().find(".carousel-container");
             var img = carousel.find('img').eq(carousel.attr("rel"))[0];
             var position = $(img).offset();
 
