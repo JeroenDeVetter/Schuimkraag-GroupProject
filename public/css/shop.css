@@ -337,6 +337,10 @@ body {
     transform: rotateY( 180deg);
 }
 
+.product-back img {
+    width: 100%;
+}
+
 .make3D.animate .product-back,
 .make3D.animate .product-front,
 div.large .product-back {
@@ -352,8 +356,6 @@ div.large .product-back {
     width: 305px;
     height: 470px;
     position: absolute;
-    top: 10px;
-    left: 10px;
     overflow: hidden;
     transform-style: preserve-3d;
     -webkit-transition: 100ms ease-out;
