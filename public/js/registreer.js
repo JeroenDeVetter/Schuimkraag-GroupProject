@@ -19,7 +19,7 @@ let foutboodschap = document.querySelector('#error_message');
 const template = document.querySelector("#gemeenteTemplate");
 
 function firstNameInputVerify() {
-    if (this.value !== "") {
+    if (voornaamInput.value !== "") {
         if (regfirstandlastnameCheck(this.value)) {
             voornaamInput.value = cleanFirstName(voornaamInput.value);
             emptyMessage(foutboodschap);
@@ -34,7 +34,7 @@ function firstNameInputVerify() {
 }
 
 function lastNameInputVerify() {
-    if (this.value !== "") {
+    if (last.value !== "") {
         if (regfirstandlastnameCheck(this.value)) {
             achternaamInput.value = cleanLastName(achternaamInput.value);
             emptyMessage(foutboodschap);
