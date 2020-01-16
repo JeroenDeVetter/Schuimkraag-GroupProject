@@ -488,11 +488,13 @@ body {
     border: 2px solid red;
     color: #95969a;
 }
-a{
-    color:red;
+
+a {
+    color: red;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: white;
 }
 
@@ -524,8 +526,7 @@ a:hover{
     text-align: center;
 }
 
-
-.logo{
+.logo {
     color: #86c232;
     opacity: 1!important;
     font-size: 1em;
