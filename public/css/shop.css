@@ -8,10 +8,14 @@
 
 .product_description {
     color: white;
+    position: relative;
+    bottom: 350px;
 }
 
 .product_alco {
     color: white;
+    position: relative;
+    bottom: 350px;
 }
 
 body {
@@ -19,6 +23,7 @@ body {
     overflow: auto;
     background-color: #111;
     height: 100%;
+    margin-top: 35px;
 }
 
 #header {
@@ -108,6 +113,7 @@ body {
 
 #grid {
     grid-column-start: 2;
+    margin-top: 50px;
 }
 
 #main_grid {
