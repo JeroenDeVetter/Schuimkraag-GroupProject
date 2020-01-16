@@ -41,7 +41,6 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                         </div>
 
                         <div class=\"product-back\">
-                          <img src=\"../images/back/" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . "_back \" />
                         <div class=\"backCardStyling stats-container\">
                     <span class=\"product_alco\"> </span><br>
                     <span class=\"product_description\"> </span>
@@ -53,8 +52,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                                     <span class=\"product_price\">€" . "danny". "</span>
                                     <span class=\"product_name\">" . $result[$i]->biernaam . "</span>
                                     <p>" .  $result[$i]->bierstijlnaam. "</p>
-
-                               
+                  
                                 </div>
                             </div>
 </div>
