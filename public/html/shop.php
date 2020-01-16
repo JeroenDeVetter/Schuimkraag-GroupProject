@@ -117,14 +117,15 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 
 </div>
 <div id="main_grid">
-      <div id="checkout">
-            CHECKOUT
-        </div>
+      
         <div id="sidebar">
             <h3>Winkelmandje</h3>
             <div id="cart">
                 <span class="empty">Nog geen bier in mandje.</span>
             </div>
+            <div id="checkout">
+            CHECKOUT
+        </div>
            
         </div>
         <div id="grid">
