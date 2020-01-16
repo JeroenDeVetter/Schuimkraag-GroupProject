@@ -99,7 +99,7 @@ body {
 
 #grid {
     width: 1500px;
-    position: absolute;
+    position: relative;
     left: 420px;
     height: 1200px;
     top: 180px;
@@ -1208,4 +1208,9 @@ h1 {
 
 p {
     color: white;
+}
+
+.flex-rw {
+    position: fixed;
+    bottom: 0;
 }
