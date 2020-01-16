@@ -7,6 +7,7 @@ let foutboodschapContact = document.querySelector('#error_message_contact');
 
 function emailVerifyContact() {
     console.log("checkmail");
+
     if (emailContact.value !== "") {
         if (regmailCheck(emailContact.value)) {
             console.log("check");
@@ -16,8 +17,7 @@ function emailVerifyContact() {
             foutboodschapContact.innerHTML = "<div>Email heeft ongeldig formaat&nbsp;</div><div>&#x274C</div>";
             toggleErrorMessage(foutboodschapContact);
         }
-    }
-    else {
+    } else {
         foutboodschapContact.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
         toggleErrorMessage(foutboodschapContact);
     }
@@ -26,8 +26,10 @@ function emailVerifyContact() {
 
 function naamVerifyContact() {
     console.log("naam");
-    if (naamContact !== "") {
-        if (regnameCheck(naamContact.value)) {
+    console.log(foutboodschapContact.innerHTML);
+    if (naamContact.value !== "") {
+        console.log(foutboodschapContact.innerHTML);
+        if (regnameCheck(this.value)) {
             naamContact.value = cleanName(naamContact.value);
             emptyMessage(foutboodschapContact);
         } else {
@@ -41,33 +43,31 @@ function naamVerifyContact() {
 }
 
 
-function subjectVerifyContact(){
+function subjectVerifyContact() {
     console.log("checkonderwerpe");
     if (onderwerpContact.value !== "") {
-        if (onderwerpContact.value.length >=2){
+        if (onderwerpContact.value.length >= 2) {
             emptyMessage(foutboodschapContact);
         } else {
             foutboodschapContact.innerHTML = "<div>Onderwerp dient minstens 2 karakters te bevatten. &nbsp;</div><div>&#x274C</div>";
             toggleErrorMessage(foutboodschapContact);
         }
-    }
-    else {
+    } else {
         foutboodschapContact.innerHTML = "<div>Onderwerp is vereist. &nbsp;</div><div>&#x274C</div>";
         toggleErrorMessage(foutboodschapContact);
     }
 }
 
-function messageVerifyContact(){
+function messageVerifyContact() {
     console.log("message");
     if (messageContact.value !== "") {
-        if (messageContact.value.length >=2){
+        if (messageContact.value.length >= 2) {
             emptyMessage(foutboodschapContact);
         } else {
             foutboodschapContact.innerHTML = "<div>Boodschap dient minstens 2 karakters te bevatten. &nbsp;</div><div>&#x274C</div>";
             toggleErrorMessage(foutboodschapContact);
         }
-    }
-    else {
+    } else {
         foutboodschapContact.innerHTML = "<div>Boodschap is vereist. &nbsp;</div><div>&#x274C</div>";
         toggleErrorMessage(foutboodschapContact);
     }
@@ -164,18 +164,28 @@ foutboodschapContact.addEventListener("click", removeErrorMessage);
 
 form.addEventListener('submit', CheckAllContact);
 
-function CheckAllContact(event){
-
+function CheckAllContact(event) {
+    let teller = 0;
     messageVerifyContact();
-    console.log(foutboodschapContact.innerHTML);
+    if (foutboodschapContact.innerHTML !== "") {
+        teller += 1
+    }
     subjectVerifyContact();
-    console.log(foutboodschapContact.innerHTML);
+    if (foutboodschapContact.innerHTML !== "") {
+        teller += 1
+    }
     emailVerifyContact();
-    console.log(foutboodschapContact.innerHTML);
+    if (foutboodschapContact.innerHTML !== "") {
+        teller += 1
+    }
     naamVerifyContact();
-    console.log(foutboodschapContact.innerHTML);
+    if (foutboodschapContact.innerHTML !== "") {
+        teller += 1
+    }
 
-    if (!(foutboodschapContact.innerHTML == "")) {
+    if (teller > 0 || (foutboodschapContact.innerHTML !== "")) {
+        console.log(teller);
+        foutboodschapContact.innerHTML = "<div>De input-waarden zijn niet correct &nbsp;</div><div>&#x274C</div>";
         event.preventDefault();
     }
 

@@ -147,7 +147,7 @@ div#form {
 }
 
 #userform .nav-tabs.nav-justified>li>a:hover {
-    background: #86c232;
+    background: rgb(55, 94, 9);
     color: #FFF;
     border-radius: 0;
     border: 0;
@@ -413,18 +413,19 @@ ul {
     list-style: none
 }
 
-a {
+.link a {
     text-decoration: none;
-    color: #86c232;
+    color: white;
+}
+
+.link a:hover {
+    text-decoration: none;
+    color: #86c232!important;
 }
 
 .link {
     padding-top: 2rem;
     text-align: center;
-}
-
-.link a:hover {
-    color: #FFF !important;
 }
 
 .warning {
