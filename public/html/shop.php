@@ -42,8 +42,10 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 
                         <div class=\"product-back\">
                         <div class=\"backCardStyling stats-container\">
+                        
                     <span class=\"product_alco\"> </span><br>
                     <span class=\"product_description\"> </span>
+                
                          </div>
                             <div class=\"shadow\">
                                
