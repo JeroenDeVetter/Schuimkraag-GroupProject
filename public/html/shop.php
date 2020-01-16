@@ -66,24 +66,56 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
 
     <title>Document</title>
 </head>
 
 <body>
-    <div id="wrapper">
-        <div class="cart-icon-top">
+<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="" class="navbar-brand">De Schuimkraag</a>
         </div>
-        <div class="cart-icon-bottom">
-        </div>
-        <div id="checkout">
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="../public/html/about.php">Over Ons</b> </a>
+                </li>
+                <li class="active">
+                    <a href="#">Login</b> </a>
+                </li>
+                <li>
+                    <a href="#">E-Shop</a>
+                </li>
+                <li>
+                    <a href="../public/html/contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+<div id="main_grid">
+      <div id="checkout">
             CHECKOUT
         </div>
         <div id="sidebar">
@@ -91,12 +123,52 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
             <div id="cart">
                 <span class="empty">No items in cart.</span>
             </div>
-            <div id="grid">
-
-                <?php createBierCards(); ?>
-            </div>
+           
         </div>
+        <div id="grid">
+        <?php createBierCards(); ?>
+        </div>
+</div>
+     
+        <footer class="flex-rw ">
+            <ul class="footer-list-top ">
+                <li>
+                    <h4 class="footer-list-header ">Over De Schuimkraag</h4>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
+                <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
+            </ul>
+            <ul class="footer-list-top ">
+                <li>
+                    <h4 class="footer-list-header ">Geschenken Hoekje</h4>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
+            </ul>
+            <ul class="footer-list-top ">
+                <li id='help'>
+                    <h4 class="footer-list-header ">Hulp Sectie</h4>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
+                <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
+                <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
+            </ul>
 
+            <section class="footer-bottom-section flex-rw">
+                <div class="footer-bottom-wrapper ">
+                    &copy; De Schuimkraag <span id="htmlYear">year </span>
+                    <address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
+                </div>
+                <div class="footer-bottom-wrapper">
+                    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
+                                                                                                                                                                                                              rel="nofollow">Privacy Beleid</a>
+                </div>
+            </section>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="../js/shop.js"></script>
         <script src="../js/beerdetails.js"></script>

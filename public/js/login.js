@@ -85,11 +85,6 @@ foutboodschapLogin.addEventListener("click", removeErrorMessage);
 function CheckAllLogin(event){
   
   passwordVerifyLogin();
-  emailVerifyLogin();
-
-  if (foutboodschapLogin.innerHTML !== "") {
-    
-    event.preventDefault();
-  }
+  emailVerifyLogin();é
 
 }

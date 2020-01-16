@@ -1,12 +1,18 @@
 .flex-rw {
     display: flex;
     flex-flow: row wrap;
+    bottom: 0;
+    position: relative;
+}
+
+* html #footer {
+    position: absolute;
+    top: expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight: document.body.clientHeight)+(ignoreMe=document.documentElement.scrollTop ? document.documentElement.scrollTop: document.body.scrollTop))+'px');
 }
 
 footer {
     background: rgb(55, 94, 9);
     /* opacity: 80%; */
-    margin-top: auto;
     width: 100%;
     text-align: center;
 }
