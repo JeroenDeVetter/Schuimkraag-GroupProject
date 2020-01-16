@@ -40,7 +40,7 @@ footer {
 .footer-bottom-section {
     width: 100%;
     padding: 10px;
-    border-top: 1px solid
+    border-top: 1px solid rgb(55, 94, 9);
 }
 
 .footer-bottom-section>div:first-child {
