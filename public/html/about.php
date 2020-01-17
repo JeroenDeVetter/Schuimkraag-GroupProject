@@ -38,7 +38,7 @@
                         <a href="fillbeer.php">E-Shop</a>
                     </li>
                     <li>
-                        <a href="contact.php">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </nav>
