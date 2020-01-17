@@ -93,7 +93,7 @@
                 <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Meer Over Ons</a>
                 </li>
                 <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Promos</a></li>
-            
+
 
                 <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Jobs</a></li>
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php
+=======
+ <?php
+>>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
 require "../../src/Model/connection.php";
 function createBierCards()
 {
@@ -40,8 +44,12 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
                         </div>
                     </div>
 
+<<<<<<< HEAD
                    <div class=\"product-back\">
                           <img src=\"../images/back/" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . "_back \" />
+=======
+                        <div class=\"product-back\">
+>>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
                         <div class=\"backCardStyling stats-container\">
                         
                           <span class=\"product_alco\"> </span><br>
@@ -62,8 +70,12 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div>
             </div>";
+=======
+                </div>";
+>>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
     }
 
 }
@@ -86,7 +98,7 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
     <title>Document</title>
 </head>
 
-<body>
+<body>k
 <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -122,6 +134,7 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
 </div>
 <div id="main_grid">
 
+<<<<<<< HEAD
     <div id="sidebar">
         <h3>Winkelmandje</h3>
         <div id="cart">
@@ -129,6 +142,17 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
         </div>
         <div id="checkout">
             CHECKOUT
+=======
+        <div id="sidebar">
+            <h3>Winkelmandje</h3>
+            <div id="cart">
+                <span class="empty">Nog geen bier in mandje.</span>
+            </div>
+            <div id="checkout">
+            CHECKOUT
+        </div>
+
+>>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
         </div>
 
     </div>
@@ -136,6 +160,37 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
         <?php createBierCards(); ?>
     </div>
 </div>
+<<<<<<< HEAD
+=======
+
+        <footer class="flex-rw ">
+            <ul class="footer-list-top ">
+                <li>
+                    <h4 class="footer-list-header ">Over De Schuimkraag</h4>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
+                <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
+            </ul>
+            <ul class="footer-list-top ">
+                <li>
+                    <h4 class="footer-list-header ">Geschenken Hoekje</h4>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
+            </ul>
+            <ul class="footer-list-top ">
+                <li id='help'>
+                    <h4 class="footer-list-header ">Hulp Sectie</h4>
+                </li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
+                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
+                <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
+                <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
+            </ul>
+>>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
 
 <footer class="flex-rw ">
     <ul class="footer-list-top ">

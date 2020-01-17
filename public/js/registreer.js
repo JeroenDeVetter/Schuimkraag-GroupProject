@@ -1,5 +1,5 @@
 const ax = axios.create({
-    baseURL: 'http://localhost:8888/Schuimkraag-GroupProject/public/js'
+    baseURL: 'http://becode.local/Schuimkraag-GroupProject/public/js'
 });
 
 let voornaamInput = document.querySelector('#first_name');
@@ -216,7 +216,9 @@ function postalnumberVerify() {
                 target.innerHTML = "";
 
                 setTimeout(() => {
+
                     arrayGemeente.forEach(buildtemplate(arrayGemeente));
+
                 }, 450);
             } else {
                 target.innerHTML = "";
@@ -393,8 +395,11 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
                     console.log(result[i].gemeente);
                     console.log(typeof(result[i].gemeente));
                     let gemeente = result[i].gemeente.toLowerCase();
+                    let gemeenteId = result[i].gemeente_ID;
                     let gemeenteFirstLetterCapitalize = gemeente.charAt(0).toUpperCase() + gemeente.slice(1);
+
                     arrayGemeente.push([gemeenteFirstLetterCapitalize, result[i].gemeente_ID]);
+
                     console.log(arrayGemeente);
                 }
             }
