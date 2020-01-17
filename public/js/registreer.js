@@ -184,20 +184,6 @@ function BTWnrInputVerify() {
     }
 }
 
-function emailVerify() {
-    if (this.value !== "") {
-        if (regmailCheck(emailInput.value)) {
-            emptyMessage(foutboodschap);
-            emailInput.value = cleanemail(emailInput.value);
-        } else {
-            foutboodschap.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
-            toggleErrorMessage(foutboodschap);
-        }
-    } else {
-        foutboodschap.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
-        toggleErrorMessage(foutboodschap);
-    }
-}
 
 function phoneVerify() {
     if (telefoonInput.value !== "") {
@@ -250,9 +236,13 @@ function postalnumberVerify() {
                 target.innerHTML = "";
 
                 setTimeout(() => {
+<<<<<<< HEAD
                     for (let i=0; i < arrayGemeente.length; i+2){
                         buildtemplate(arrayGemeente[i],arrayGemeente[i+1])
                     }
+=======
+                    arrayGemeente.forEach(buildtemplate(arrayGemeente));
+>>>>>>> cc717548cc7c104d31d5b4c6e755ea8198cf42a0
                 }, 450);
             } else {
                 target.innerHTML = "";
@@ -276,6 +266,10 @@ function get_gemeentes() {
 }
 
 function passwordVerify() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cc717548cc7c104d31d5b4c6e755ea8198cf42a0
     if (paswoordInput.value !== "") {
         if (regpasswordCheck(paswoordInput.value)) { // Second Change
             emptyMessage(foutboodschap);
@@ -288,7 +282,10 @@ function passwordVerify() {
         toggleErrorMessage(foutboodschap);
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cc717548cc7c104d31d5b4c6e755ea8198cf42a0
 
 function passwordVerify2() {
     if (paswoord2Input.value !== "") {
@@ -404,6 +401,20 @@ function connect_with_json_file(ax, postnr) {
         });
 }
 
+function buildtemplate(item) {
+
+
+    console.log(item);
+    item.forEach(data => {
+        var tmpl = document.createElement('option');
+        tmpl.setAttribute("value", data[1]);
+        tmpl.innerHTML = data[0];
+        target.appendChild(tmpl)
+    }
+)
+}
+
+
 function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
     ax.get("schuimkraag_gemeente.json")
         .then((response) => {
@@ -415,8 +426,8 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
                     let gemeente = result[i].gemeente.toLowerCase();
                     let gemeenteId = result[i].gemeente_ID;
                     let gemeenteFirstLetterCapitalize = gemeente.charAt(0).toUpperCase() + gemeente.slice(1);
-                    arrayGemeente.push(gemeenteId);
-                    arrayGemeente.push(gemeenteFirstLetterCapitalize);
+
+                    arrayGemeente.push([gemeenteFirstLetterCapitalize, result[i].gemeente_ID]);
 
                     console.log(arrayGemeente);
                 }
@@ -427,15 +438,6 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
             //catch error
             console.log("This path is not found , please try again <span class='stop'>×</span>");
         });
-}
-
-function buildtemplate(gemeenteId, gemeenteNaam) {
-
-    var tmpl = document.createElement('option');
-    tmpl.setAttribute("value", gemeenteId);
-    tmpl.innerHTML = gemeenteNaam;
-    target.appendChild(tmpl);
-
 }
 
 function CheckAll(event) {
