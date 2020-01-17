@@ -236,13 +236,9 @@ function postalnumberVerify() {
                 target.innerHTML = "";
 
                 setTimeout(() => {
-<<<<<<< HEAD
-                    for (let i=0; i < arrayGemeente.length; i+2){
-                        buildtemplate(arrayGemeente[i],arrayGemeente[i+1])
-                    }
-=======
+
                     arrayGemeente.forEach(buildtemplate(arrayGemeente));
->>>>>>> cc717548cc7c104d31d5b4c6e755ea8198cf42a0
+
                 }, 450);
             } else {
                 target.innerHTML = "";
@@ -266,10 +262,7 @@ function get_gemeentes() {
 }
 
 function passwordVerify() {
-<<<<<<< HEAD
-=======
 
->>>>>>> cc717548cc7c104d31d5b4c6e755ea8198cf42a0
     if (paswoordInput.value !== "") {
         if (regpasswordCheck(paswoordInput.value)) { // Second Change
             emptyMessage(foutboodschap);
@@ -282,10 +275,6 @@ function passwordVerify() {
         toggleErrorMessage(foutboodschap);
     }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cc717548cc7c104d31d5b4c6e755ea8198cf42a0
 
 function passwordVerify2() {
     if (paswoord2Input.value !== "") {
