@@ -1,5 +1,5 @@
 const ax = axios.create({
-    baseURL: 'http://becode.local/Schuimkraag-GroupProject/public/js'
+    baseURL: 'http://localhost:8888/Schuimkraag-GroupProject/public/js'
 });
 
 let voornaamInput = document.querySelector('#first_name');
@@ -19,7 +19,7 @@ let foutboodschap = document.querySelector('#error_message');
 const template = document.querySelector("#gemeenteTemplate");
 
 function firstNameInputVerify() {
-    if (this.value !== "") {
+    if (voornaamInput.value !== "") {
         if (regfirstandlastnameCheck(this.value)) {
             voornaamInput.value = cleanFirstName(voornaamInput.value);
             emptyMessage(foutboodschap);
@@ -34,7 +34,7 @@ function firstNameInputVerify() {
 }
 
 function lastNameInputVerify() {
-    if (this.value !== "") {
+    if (achternaamInput.value !== "") {
         if (regfirstandlastnameCheck(this.value)) {
             achternaamInput.value = cleanLastName(achternaamInput.value);
             emptyMessage(foutboodschap);
@@ -48,32 +48,6 @@ function lastNameInputVerify() {
     }
 }
 
-function firmaNameInputVerify() {
-    if (this.value !== "") {
-        firmanaamInput.value = cleanfirmName(this.value);
-    }
-}
-
-function emailVerify() {
-    if (emailInput.value !== "") {
-        if (regmailCheck(emailInput.value)) {
-            emptyMessage(foutboodschap);
-            emailInput.value = cleanemail(emailInput.value);
-        } else {
-            foutboodschap.innerHTML = "Email heeft verkeerd formaat&nbsp;&#x274C";
-            toggleErrorMessage(foutboodschap);
-        }
-    } else {
-        foutboodschap.innerHTML = "Email is vereist&nbsp;&#x274C;";
-        toggleErrorMessage(foutboodschap);
-    }
-}
-
-
-function regfirstandlastnameCheck(nameCheck) {
-    let nameRegex = /^[a-zA-Zàâçéèêëîïôûùüÿñæœ /'-]{2,}$/;
-    return (nameRegex.test(nameCheck));
-}
 
 function cleanFirstName(string) {
     string = string.trim();
@@ -161,14 +135,20 @@ function cleanLastName(string) {
     return string;
 }
 
-function BTWnrInputVerify() {
-    if (this.value.match(/^\d+$/)) {
-        if (this.value.length == 10) {
+function firmaNameInputVerify() {
+    if (firmanaamInput.value !== "") {
+        firmanaamInput.value = cleanfirmName(this.value);
+    }
+}
 
-            let deel1 = parseInt(this.value.substr(0, 8));
-            let deel2 = parseInt(this.value.substr(8));
+function BTWnrInputVerify() {
+    if (btwnrInput.value.match(/^\d+$/)) {
+        if (btwnrInput.value.length === 10) {
+
+            let deel1 = parseInt(btwnrInput.value.substr(0, 8));
+            let deel2 = parseInt(btwnrInput.value.substr(8));
             let modulus = deel1 % 97;
-            if (deel2 + modulus == 97) {
+            if (deel2 + modulus === 97) {
                 emptyMessage(foutboodschap);
             } else {
                 foutboodschap.innerHTML = "<div>BTW-nr is niet correct.&nbsp;</div><div>&#x274C</div>";
@@ -229,7 +209,7 @@ function postalnumberVerify() {
     if (postnummerInput.value !== "") {
         if (regpostalnumberCheck(postnummerInput.value)) {
             connect_with_json_file(ax, postnummerInput.value);
-            if (foutboodschap.className == "warning hide") {
+            if (foutboodschap.className === "warning hide") {
                 var arrayGemeente = [];
 
                 find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente);
@@ -260,7 +240,6 @@ function get_gemeentes() {
 }
 
 function passwordVerify() {
-
     if (paswoordInput.value !== "") {
         if (regpasswordCheck(paswoordInput.value)) { // Second Change
             emptyMessage(foutboodschap);
@@ -297,6 +276,11 @@ function passwordVerify2() {
             toggleErrorMessage(foutboodschap);
         }
     }
+}
+
+function regfirstandlastnameCheck(nameCheck) {
+    let nameRegex = /^[a-zA-Zàâçéèêëîïôûùüÿñæœ /'-]{2,}$/;
+    return (nameRegex.test(nameCheck));
 }
 
 function cleanfirmName(string) {
@@ -369,7 +353,7 @@ function connect_with_json_file(ax, postnr) {
         .then((response) => {
             let result = response.data;
             for (let i = 0; i < result.length; i++) {
-                if (result[i].postnummer == postnr) {
+                if (result[i].postnummer === postnr) {
                     emptyMessage(foutboodschap);
                     return;
                 } else {
@@ -396,8 +380,7 @@ function buildtemplate(item) {
         tmpl.setAttribute("value", data[1]);
         tmpl.innerHTML = data[0];
         target.appendChild(tmpl)
-    }
-)
+    })
 }
 
 
@@ -406,7 +389,7 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
         .then((response) => {
             let result = response.data;
             for (let i = 0; i < result.length; i++) {
-                if (result[i].postnummer == postnr) {
+                if (result[i].postnummer === postnr) {
                     console.log(result[i].gemeente);
                     console.log(typeof(result[i].gemeente));
                     let gemeente = result[i].gemeente.toLowerCase();
@@ -423,16 +406,52 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
         });
 }
 
+function buildtemplate(item) {
+
+    item.forEach(data => {
+        var tmpl = document.createElement('option');
+        tmpl.setAttribute("value", data[1]);
+        tmpl.innerHTML = data[0];
+        target.appendChild(tmpl);
+    })
+
+}
+
 function CheckAll(event) {
+
+    let teller = 0;
     firstNameInputVerify();
+    if (foutboodschap.innerHTML !== "") {
+        teller += 1
+    }
     lastNameInputVerify();
+    if (foutboodschap.innerHTML !== "") {
+        teller += 1
+    }
     emailVerify();
+    if (foutboodschap.innerHTML !== "") {
+        teller += 1
+    }
     phoneVerify();
+    if (foutboodschap.innerHTML !== "") {
+        teller += 1
+    }
     streetInputVerify();
-    postalnumberVerify();
+    if (foutboodschap.innerHTML !== "") {
+        teller += 1
+    }
     passwordVerify();
+    if (foutboodschap.innerHTML !== "") {
+        teller += 1
+    }
     passwordVerify2();
-    if (foutboodschap.innerHTML === "") {
+    if (foutboodschap.innerHTML !== "") {
+        teller += 1
+    }
+    if (teller > 0 || (foutboodschap.innerHTML !== "")) {
+        console.log(teller);
+        console.log(foutboodschap.innerHTML);
+        foutboodschap.innerHTML = "<div>De input-waarden zijn niet correct &nbsp;</div><div>&#x274C</div>";
         event.preventDefault();
     }
 }
@@ -449,6 +468,6 @@ postnummerInput.addEventListener('blur', postalnumberVerify);
 paswoordInput.addEventListener('blur', passwordVerify);
 paswoord2Input.addEventListener('blur', passwordVerify2);
 
-//form.addEventListener('submit', CheckAll);
+form.addEventListener('submit', CheckAll);
 
 foutboodschap.addEventListener("click", removeErrorMessage);

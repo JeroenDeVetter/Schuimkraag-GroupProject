@@ -1,6 +1,6 @@
 <?php
 require '../../src/Model/connection.php';
-for ($i=1; $i<2 ; $i++){
+for ($i=1; $i<36 ; $i++){
     $sql1 = "SELECT etiketafbeelding FROM bier WHERE bier_ID=:bierId";
     $stmt =  openConnection()->prepare($sql1);
     $stmt->bindValue(":bierId", $i);
@@ -13,4 +13,4 @@ for ($i=1; $i<2 ; $i++){
     $stmt2->bindValue(":bierId", $i);
     $stmt2->execute();
 }
-
+ECHO "finish";

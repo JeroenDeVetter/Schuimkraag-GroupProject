@@ -90,7 +90,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                         <li ><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane fade  in" id="signup">
+                        <div class="tab-pane fade in" id="signup">
                             <h2 class="text-uppercase text-center">Registreer</h2>
                             <div class="warning hide" id="error_message"></div>
                             <form action="" method="post" id="signup" novalidate>

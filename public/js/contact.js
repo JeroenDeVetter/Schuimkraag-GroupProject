@@ -182,9 +182,7 @@ function CheckAllContact(event) {
     if (foutboodschapContact.innerHTML !== "") {
         teller += 1
     }
-
     if (teller > 0 || (foutboodschapContact.innerHTML !== "")) {
-        console.log(teller);
         foutboodschapContact.innerHTML = "<div>De input-waarden zijn niet correct &nbsp;</div><div>&#x274C</div>";
         event.preventDefault();
     }

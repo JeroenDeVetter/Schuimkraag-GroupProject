@@ -1,8 +1,6 @@
 <?php
 
-
-
-require 'local.php';
+require 'connection.php';
 
 function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $straatNo , $gemeenteId , $email , $phoneNo , $pass) {
     $db = openConnection();
