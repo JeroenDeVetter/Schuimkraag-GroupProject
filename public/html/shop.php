@@ -82,7 +82,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
     <title>Document</title>
 </head>
 
-<body>
+<body>k
 <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
     <div class="container">
         <div class="navbar-header">

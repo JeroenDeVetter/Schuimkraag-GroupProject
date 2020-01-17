@@ -38,7 +38,7 @@
                         <a href="fillbeer.php">E-Shop</a>
                     </li>
                     <li>
-                        <a href="contact.php">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -93,7 +93,7 @@
                 <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Meer Over Ons</a>
                 </li>
                 <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">Promos</a></li>
-            
+
 
                 <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">Jobs</a></li>
 
