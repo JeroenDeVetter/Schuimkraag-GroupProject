@@ -13,6 +13,10 @@ body {
     -moz-font-smoothing: antialiased;
 }
 
+.img-responsive {
+    opacity: 30%;
+}
+
 h1 {
     color: darkgreen;
     margin-bottom: 100px;
@@ -53,7 +57,7 @@ h1 {
 .team-member,
 .team-member .team-img {
     position: relative;
-    border: 2px solid darkgreen;
+    border: 1px solid rgba(20, 20, 20, 0.3);
 }
 
 .team-member {
