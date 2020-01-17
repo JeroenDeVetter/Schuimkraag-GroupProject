@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 <?php
-=======
- <?php
->>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
-require "../../src/Model/connection.php";
+require "../../src/Model/local.php";
 function createBierCards()
 {
     $sql = "SELECT bier_ID, biernaam, prijs, etiketafbeelding, bierstijlnaam FROM bier
-JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
+JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 
     $stmt = openConnection()->prepare($sql);
     $stmt->execute();
@@ -15,54 +11,45 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
     for ($i = 0; $i < count($result); $i++) {
 
         echo
-            "<div class=\"product\" id=\"product_" . $result[$i]->bier_ID. "\">
-                <div class=\"info-large\">
-                    <h4>" . $result[$i]->biernaam . "</h4>
-
-                    <div class=\"price-big\">
-                        <span>€" . $result[$i]->prijs ."</span> 
-    </div>
-
-                    <button class=\"add-cart-large\">Add To Cart</button>
-
-                </div>
-                <div class=\"make3D\">
-                    <div class=\"product-front\">
-                        <div class=\"shadow\"></div>
-                        <img src=\"../images/front/" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . "_front \" />
-                        <div class=\"image_overlay\"></div>
-                        <div class=\"add_to_cart\">Add to cart</div>
-                        <div class=\"view_details\">View Details</div>
-                        <div class=\"stats\">
-                            <div class=\"stats-container\">
-                                <span class=\"product_price\">€" . $result[$i]->prijs. "</span>
-                                <span class=\"product_name\">" . $result[$i]->biernaam . "</span>
-                                <p>" .  $result[$i]->bierstijlnaam. "</p>
-
-                           
+                  "<div class=\"product\" id=\"product_" . $result[$i]->bier_ID. "\">
+                    <div class=\"info-large\">
+                        <h4>" . $result[$i]->biernaam . "</h4>
+                        <div class=\"price-big\">
+                            <span>€" . $result[$i]->prijs ."</span> 
+        </div>
+                        <button class=\"add-cart-large\">Add To Cart</button>
+                    </div>
+                    <div class=\"make3D\">
+                        <div class=\"product-front\">
+                            <div class=\"shadow\"></div>
+                            <img src=\"../images/front/" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . "_front \" />
+                            <div class=\"image_overlay\"></div>
+                            <div class=\"add_to_cart\">Add to cart</div>
+                            <div class=\"view_details\">View Details</div>
+                            <div class=\"stats\">
+                                <div class=\"stats-container\">
+                                    <span class=\"product_price\">€ " . $result[$i]->prijs. "</span>
+                                    <span class=\"product_name\">" . $result[$i]->biernaam . "</span>
+                                    <p>" .  $result[$i]->bierstijlnaam. "</p>
+                               
+                           </div>
                             </div>
                         </div>
-                    </div>
-
-<<<<<<< HEAD
-                   <div class=\"product-back\">
-                          <img src=\"../images/back/" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . "_back \" />
-=======
                         <div class=\"product-back\">
->>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
+                          <img src=\"../images/back/" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . "_back \" />
                         <div class=\"backCardStyling stats-container\">
                         
-                          <span class=\"product_alco\"> </span><br>
-                          <span class=\"product_description\"> </span>
-                          <span class=\"product_name_back\"> " . $result[$i]->biernaam . "</span>
-                          <span class=\"product_price_back\">€" . $result[$i]->prijs . "</span>
+                    <span class=\"product_alco\"> </span><br>
+                    <span class=\"product_description\"> </span>
+                
                          </div>
                             <div class=\"shadow\">
                                
                              <div class=\"stats\">
-                                <div class=\"stats-container\"></div>
+                                <div class=\"stats-container\">
+                                </div>
                             </div>
-                        </div>
+</div>
             
                             <div class=\"flip-back\">
                                 <div class=\"cy\"></div>
@@ -70,18 +57,11 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                </div>
-            </div>";
-=======
                 </div>";
->>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
     }
-
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,7 +78,7 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
     <title>Document</title>
 </head>
 
-<body>k
+<body>
 <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -118,7 +98,7 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
                 <li>
                     <a href="about.php">Over Ons</b> </a>
                 </li>
-                <li>
+                <li >
                     <a href="../../View/login.php">Login</b> </a>
                 </li>
                 <li class="active">
@@ -134,7 +114,6 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
 </div>
 <div id="main_grid">
 
-<<<<<<< HEAD
     <div id="sidebar">
         <h3>Winkelmandje</h3>
         <div id="cart">
@@ -142,17 +121,6 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
         </div>
         <div id="checkout">
             CHECKOUT
-=======
-        <div id="sidebar">
-            <h3>Winkelmandje</h3>
-            <div id="cart">
-                <span class="empty">Nog geen bier in mandje.</span>
-            </div>
-            <div id="checkout">
-            CHECKOUT
-        </div>
-
->>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
         </div>
 
     </div>
@@ -160,37 +128,6 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
         <?php createBierCards(); ?>
     </div>
 </div>
-<<<<<<< HEAD
-=======
-
-        <footer class="flex-rw ">
-            <ul class="footer-list-top ">
-                <li>
-                    <h4 class="footer-list-header ">Over De Schuimkraag</h4>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
-                <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
-            </ul>
-            <ul class="footer-list-top ">
-                <li>
-                    <h4 class="footer-list-header ">Geschenken Hoekje</h4>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
-            </ul>
-            <ul class="footer-list-top ">
-                <li id='help'>
-                    <h4 class="footer-list-header ">Hulp Sectie</h4>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
-                <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
-                <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
-            </ul>
->>>>>>> bed8daa993eec3e78d4dbf92343c6bbce6dec7eb
 
 <footer class="flex-rw ">
     <ul class="footer-list-top ">
@@ -216,10 +153,8 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
         </li>
         <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
         <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
-        <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek
-                Winkel</a></li>
-        <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor "
-                                      itemprop="significantLink ">Nieuwe Gebrukers</a></li>
+        <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
+        <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
     </ul>
 
     <section class="footer-bottom-section flex-rw">
@@ -228,10 +163,8 @@ JOIN bierstijl ON bierstijl.bierstijl_ID = bier.bierstijl_id";
             <address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
         </div>
         <div class="footer-bottom-wrapper">
-            <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a
-                    href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a
-                    href="/cookie-policy.html" class="generic-anchor"
-                    rel="nofollow">Privacy Beleid</a>
+            <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
+                                                                                                                                                                                                      rel="nofollow">Privacy Beleid</a>
         </div>
     </section>
 </footer>
