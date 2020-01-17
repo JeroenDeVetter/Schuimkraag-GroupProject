@@ -40,21 +40,21 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                             </div>
                         </div>
 
-                        <div class=\"product-back\">
+                   <div class=\"product-back\">
                           <img src=\"../images/back/" .$result[$i]->etiketafbeelding. "\" alt=\"". $result[$i]->biernaam . "_back \" />
                         <div class=\"backCardStyling stats-container\">
                         
-                    <span class=\"product_alco\"> </span><br>
-                    <span class=\"product_description\"> </span>
-                
+                          <span class=\"product_alco\"> </span><br>
+                          <span class=\"product_description\"> </span>
+                          <span class=\"product_name_back\"> " . $result[$i]->biernaam . "</span>
+                          <span class=\"product_price_back\">€" . $result[$i]->prijs . "</span>
                          </div>
                             <div class=\"shadow\">
                                
                              <div class=\"stats\">
-                                <div class=\"stats-container\">
-                                </div>
+                                <div class=\"stats-container\"></div>
                             </div>
-</div>
+                        </div>
             
                             <div class=\"flip-back\">
                                 <div class=\"cy\"></div>
@@ -103,7 +103,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
                 <li>
                     <a href="about.php">Over Ons</b> </a>
                 </li>
-                http://becode.local/Schuimkraag-GroupProject/public/images/back/deliriumtremens.png  <li >
+                <li >
                     <a href="../../View/login.php">Login</b> </a>
                 </li>
                 <li class="active">

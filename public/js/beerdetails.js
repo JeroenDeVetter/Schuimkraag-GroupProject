@@ -1,6 +1,4 @@
 const viewDetailsButtons = document.querySelectorAll(".view_details");
-console.log(viewDetailsButtons);
-
 viewDetailsButtons.forEach(function() {
     addEventListener('click', async function(event) {
         let productBack = event.target.parentElement.nextElementSibling;

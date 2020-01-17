@@ -222,7 +222,7 @@ $(document).ready(function() {
             return false;
         });
     });
-
+    var count = 0;
     $('.add_to_cart').click(function() {
         var productCard = $(this).parent();
         var position = productCard.offset();
@@ -241,10 +241,61 @@ $(document).ready(function() {
 
 
             var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
-
-            $("#cart .empty").hide();
-            $("#cart").append(cartItem);
+            var testArray = [];
+            var numberOfItems = [];
+            if (count < 1) {
+                count++;
+                $("#cart .empty").hide();
+                $("#cart").append(cartItem);
+                numberOfItems.push([productName , productPrice])
+            }
+            var test2array = [];
             $("#checkout").fadeIn(500);
+            allItems.forEach(data => {
+               var test =  data.textContent.split("€");
+               test2array.push(test[0]);
+
+            });
+            var countCublicates = compressArray(test2array);
+            console.log(countCublicates);
+            countCublicates.forEach(data =>{
+                if (data["count"] >= 2) {
+                    console.log("shit");
+                }
+            });
+
+            function compressArray(original) {
+
+                var compressed = [];
+                // make a copy of the input array
+                var copy = original.slice(0);
+
+                // first loop goes over every element
+                for (var i = 0; i < original.length; i++) {
+
+                    var myCount = 0;
+                    // loop over every element in the copy and see if it's the same
+                    for (var w = 0; w < copy.length; w++) {
+                        if (original[i] == copy[w]) {
+                            // increase amount of times duplicate is found
+                            myCount++;
+                            // sets item to undefined
+                            delete copy[w];
+                        }
+                    }
+
+                    if (myCount > 0) {
+                        var a = new Object();
+                        a.value = original[i];
+                        a.count = myCount;
+                        compressed.push(a);
+                    }
+                }
+
+                return compressed;
+            };
+
+
 
             $("#cart .cart-item").last()
                 .addClass("flash")
