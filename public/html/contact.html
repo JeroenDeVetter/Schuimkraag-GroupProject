@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Latest compiled and minified CSS -->
+    <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
+    <meta name="description" content="Contact pagina">
+    <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -62,11 +65,20 @@
                             </div>
                             <form id="signup" novalidate>
                                 <div class="row">
-                                </div>
-                                <div class="form-group">
-                                    <label> Naam <span class="req">*</span> </label>
-                                    <input type="text" class="form-control" id="naam" required autocomplete="off">
-                                    <p class="help-block text-danger"></p>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label> Voornaam <span class="req">*</span> </label>
+                                            <input type="text" name="firstName" class="form-control" id="first_name" required data-validation-required-message="Voornaam." autocomplete="off">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <div class="form-group">
+                                            <label> Familienaam <span class="req">*</span> </label>
+                                            <input type="text" name="lastName" class="form-control" id="last_name" required data-validation-required-message="Achternaam." autocomplete="off">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label> Email <span class="req">*</span> </label>
@@ -150,7 +162,7 @@
         </ul>
         <ul class="footer-list-top ">
             <li>
-                <h4 class="footer-list-header ">Geschenken Hoekje</h4>
+                <h4 class="footer-list-header ">Geschenken hoekje</h4>
             </li>
             <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
             <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
@@ -161,23 +173,26 @@
             </li>
             <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
             <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
-            <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
-            <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
+            <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek winkel</a></li>
+            <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe gebrukers</a></li>
         </ul>
 
         <section class="footer-bottom-section flex-rw">
-            <div class="footer-bottom-wrapper ">
+            <div class="footer-bottom-wrapper">
                 &copy; De Schuimkraag <span id="htmlYear">year </span>
                 <address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
             </div>
+            <div class="footer-bottom-wrapper warning-message">
+                "bier met liefde gebrouwen drink je met mate"
+            </div>
+
             <div class="footer-bottom-wrapper">
-                <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
-                    rel="nofollow">Privacy Beleid</a>
+                <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
+                    rel="nofollow">Privacy beleid</a>
             </div>
         </section>
     </footer>
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
-    <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
     <script src="../js/input.js"></script>
     <script src="../js/contact.js"></script>
