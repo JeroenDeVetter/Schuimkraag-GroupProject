@@ -286,14 +286,20 @@ body {
 .instructions {
     position: fixed;
     left: 50%;
-    top: 25vw;
+    top: 30vw;
     color: #fff;
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 3vmin;
-    opacity: 0.5;
     transform: translate(-50%, -50%);
     animation-name: instructions;
+}
+
+@media only screen and (max-width: 768px) {
+    .instructions{
+        font-size: 1.25rem;
+        top: 30vh;
+    }
 }
 
 @media (pointer: fine) {
@@ -311,7 +317,7 @@ body {
 @keyframes instructions {
     0%,
     15% {
-        opacity: 0.5;
+        opacity: 0.75;
     }
     20%,
     100% {
@@ -443,9 +449,18 @@ body {
 .verify-window {
     background-color: black;
     margin-top: 1em;
+    font-family: 'Rubik', sans-serif;;
+    font-size: 1em;
     display: inline-flex;
     align-items: flex-start;
     align-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .instructions{
+        font-size: 0.6em;
+        top: 30vh;
+    }
 }
 
 .verify-window img {
@@ -456,8 +471,6 @@ body {
 }
 
 .verify-window h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
     color: whitesmoke;
     line-height: 1.7;
     margin-top: 10px;
@@ -465,10 +478,10 @@ body {
 }
 
 .verify-window p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
+    margin: 0;
     color: whitesmoke;
     text-align: center;
+    line-height: 1.5em;
 }
 
 .button-yes,
@@ -479,7 +492,7 @@ body {
     margin-top: 30px;
     border: 2px solid#86c232;
     padding: 12px 17px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;;
     text-align: center;
     font-size: 1em;
 }

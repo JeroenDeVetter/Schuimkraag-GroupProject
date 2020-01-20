@@ -3,14 +3,15 @@
 <html lang="en">
 
 <head>
+<title>fillbeer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
+    <meta name="description" content="Contact pagina">
+    <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../css/fillbeer.css">
-    <title>index</title>
-
-    <title>Document</title>
 </head>
 
 
@@ -18,23 +19,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="../js/ageverif.js"></script>
-
-
-    <!-- Icon from flaticon -->
-    <!-- <div class="popup">
-        <img src="https://image.flaticon.com/icons/svg/2078/2078580.svg" alt="">
-        <h2>Hallo, Deze site maakt gebruik van cookies!</h2>
-        <p>Deze cookies laten de gebruiker toe om zonder zorgen gebruik te maken van deze website.</p>
-        <div class="btn-container">
-            <button class="btn">Lekker... cookies!</button>
-            <button class="btn ghost" id="trick">
-              Nee, Ik ben op dieet !
-              <span>Niet op mij klikken :(</span>
-          </button>
-        </div>
-    </div> -->
-
-
     <script src="../js/cookies.js"></script>
     <div class="box">
         <div class="glass">
@@ -126,7 +110,7 @@
             </div>
 
             <div class="button-no">
-                <a href="https://google.com">Neen, ik ben nog geen 18 jaar !</a>
+                <a href="401.html">Neen, ik ben nog geen 18 jaar !</a>
             </div>
 
         </div>

@@ -1,6 +1,9 @@
 const trickBtn = document.getElementById('trick');
 const btnContainer = document.querySelector('.btn-container');
-// setting it initially
+const btnOK = document.querySelector('#btnOK');
+const overlay = document.querySelector('.overlay');
+const cookiebox = document.querySelector('.popup');
+
 btnContainer.style.flexDirection = 'row';
 
 trickBtn.addEventListener('mouseover', (e) => {
@@ -10,17 +13,35 @@ trickBtn.addEventListener('mouseover', (e) => {
     } else {
         btnContainer.style.flexDirection = 'row';
     }
-})
-
-// SOCIAL PANEL JS
-const floating_btn = document.querySelector('.floating-btn');
-const close_btn = document.querySelector('.close-btn');
-const social_panel_container = document.querySelector('.social-panel-container');
-
-floating_btn.addEventListener('click', () => {
-    social_panel_container.classList.toggle('visible')
 });
 
-close_btn.addEventListener('click', () => {
-    social_panel_container.classList.remove('visible')
-});
+function createCookie(cookieName,cookieValue,daysToExpire){
+    let date = new Date();
+    date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+    document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+    console.log(document.cookie);
+}
+
+function testCookieExist() {
+    let myCookie = document.cookie;
+    console.log(myCookie);
+    if (!(myCookie == "")) {
+        console.log("cookie bestaat");
+        cookiebox.style.visibility = "hidden";
+        overlay.style.visibility = "hidden";
+    }
+    else {
+        console.log("cookie bestaat nog niet");
+        cookiebox.style.visibility = "visible";
+        overlay.style.visibility = "visible";
+    }
+}
+
+function placeCookie(){
+        createCookie("policyCookie", "anonymous", 365);
+        overlay.style.visibility = "hidden";
+        cookiebox.style.visibility = "hidden";
+}
+
+window.addEventListener("load",testCookieExist);
+btnOK.addEventListener("click",placeCookie);

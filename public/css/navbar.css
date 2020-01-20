@@ -1,12 +1,13 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
+.navbar .container {
+    padding: 0.25em 0;
+}
+
 .navbar-brand {
-    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     color: #86c232!important;
 }
 
 .navbar .nav {
-    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 1.2rem
@@ -118,5 +119,5 @@ a {
 .navbar-inverse .navbar-nav>li>a:focus {
     background-color: rgb(55, 94, 9);
     color: #FFF !important;
-    border: solid 1px rgb(55, 94, 9);
+    border: solid 1px white;
 }

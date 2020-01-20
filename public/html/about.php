@@ -50,7 +50,7 @@
 <body>
 
     <div id="title" class="slide header">
-        <h1>De Schuimkraag</h1>
+        <h1>De<br>Schuimkraag</h1>
     </div>
 
     <div id="slide1" class="slide">
