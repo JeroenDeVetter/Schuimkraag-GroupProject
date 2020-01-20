@@ -3,7 +3,8 @@ html {
     height: 100%;
     background: #1c1e21;
     overflow-x: hidden;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Rubik', sans-serif;
+
 }
 
 btn {
@@ -21,11 +22,8 @@ btn {
 .btn-larger {
     padding: 15px 40px !important;
     border: 2px solid #86c232 !important;
-    ;
     border-radius: 0px !important;
-    ;
     text-transform: uppercase;
-    font-family: 'Dosis', sans-serif;
     font-size: 18px;
     font-weight: 300;
     color: #86c232;
@@ -76,6 +74,11 @@ fieldset[disabled] .btn-larger.active {
     background-color: #fff;
 }
 
+.direct-contact-container{
+    padding: 2em;
+    margin-top: 10.5em;
+}
+
 div#form {
     color: #fff;
     background-attachment: scroll;
@@ -103,13 +106,14 @@ div#form {
 
 #userform {
     background: rgba(0, 0, 0, 0.8);
-    margin: 20px 0 20px 0
+    margin: 9em 0 20px 0;
+    box-shadow: 0.5em 0.5rem 0.75em rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 768px) {
     #userform {
         background: rgba(0, 0, 0, 0.8);
-        margin: 50px 0 20px 0
+        margin: 9em 0 20px 0
     }
 }
 
@@ -237,7 +241,6 @@ div#form {
 
 #userform::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: 'Dosis', sans-serif;
     font-weight: 700;
     color: #bbb;
 }
@@ -314,15 +317,12 @@ div#form {
     margin-top: 30px
 }
 
-@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
 .navbar-brand {
-    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     color: #86c232!important;
 }
 
 .navbar .nav {
-    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 1.2rem
@@ -339,21 +339,7 @@ div#form {
     color: #86c232!important;
 }
 
-.dropdown-menu {
-    background-color: #006B00
-}
-
-.dropdown-menu>li>a:hover,
-.dropdown-menu>li>a:focus {
-    background-color: #002200
-}
-
 .navbar-inverse {
-    background-image: none;
-}
-
-.dropdown-menu>li>a:hover,
-.dropdown-menu>li>a:focus {
     background-image: none;
 }
 
@@ -488,7 +474,7 @@ a {
     margin-left: -30px;
     padding-right: 20px;
     text-align: center;
-    margin-top: 8.5em;
+    margin-top: 1em;
 }
 
 .list-item {
@@ -497,8 +483,7 @@ a {
 }
 
 .contact-text {
-    font: 300 25px 'Lato', sans-serif;
-    letter-spacing: 1.9px;
+    font-family: 'Rubik', sans-serif;
     font-weight: bold;
     color: #fff;
     margin-left: 20px;
@@ -521,4 +506,11 @@ textarea {
     color: #fff;
     letter-spacing: 1px;
     border-radius: 0;
+}
+
+hr{
+    color: grey;
+    height: 1px;
+    margin-top: 4em;
+    margin-bottom: 1em;
 }

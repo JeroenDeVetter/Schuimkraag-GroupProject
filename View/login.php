@@ -1,11 +1,11 @@
-  
+
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 require '../src/Model/register.php';
 require '../src/Model/login.php';
 require '../src/Model/checkUser.php';
-session_start();
+//session_start();
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register']))
     {
         checkUser($_POST['company'],$_POST['firstName'],$_POST['lastName'],$_POST['btw'],$_POST['streedName'],$_POST['houseNum'],$_POST['gemeente'],$_POST['emailRegister'],$_POST['phoneNum'],$_POST['registerPass']);
@@ -24,6 +24,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
+    <meta name="description" content="Login pagina">
+    <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/login.css">
@@ -33,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 </head>
 
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+<!--<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
             <div class="container">
                 <div class="navbar-header">
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -65,8 +68,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                 </nav>
             </div>
 
-        </div>
+        </div>-->
 
+<?php require 'nav.php'?>
     <!--========================-->
     <div id="form">
         <div class="container">
@@ -86,11 +90,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
               ?>
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
-                        <li class="active"><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
-                        <li ><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
+                        <li class="active"><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
+                        <li ><a href="#signup" role="tab" data-toggle="tab"> Registreer</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane fade active in" id="signup">
+                        <div class="tab-pane fade in" id="signup">
                             <h2 class="text-uppercase text-center">Registreer</h2>
                             <div class="warning hide" id="error_message"></div>
                             <form action="" method="post" id="signup" novalidate>
@@ -190,7 +194,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                 </div>
                             </form>
                         </div>
-                        <div class="tab-pane fade in" id="login">
+                        <div class="tab-pane fade active in" id="login">
                             <h2 class="text-uppercase text-center"> Log in</h2>
                             <div class="warning hide" id="error_message_login"></div>
                             <form action="" method="post" id="login" novalidate>
@@ -220,45 +224,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
         </div>
         <!-- /.container -->
     </div>
-    <footer class="flex-rw ">
-
-            <ul class="footer-list-top ">
-                <li>
-                    <h4 class="footer-list-header ">Over De Schuimkraag</h4>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
-                <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
-            </ul>
-            <ul class="footer-list-top ">
-                <li>
-                    <h4 class="footer-list-header ">Geschenken Hoekje</h4>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
-            </ul>
-            <ul class="footer-list-top ">
-                <li id='help'>
-                    <h4 class="footer-list-header ">Hulp Sectie</h4>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
-                <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
-                <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
-            </ul>
-
-            <section class="footer-bottom-section flex-rw">
-                <div class="footer-bottom-wrapper ">
-                    &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
-                </div>
-                <div class="footer-bottom-wrapper">
-                    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
-                        rel="nofollow">Privacy Beleid</a>
-                </div>
-            </section>
-        </footer>
+    <?php require 'footer.php'?>
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>

@@ -1,5 +1,6 @@
 let emailContact = document.querySelector('#email_contact');
-let naamContact = document.querySelector('#naam');
+let voornaamContact = document.querySelector('#first_name');
+let achternaamContact = document.querySelector('#last_name');
 let onderwerpContact = document.querySelector('#subject_contact');
 let messageContact = document.querySelector('#message');
 
@@ -24,13 +25,28 @@ function emailVerifyContact() {
 
 }
 
-function naamVerifyContact() {
-    console.log("naam");
-    console.log(foutboodschapContact.innerHTML);
-    if (naamContact.value !== "") {
+function voornaamVerifyContact(){
+    console.log("voornaam");
+    if (voornaamContact.value !== "") {
+        if (regfirstandlastnameCheck(voornaamContact.value)) {
+            voornaamContact.value = cleanFirstName(voornaamContact.value);
+            emptyMessage(foutboodschapContact);
+        } else {
+            foutboodschapContact.innerHTML = "<div>Voornaam is niet correct. Min 2 letters, geen getallen of symbolen &nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschapContact);
+        }
+    } else {
+        foutboodschapContact.innerHTML = "<div>Voornaam is vereist &nbsp;</div><div>&#x274C;</div>";
+        toggleErrorMessage(foutboodschapContact);
+    }
+}
+
+function achternaamVerifyContact() {
+    console.log("achternaam");
+    if (achternaamContact.value !== "") {
         console.log(foutboodschapContact.innerHTML);
-        if (regnameCheck(this.value)) {
-            naamContact.value = cleanName(naamContact.value);
+        if (regfirstandlastnameCheck(achternaamContact.value)) {
+            achternaamContact.value = cleanName(achternaamContact.value);
             emptyMessage(foutboodschapContact);
         } else {
             foutboodschapContact.innerHTML = "<div>Naam is niet correct. Min 2 letters, geen getallen of symbolen &nbsp;</div><div>&#x274C</div>";
@@ -71,6 +87,49 @@ function messageVerifyContact() {
         foutboodschapContact.innerHTML = "<div>Boodschap is vereist. &nbsp;</div><div>&#x274C</div>";
         toggleErrorMessage(foutboodschapContact);
     }
+}
+
+function cleanFirstName(string) {
+    string = string.trim();
+    string = string.replace(/\s+/g, ' ');
+    string = string.replace(/\s-\s/g, '-');
+    let newSentence = "";
+    let x = string.split(" ").length;
+    var words = string.split(" ");
+    var firstSubPart;
+
+    for (let i = 0; i < x; i++) {
+        if ((words[i].split("-")).length > 1) {
+            let subWords = words[i].split("-");
+            let newSubSentence2 = "";
+            let k = subWords.length;
+            for (j = 0; j < (k - 1); j++) {
+                if (j === 0) {
+                    let firstSubPart1 = subWords[j].substring(0, 1).toUpperCase();
+                    let firstSubPart2 = (subWords[j].substring(1)).toLowerCase();
+                    firstSubPart = firstSubPart1 + firstSubPart2;
+                } else {
+                    firstSubPart = "";
+                }
+                let lastSubPart1 = (subWords[j + 1].substring(0, 1)).toUpperCase();
+                let lastSubPart2 = (subWords[j + 1].substring(1)).toLowerCase();
+                let newSubWord = firstSubPart + "-" + lastSubPart1 + lastSubPart2;
+                newSubSentence2 = newSubSentence2 + newSubWord;
+            }
+            newSentence = newSentence + newSubSentence2 + " ";
+            string = newSentence;
+        } else {
+            var firstPart = words[i].substring(0, 1);
+            var lastPart = words[i].substring(1);
+            firstPart = (words[i].substring(0, 1)).toUpperCase();
+            lastPart = (words[i].substring(1)).toLowerCase();
+            newWord = firstPart + lastPart;
+            newSentence = newSentence + newWord + " ";
+            string = newSentence;
+        }
+    }
+    string = string.trimEnd();
+    return string;
 }
 
 function cleanName(string) {
@@ -127,7 +186,7 @@ function regmailCheck(mailCheck) {
 
 }
 
-function regnameCheck(nameCheck) {
+function regfirstandlastnameCheck(nameCheck) {
 
     let nameRegex = /^[a-zA-Zàâçéèêëîïôûùüÿñæœ /'-]{2,}$/;
     return (nameRegex.test(nameCheck));
@@ -149,13 +208,13 @@ function toggleErrorMessage(foutboodschapContact) {
 }
 
 function removeErrorMessage() {
-
     this.classList.remove("show");
     this.classList.add("hide");
 
 }
 
-naamContact.addEventListener('blur', naamVerifyContact)
+voornaamContact.addEventListener('blur', voornaamVerifyContact)
+achternaamContact.addEventListener('blur', achternaamVerifyContact)
 emailContact.addEventListener('blur', emailVerifyContact);
 onderwerpContact.addEventListener('blur', subjectVerifyContact);
 messageContact.addEventListener('blur', messageVerifyContact);
@@ -178,14 +237,20 @@ function CheckAllContact(event) {
     if (foutboodschapContact.innerHTML !== "") {
         teller += 1
     }
-    naamVerifyContact();
+    achternaamVerifyContact();
     if (foutboodschapContact.innerHTML !== "") {
         teller += 1
     }
-
+    voornaamVerifyContact();
+    if (foutboodschapContact.innerHTML !== "") {
+        teller += 1
+    }
+    console.log(teller);
     if (teller > 0 || (foutboodschapContact.innerHTML !== "")) {
-        console.log(teller);
+        console.log("in foutboodschap div");
         foutboodschapContact.innerHTML = "<div>De input-waarden zijn niet correct &nbsp;</div><div>&#x274C</div>";
+        console.log(foutboodschapContact);
+        toggleErrorMessage(foutboodschapContact);
         event.preventDefault();
     }
 

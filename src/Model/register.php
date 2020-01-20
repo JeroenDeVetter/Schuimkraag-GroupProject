@@ -2,12 +2,12 @@
 
 
 
-require 'local.php';
+require 'connection.php';
 
 function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $straatNo , $gemeenteId , $email , $phoneNo , $pass) {
     $db = openConnection();
     $shadPass = password_hash($pass, PASSWORD_DEFAULT);
-
+    $mailtoken = bin2hex(openssl_random_pseudo_bytes(16));
     $select = $db->query("INSERT INTO
     klant (
       firmanaam,
@@ -19,7 +19,8 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
       gemeente_id,
       email,
       telefoonnummer,
-      hashed_wachtwoord
+      hashed_wachtwoord,
+      mail_token
     )
   VALUES
     (
@@ -32,9 +33,12 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
       '$gemeenteId',
       '$email',
       '$phoneNo',
-      '$shadPass'
+      '$shadPass',
+      '$mailtoken'
     )
   ");
-
+//$_SERVER['HTTP_HOST']
+    header("Location: http://schuimkraag.local/src/Model/registrationMail.php?mail={$email}&naam={$firstname}&token={$mailtoken}");
+    die();
 
 }
