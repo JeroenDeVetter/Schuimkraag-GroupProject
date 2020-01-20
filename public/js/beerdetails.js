@@ -10,9 +10,9 @@ viewDetailsButtons.forEach(function(detailbutton) {
         let descriptionBox = backstats.querySelector(".product_description");
         let ProductId = event.target.closest('.product').id;
         let bierId = ProductId.substr(8);
-        let response = await fetch(`getbeerdetails.php?q=${bierId}`);
+        let response = await fetch(`../src/Model/getbeerdetails.php?q=${bierId}`);
         const jsonResponse = await response.json();
-        productbackimg.src = "../images/back/" + jsonResponse.etiketafbeelding;
+        productbackimg.src = "../public/images/back/" + jsonResponse.etiketafbeelding;
         productBack.insertBefore(productbackimg, productBack.firstChild);
         alcoholgehalteBox.innerHTML = "alcoholgehalte: " + jsonResponse.alcoholgehalte + "°";
         descriptionBox.innerHTML = "<em>" + jsonResponse.bierbeschrijving + "</em>";

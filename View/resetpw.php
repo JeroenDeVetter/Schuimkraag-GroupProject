@@ -7,7 +7,7 @@ require '../src/Model/checkUser.php';
 session_start();
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register']))
     {
-        checkUser($_POST['company'],$_POST['firstName'],$_POST['lastName'],$_POST['btw'],$_POST['streedName'],$_POST['houseNum'],$_POST['gemeente'],$_POST['emailRegister'],$_POST['phoneNum'],$_POST['registerPass']);
+        $success = checkUser($_POST['company'],$_POST['firstName'],$_POST['lastName'],$_POST['btw'],$_POST['streedName'],$_POST['houseNum'],$_POST['gemeente'],$_POST['emailRegister'],$_POST['phoneNum'],$_POST['registerPass']);
         var_dump($_POST['postcode']);
     }
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
@@ -23,6 +23,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
+        <meta name="description" content="ResetPw pagina">
+        <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="../public/css/login.css">
@@ -32,39 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
     </head>
 
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                    <a href="" class="navbar-brand">De Schuimkraag</a>
-                </div>
-                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="../public/html/about.php">Over Ons</b> </a>
-                        </li>
-                        <li class="active">
-                            <a href="#">Login</b> </a>
-                        </li>
-                        <li>
-                            <a href="../public/html/fillbeer.php">E-Shop</a>
-                        </li>
-                        <li>
-                            <a href="../public/html/contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-        </div>
+        <?php require 'nav.php'?>
 
         <!--========================-->
         <div id="form">
@@ -219,45 +190,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
             </div>
             <!-- /.container -->
         </div>
-        <footer class="flex-rw ">
-
-            <ul class="footer-list-top ">
-                <li>
-                    <h4 class="footer-list-header ">Over De Schuimkraag</h4>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
-                <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
-            </ul>
-            <ul class="footer-list-top ">
-                <li>
-                    <h4 class="footer-list-header ">Geschenken Hoekje</h4>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
-            </ul>
-            <ul class="footer-list-top ">
-                <li id='help'>
-                    <h4 class="footer-list-header ">Hulp Sectie</h4>
-                </li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
-                <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
-                <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
-                <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
-            </ul>
-
-            <section class="footer-bottom-section flex-rw">
-                <div class="footer-bottom-wrapper ">
-                    &copy; De Schuimkraag <span id="htmlYear">year </span><address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
-                </div>
-                <div class="footer-bottom-wrapper">
-                    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
-                        rel="nofollow">Privacy Beleid</a>
-                </div>
-            </section>
-        </footer>
+        <?php
+         require 'footer.php'
+        ?>
         <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>

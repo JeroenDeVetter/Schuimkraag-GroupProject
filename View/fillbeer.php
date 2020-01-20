@@ -8,18 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
-    <meta name="description" content="Contact pagina">
+    <meta name="description" content="Fillbeer pagina">
     <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="../css/fillbeer.css">
+    <link rel="stylesheet" href="../public/css/fillbeer.css">
 </head>
 
 
 <body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="../js/ageverif.js"></script>
-    <script src="../js/cookies.js"></script>
+    <script src="../public/js/ageverif.js"></script>
+    <script src="../public/js/cookies.js"></script>
     <div class="box">
         <div class="glass">
             <div class="wrapper">

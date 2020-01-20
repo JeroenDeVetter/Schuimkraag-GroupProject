@@ -37,7 +37,7 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
       '$mailtoken'
     )
   ");
-
+//$_SERVER['HTTP_HOST']
     header("Location: http://schuimkraag.local/src/Model/registrationMail.php?mail={$email}&naam={$firstname}&token={$mailtoken}");
     die();
 

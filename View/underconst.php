@@ -1,52 +1,23 @@
+<?php?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
+    <meta name="description" content="under construkt pagina">
+    <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/underconst.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../public/css/navbar.css">
+    <link rel="stylesheet" href="../public/css/underconst.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
     <title>coming soon</title>
 </head>
-
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="" class="navbar-brand">De Schuimkraag</a>
-            </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.php">Over Ons</b> </a>
-                    </li>
-                    <li>
-                        <a href="../../View/login.php">Login</b> </a>
-                    </li>
-                    <li>
-                        <a href="fillbeer.php">E-Shop</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <?php require 'nav.php'?>
     <div class="main-wrapper">
         <div class="const-msg-container">
             <div class="const-msg">
@@ -70,62 +41,12 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-    <footer class="flex-rw ">
-
-        <ul class="footer-list-top ">
-            <li>
-                <h4 class="footer-list-header ">Over De Schuimkraag</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
-            <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
-        </ul>
-        <ul class="footer-list-top ">
-            <li>
-                <h4 class="footer-list-header ">Geschenken Hoekje</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
-        </ul>
-        <ul class="footer-list-top ">
-            <li id='help'>
-                <h4 class="footer-list-header ">Hulp Sectie</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
-            <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
-            <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
-        </ul>
-
-        <section class="footer-bottom-section flex-rw">
-            <div class="footer-bottom-wrapper ">
-                &copy; De Schuimkraag <span id="htmlYear">year </span>
-                <address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
-            </div>
-            <div class="footer-bottom-wrapper">
-                <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
-                    rel="nofollow">Privacy Beleid</a>
-            </div>
-        </section>
-    </footer>
+    <?php require 'footer.php'?>
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
 
-    <script src="../js/footer.js "></script>
+    <script src="../public/js/footer.js "></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
