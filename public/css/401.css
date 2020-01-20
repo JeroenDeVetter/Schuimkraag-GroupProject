@@ -1,8 +1,11 @@
-html, body, div, span {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
+html,
+body,
+div,
+span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
 }
 
 html {
@@ -101,7 +104,7 @@ a {
     padding: 0.25rem 0.5rem;
 }
 
-a:hover{
+a:hover {
     background-color: rgba(51, 255, 51, 0.4);
 }
 
@@ -113,7 +116,7 @@ a::after {
     content: "]";
 }
 
-header{
+header {
     margin: 10rem 0;
 }
 
@@ -125,7 +128,7 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
-    header{
+    header {
         margin: 5rem 0;
     }
     h1 {
@@ -134,19 +137,18 @@ h1 {
     }
     body {
         font-size: 1.15em;
-
     }
-    .output{
+    .output {
         margin-left: 10%;
     }
 }
 
 @media only screen and (max-width: 375px) {
-    .terminal{
+    .terminal {
         width: 95%;
         margin-left: 0;
     }
-    header{
+    header {
         margin: 3rem 0;
     }
     h1 {
@@ -155,9 +157,8 @@ h1 {
     }
     body {
         font-size: 1em;
-
     }
-    .output{
+    .output {
         margin-left: 5%;
     }
 }

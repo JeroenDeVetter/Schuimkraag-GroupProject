@@ -1,5 +1,5 @@
 const ax = axios.create({
-    baseURL: 'http://localhost:8888/Schuimkraag-GroupProject/public/js'
+    baseURL: 'http://becode.local/Schuimkraag-GroupProject/public/js'
 });
 
 let voornaamInput = document.querySelector('#first_name');
@@ -164,20 +164,6 @@ function BTWnrInputVerify() {
     }
 }
 
-function emailVerify() {
-    if (this.value !== "") {
-        if (regmailCheck(emailInput.value)) {
-            emptyMessage(foutboodschap);
-            emailInput.value = cleanemail(emailInput.value);
-        } else {
-            foutboodschap.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
-            toggleErrorMessage(foutboodschap);
-        }
-    } else {
-        foutboodschap.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
-        toggleErrorMessage(foutboodschap);
-    }
-}
 
 function phoneVerify() {
     if (telefoonInput.value !== "") {
@@ -230,7 +216,9 @@ function postalnumberVerify() {
                 target.innerHTML = "";
 
                 setTimeout(() => {
+
                     arrayGemeente.forEach(buildtemplate(arrayGemeente));
+
                 }, 450);
             } else {
                 target.innerHTML = "";
@@ -385,6 +373,19 @@ function connect_with_json_file(ax, postnr) {
         });
 }
 
+function buildtemplate(item) {
+
+
+    console.log(item);
+    item.forEach(data => {
+        var tmpl = document.createElement('option');
+        tmpl.setAttribute("value", data[1]);
+        tmpl.innerHTML = data[0];
+        target.appendChild(tmpl)
+    })
+}
+
+
 function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
     ax.get("schuimkraag_gemeente.json")
         .then((response) => {
@@ -394,8 +395,11 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
                     console.log(result[i].gemeente);
                     console.log(typeof(result[i].gemeente));
                     let gemeente = result[i].gemeente.toLowerCase();
+                    let gemeenteId = result[i].gemeente_ID;
                     let gemeenteFirstLetterCapitalize = gemeente.charAt(0).toUpperCase() + gemeente.slice(1);
+
                     arrayGemeente.push([gemeenteFirstLetterCapitalize, result[i].gemeente_ID]);
+
                     console.log(arrayGemeente);
                 }
             }
@@ -409,7 +413,7 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
 
 function buildtemplate(item) {
 
-    item.forEach(data=>{
+    item.forEach(data => {
         var tmpl = document.createElement('option');
         tmpl.setAttribute("value", data[1]);
         tmpl.innerHTML = data[0];
