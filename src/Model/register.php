@@ -38,7 +38,7 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
     )
   ");
 //$_SERVER['HTTP_HOST']
-    header("Location: http://localhost:8888/src/Model/registrationMail.php?mail={$email}&naam={$firstname}&token={$mailtoken}");
+    header("Location: {$_SERVER['HTTP_HOST']}/src/Model/registrationMail.php?mail={$email}&naam={$firstname}&token={$mailtoken}");
     die();
 
 }

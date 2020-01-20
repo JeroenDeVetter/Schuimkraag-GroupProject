@@ -16,8 +16,7 @@ if ($row != ""){
     $stmt=openConnection()->prepare($sql);
     $stmt->bindValue(':mailtoken', $tokenparam);
     $stmt->execute();
-    $_SERVER['HTTP_REFERER']= "http://schuimkraag.local/src/Model/verifyuser.php";
-    header("Location: http://schuimkraag.local/View/login.php");
+    header("Location: http://schuimkraag.local/View/login.php?q=success");
     die();
 }
 else {
