@@ -5,7 +5,11 @@ ini_set("display_errors", 1);
 require '../src/Model/register.php';
 require '../src/Model/login.php';
 require '../src/Model/checkUser.php';
+
 //session_start();
+if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == "http://schuimkraag.local/src/Model/verifyuser.php"){
+$succes= "registration successfull! \r\n you are now able to login.";
+}
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register']))
     {
         checkUser($_POST['company'],$_POST['firstName'],$_POST['lastName'],$_POST['btw'],$_POST['streedName'],$_POST['houseNum'],$_POST['gemeente'],$_POST['emailRegister'],$_POST['phoneNum'],$_POST['registerPass']);
@@ -82,8 +86,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                 if (isset($_SESSION['error_message'])) {
                   echo  '<div class="alert alert-danger mb-0"><h3>'. $_SESSION['error_message'] . '</h3></div>';
                 }
-
               ?>
+                <div class="alert alert-succes"><?php echo $succes ?></div>;
+
+
                 <div id="userform">
                     <ul class="nav nav-tabs nav-justified" role="tablist">
                         <li class="active"><a href="#login" role="tab" data-toggle="tab">Log in</a></li>
