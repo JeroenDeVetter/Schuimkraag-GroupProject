@@ -14,7 +14,7 @@
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="underconst.php">Home</a>
+                    <a href="home.php">Home</a>
                 </li>
                 <li>
                     <a href="about.php">Over Ons</b> </a>
