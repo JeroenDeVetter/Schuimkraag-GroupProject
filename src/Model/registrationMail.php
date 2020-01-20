@@ -18,7 +18,7 @@ $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
 $message = "<p><strong>Dear {$naam}</strong>, \r\n 
  thank you for registering.  Once we verifier your emailadres, you will be able to login. Please click the link to do so \r\n\ 
-  <a href='http://schuimkraag.local/src/Model/verifyuser.php?token={$token}&mail={$to}'></a><button>verify</button></p>";
+  <a href='http://localhost:8888/src/Model/verifyuser.php?token={$token}&mail={$to}'></a><button>verify</button></p>";
 
 
 mail($to, $subject, $message, $headers);
