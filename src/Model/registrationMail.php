@@ -19,4 +19,5 @@ $message = "<p><strong>Dear {$naam}</strong>, <br><br>" .
   "<a href=\"http://schuimkraag.local/src/Model/verifyuser.php?token={$token}&mail={$to}\"><button>verify</button></a></p>";
 
 
+
 mail($to, $subject, $message, $headers);
