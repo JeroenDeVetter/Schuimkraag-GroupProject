@@ -2,6 +2,8 @@
 ?>
 <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
     <div class="container">
+    <div class="bg-div">
+    
         <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
