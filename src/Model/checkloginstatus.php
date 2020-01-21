@@ -6,11 +6,13 @@ error_reporting(E_ALL);
 
 //change to your local host name
 if (isset($_COOKIE['PHPSESSID'])) {
-    header("Location: {$_SERVER['HTTP_HOST']}/Schuimkraag-GroupProject/View/shop.php");
+
+    header("Location: {$_SERVER['HTTP_HOST']}/View/shop.php");
     die();
 }
 //change to your local host name
 else {
-    header("Location: {$_SERVER['HTTP_HOST']}/Schuimkraag-GroupProject/View/fillbeer.php");
+    header_remove();
+    header("Location: {$_SERVER['HTTP_HOST']}/View/fillbeer.php");
     die();
 }

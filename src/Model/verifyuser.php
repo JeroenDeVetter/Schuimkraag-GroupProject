@@ -1,6 +1,6 @@
 <?php
 
-require '../../src/Model/connection.php';
+require 'connection.php';
 
 
 
