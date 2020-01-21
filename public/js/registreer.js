@@ -1,5 +1,5 @@
 const ax = axios.create({
-    baseURL: 'http://localhost:8888/Schuimkraag-GroupProject/public/js'
+    baseURL: "{$_SERVER['HTTP_HOST']}/public/js"
 });
 
 let voornaamInput = document.querySelector('#first_name');

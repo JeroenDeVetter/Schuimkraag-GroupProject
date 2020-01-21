@@ -100,7 +100,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 </div>
 <?php require 'footer.php'?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="../public/js/shop.js"></script>
+<script src="../public/js/testshop.js"></script>
 <script src="../public/js/beerdetails.js"></script>
 </body>
 </html>

@@ -5,14 +5,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 //change to your local host name
-if (isset($_COOKIE['PHPSESSID'])) {
+function setHeader($locationPath){
+    return header($locationPath);
+}
 
-    header("Location: {$_SERVER['HTTP_HOST']}/View/shop.php");
-    die();
-}
-//change to your local host name
-else {
-    header_remove();
-    header("Location: {$_SERVER['HTTP_HOST']}/View/fillbeer.php");
-    die();
-}
+setHeader('$_SERVER[HTTP_HOST]/View/fillbeer.php');
