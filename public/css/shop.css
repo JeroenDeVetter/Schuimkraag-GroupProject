@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Rubik', sans-serif;
     overflow: auto;
     background-color: #111;
     height: 100%;
@@ -439,8 +439,7 @@ div.large .make3D {
     -moz-transition: all 200ms ease-out;
     -o-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
-    background-color: black;
-    opacity: 30%;
+    background-color: #191919;
 }
 
 .make3D.animate .stats-container {

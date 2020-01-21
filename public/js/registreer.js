@@ -1,5 +1,5 @@
 const ax = axios.create({
-    baseURL: 'http://becode.local/Schuimkraag-GroupProject/public/js'
+    baseURL: 'http://localhost:8888/Schuimkraag-GroupProject/public/js'
 });
 
 let voornaamInput = document.querySelector('#first_name');
@@ -140,6 +140,24 @@ function firmaNameInputVerify() {
         firmanaamInput.value = cleanfirmName(this.value);
     }
 }
+
+function emailVerify() {
+
+    if (emailInput.value !== "") {
+        if (regmailCheck(emailInput.value)) {
+            emptyMessage(foutboodschapLogin);
+            emailInput.value = cleanemail(emailinput.value);
+        } else {
+            foutboodschapLogin.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschapLogin);
+        }
+    } else {
+        foutboodschapLogin.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
+        toggleErrorMessage(foutboodschapLogin);
+    }
+
+}
+
 
 function BTWnrInputVerify() {
     if (btwnrInput.value.match(/^\d+$/)) {
