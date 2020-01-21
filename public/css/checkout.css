@@ -107,16 +107,6 @@ p {
     background-size: 60px 60px;
 }
 
-
-/* .clientlogo {
-    float: left;
-    height: 60px;
-    width: 60px;
-    background: url(http://michaeltruong.ca/images/client.jpg) no-repeat;
-    background-size: 60px 60px;
-    border-radius: 50px;
-} */
-
 .info {
     display: block;
     float: left;
@@ -124,7 +114,7 @@ p {
 }
 
 .title {
-    float: right;
+    text-align: right;
 }
 
 .title p {

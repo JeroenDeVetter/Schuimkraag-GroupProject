@@ -1,5 +1,5 @@
 <?php
-require "../src/Model/connection.php";
+require "../src/Model/david.php";
 function createBierCards()
 {
     $sql = "SELECT bier_ID, biernaam, prijs, etiketafbeelding, bierstijlnaam FROM bier

@@ -68,7 +68,7 @@
                 </div>
                 <div class="team-title">
                     <h5>Danny</h5>
-                    <span color>Back-end &amp; Solutions</span>
+                    <span color>Back-end &amp; DB-Master</span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">
@@ -114,7 +114,7 @@
                 </div>
                 <div class="team-title">
                     <h5>Jeroen</h5>
-                    <span>Back-end &amp; DB-Master</span>
+                    <span>Back-end &amp; Git-Master</span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">
