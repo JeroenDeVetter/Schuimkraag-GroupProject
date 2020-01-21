@@ -77,7 +77,7 @@ p {
     width: 700px;
     background: #1c1e21;
     color: #fff;
-    opacity: 70%;
+    opacity: 90%;
     background-color: black;
 }
 
@@ -213,4 +213,10 @@ form {
 .legal {
     width: 70%;
     background-color: black;
+}
+
+#button {
+    background-color: #86c232;
+    color: #FFF;
+    margin-left: 30px;
 }

@@ -37,7 +37,7 @@
     <div class="title">
       <h1>Factuur #1069</h1>
       <p>Verstrekt: Mei 27, 2020</br>
-         Ten laatste te betalen: June 27, 2015
+         Ten laatste te betalen: Juni 27, 2020
       </p>
     </div><!--End Title-->
   </div><!--End InvoiceTop-->
@@ -54,8 +54,8 @@
     </div>
 
     <div id="project">
-      <h2>Project Omschrijving</h2>
-      <p>Proin cursus, dui non tincidunt elementum, tortor ex feugiat enim, at elementum enim quam vel purus. Curabitur semper malesuada urna ut suscipit.</p>
+      <h2>Download as PDF</h2>
+      <p><button id="button">PDF</button></p>
     </div>   
 
   </div><!--End Invoice Mid-->
@@ -123,6 +123,7 @@
         
       </table>
     </div><!--End Table-->
+
     
   
 
