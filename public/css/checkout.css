@@ -7,7 +7,7 @@
 body {
     background: #2B2B2B;
     font-family: 'Roboto', sans-serif;
-    background-image: url('');
+    background-image: url("../images/darkonder.jpg");
     background-repeat: repeat-y;
     background-size: 100%;
 }
@@ -24,22 +24,24 @@ body {
 
 h1 {
     font-size: 1.5em;
-    color: #222;
+    color: #86c232;
 }
 
 h2 {
     font-size: .9em;
+    color: #86c232;
 }
 
 h3 {
     font-size: 1.2em;
     font-weight: 300;
     line-height: 2em;
+    color: #86c232;
 }
 
 p {
     font-size: .7em;
-    color: #666;
+    color: #86c232;
     line-height: 1.2em;
 }
 
@@ -49,12 +51,14 @@ p {
     padding-top: 50px;
 }
 
-#headerimage {
+
+/* #headerimage {
     z-index: -1;
     position: relative;
     top: -50px;
     height: 350px;
-    background-image: url('../images/cheers.jpg');
+    background-color: #2B2B2B;
+    background-image: url("../images/kraag.jpg");
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), inset 0 -2px 4px rgba(0, 0, 0, .15);
     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), inset 0 -2px 4px rgba(0, 0, 0, .15);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), inset 0 -2px 4px rgba(0, 0, 0, .15);
@@ -62,14 +66,19 @@ p {
     background-attachment: fixed;
     background-size: 1920px 80%;
     background-position: 50% -90%;
-}
+} */
 
 #invoice {
     position: relative;
-    top: -290px;
-    margin: 0 auto;
+    top: 125pxpx;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    margin-left: 565px;
     width: 700px;
-    background: #FFF;
+    background: #1c1e21;
+    color: #fff;
+    opacity: 70%;
+    background-color: black;
 }
 
 [id*='invoice-'] {
@@ -88,24 +97,26 @@ p {
 
 #invoice-bot {
     min-height: 250px;
+    background-color: black;
 }
 
 .logo {
     float: left;
     height: 60px;
     width: 60px;
-    background: url(http://michaeltruong.ca/images/logo1.png) no-repeat;
+    background: url("../images/bierlogo.png") no-repeat;
     background-size: 60px 60px;
 }
 
-.clientlogo {
+
+/* .clientlogo {
     float: left;
     height: 60px;
     width: 60px;
     background: url(http://michaeltruong.ca/images/client.jpg) no-repeat;
     background-size: 60px 60px;
     border-radius: 50px;
-}
+} */
 
 .info {
     display: block;
@@ -132,12 +143,14 @@ table {
 
 td {
     padding: 5px 0 5px 15px;
-    border: 1px solid #EEE
+    border: 1px solid #EEE;
+    background-color: black;
 }
 
 .tabletitle {
     padding: 5px;
-    background: #EEE;
+    background: #1c1e21;
+    color: #FFF;
 }
 
 .service {
@@ -199,4 +212,5 @@ form {
 
 .legal {
     width: 70%;
+    background-color: black;
 }
