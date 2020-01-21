@@ -9,7 +9,7 @@
     <meta name="description" content="Checkout pagina">
     <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../public/css/checkout.css"> 
     <link rel="stylesheet" href="../public/css/navbar.css">
     <link rel="stylesheet" href="../public/css/footer.css">

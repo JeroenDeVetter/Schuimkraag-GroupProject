@@ -9,6 +9,7 @@
     <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
     <meta name="description" content="Home pagina">
     <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../public/css/navbar.css">
@@ -67,7 +68,7 @@
                 </div>
                 <div class="team-title">
                     <h5>Danny</h5>
-                    <span>Back-end &amp; Solutions</span>
+                    <span color>Back-end &amp; Solutions</span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">

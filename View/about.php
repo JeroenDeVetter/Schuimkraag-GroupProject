@@ -10,6 +10,7 @@
     <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
     <meta name="description" content="About pagina">
     <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/about.css">
     <link rel="stylesheet" href="../public/css/navbar.css">

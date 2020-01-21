@@ -32,3 +32,5 @@
         </nav>
     </div>
 </div>
+
+<script src="../public/js/nav.js"></script>
