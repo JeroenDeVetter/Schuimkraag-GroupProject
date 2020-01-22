@@ -14,19 +14,19 @@
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="home.php">Home</a>
+                    <a class ='link-nav' href="home.php">Home</a>
                 </li>
                 <li>
-                    <a href="about.php">Over Ons</b> </a>
+                    <a class ='link-nav'href="about.php">Over Ons</b> </a>
                 </li>
                 <li>
-                    <a href="login.php">Login</b> </a>
+                    <a class ='link-nav'href="login.php">Login</b> </a>
                 </li>
                 <li>
-                    <a href="../src/Model/checkloginstatus.php">E-Shop</a>
+                    <a class ='link-nav'href="../src/Model/checkloginstatus.php">E-Shop</a>
                 </li>
                 <li>
-                    <a href="contact.php">Contact</a>
+                    <a class ='link-nav'href="contact.php">Contact</a>
                 </li>
             </ul>
         </nav>
