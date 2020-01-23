@@ -1,3 +1,4 @@
+<?php?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +9,7 @@
     <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
     <meta name="description" content="Home pagina">
     <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../public/css/navbar.css">
@@ -19,39 +21,7 @@
 
 <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-                <a href="" class="navbar-brand">De Schuimkraag</a>
-            </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.php">Over Ons</b> </a>
-                    </li>
-                    <li>
-                        <a href="login.php">Login</b> </a>
-                    </li>
-                    <li>
-                        <a href="shop.php">E-Shop</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-    </div>
+   <?php require "nav.php"?>
     <div class="container">
         <div class="row">
             <div class="heading-title text-center">
@@ -64,8 +34,8 @@
                     </div>
                     <div class="team-hover">
                         <div class="desk">
-                            <h4>Favourite Quote</h4>
-                            <p><q>I love deadlines!</q></p>
+
+                            <p><q>Tried running. Gave it up. Kept spilling my beer</q></p>
                         </div>
                         <div class="s-link">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -82,12 +52,12 @@
             <div class="col-md-4 col-sm-4">
                 <div class="team-member">
                     <div class="team-img">
-                        <img src="../public/images/up.jpg" alt="team member" class="img-responsive">
+                        <img src="../public/images/danny.png" alt="team member" class="img-responsive">
                     </div>
                     <div class="team-hover">
                         <div class="desk">
-                            <h4>Favourite Quote</h4>
-                            <p>to come</p>
+
+                            <p><q>I'm not really a social drinker. I'd say most of my drinking is work related</q></p>
                         </div>
                         <div class="s-link">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -98,7 +68,7 @@
                 </div>
                 <div class="team-title">
                     <h5>Danny</h5>
-                    <span>Back-end &amp; Solutions</span>
+                    <span color>Back-end &amp; Solutions</span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">
@@ -108,8 +78,8 @@
                     </div>
                     <div class="team-hover">
                         <div class="desk">
-                            <h4>Favourite Quote</h4>
-                            <p>I love to introduce myself as a hardcore Web Designer.</p>
+
+                            <p><q>With beers like this, who needs memories ...</q></p>
                         </div>
                         <div class="s-link">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -126,13 +96,14 @@
             <div class="col-md-4 col-sm-4">
                 <div class="team-member">
                     <div class="team-img">
-                        <img src="../public/images/deadpool.jpg" alt="team member" class="img-responsive">
+                        <img src="../public/images/jeroen.png" alt="team member" class="img-responsive">
+
 
                     </div>
                     <div class="team-hover">
                         <div class="desk">
-                            <h4>Favourite Quote</h4>
-                            <p><q>To come</q></p>
+
+                            <p><q>Beer : Technically a solution</q></p>
                         </div>
                         <div class="s-link">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -146,15 +117,15 @@
                     <span>Back-end &amp; DB-Master</span>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-3">
+            <div class="col-md-4 col-sm-4">
                 <div class="team-member">
                     <div class="team-img">
                         <img src="../public/images/david.png" alt="team member" class="img-responsive">
                     </div>
                     <div class="team-hover">
                         <div class="desk">
-                            <h4>Favourite Quote</h4>
-                            <p></p>
+
+                            <p><q>You know things will get funky when i say: "hold my beer and watch this".</q></p>
                         </div>
                         <div class="s-link">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -171,11 +142,12 @@
             <div class="col-md-4 col-sm-4">
                 <div class="team-member">
                     <div class="team-img">
-                        <img src="../public/images/riddler.jpg" alt="team member" class="img-responsive">
+                        <img src="../public/images/vraagteken.png" alt="team member" class="img-responsive">
+
                     </div>
                     <div class="team-hover">
                         <div class="desk">
-                            <h4>Favourite Quote</h4>
+
                             <p><q>I'd love to work @ de Schuimkraag !</q></p>
                         </div>
                         <div class="s-link">
@@ -194,46 +166,7 @@
         </div>
 
     </div>
-    <footer class="flex-rw ">
-
-        <ul class="footer-list-top ">
-            <li>
-                <h4 class="footer-list-header ">Over De Schuimkraag</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Meer Over Ons</a>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Promos</a></li>
-            <li><a href='#' itemprop="significantLink " class="generic-anchor footer-list-anchor ">Jobs</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Evenementen</a></li>
-        </ul>
-        <ul class="footer-list-top ">
-            <li>
-                <h4 class="footer-list-header ">Geschenken Hoekje</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor ">Biermanden</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " target="_blank ">Cadeaubonnen</a></li>
-        </ul>
-        <ul class="footer-list-top ">
-            <li id='help'>
-                <h4 class="footer-list-header ">Hulp Sectie</h4>
-            </li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Contact</a></li>
-            <li><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">FAQ</a></li>
-            <li id='find-a-store'><a href='#' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Zoek Winkel</a></li>
-            <li id='user-registration'><a href='login.html' class="generic-anchor footer-list-anchor " itemprop="significantLink ">Nieuwe Gebrukers</a></li>
-        </ul>
-
-        <section class="footer-bottom-section flex-rw">
-            <div class="footer-bottom-wrapper ">
-                &copy; De Schuimkraag <span id="htmlYear">year </span>
-                <address class="footer-address " role="company address ">&nbsp;Gent, BE</address>
-            </div>
-            <div class="footer-bottom-wrapper">
-                <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie Beleid</a> | <a href="/cookie-policy.html" class="generic-anchor"
-                    rel="nofollow">Privacy Beleid</a>
-            </div>
-        </section>
-    </footer>
+    <?php require "footer.php"?>
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>

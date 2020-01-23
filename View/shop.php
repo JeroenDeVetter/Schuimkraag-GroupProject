@@ -70,8 +70,9 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
     <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
     <meta name="description" content="Shop pagina">
     <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    type='text/css'>
     <link rel="stylesheet" href="../public/css/navbar.css">
     <link rel="stylesheet" href="../public/css/shop.css">
     <link rel="stylesheet" href="../public/css/footer.css">
@@ -89,18 +90,25 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
         <div id="cart">
             <span class="empty">Nog geen bier in mandje.</span>
         </div>
-        <div id="checkout">
-            CHECKOUT
+        
+        <div class="total">
+            <div class="totaalPrijs">Uw totaal: <span class= "totalPrice"></span></div>
+            <div id="checkout">
+                CHECKOUT
+            </div>
         </div>
+
 
     </div>
     <div id="grid">
         <?php createBierCards(); ?>
     </div>
 </div>
+
 <?php require 'footer.php'?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="../public/js/shop.js"></script>
 <script src="../public/js/beerdetails.js"></script>
+<script src="../public/js/itemAddHide.js"></script>
 </body>
 </html>

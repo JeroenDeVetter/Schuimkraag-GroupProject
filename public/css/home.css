@@ -1,16 +1,24 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
+
 body {
-    background-image: url("../images/landing.jpg");
+    background-image: url("../images/home-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Source Sans Pro', sans-serif;
+    background-position: center center;
+    background-color: black;
+    font-family: 'Rubrik', sans-serif;
     line-height: 1.5;
     color: black;
-    font-size: 15px;
-    font-weight: 400;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
+}
+
+.container{
+    height: 100%;
+}
+
+.row{
+    margin-top: 10rem;
 }
 
 .img-responsive {
@@ -58,6 +66,8 @@ h1 {
 .team-member .team-img {
     position: relative;
     border: 1px solid rgba(20, 20, 20, 0.3);
+    background: white;
+    opacity: 55%;
 }
 
 .team-member {
@@ -162,8 +172,10 @@ h1 {
 .team-title h5 {
     margin-bottom: 0px;
     display: block;
+    text-align: center;
     text-transform: uppercase;
     font-size: 22px;
+    color: #86c232;
 }
 
 .team-title span {

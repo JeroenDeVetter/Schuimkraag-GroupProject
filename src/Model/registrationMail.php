@@ -20,5 +20,4 @@ $message = "<p><strong>Dear {$naam}</strong>, \r\n
  thank you for registering.  Once we verifier your emailadres, you will be able to login. Please click the link to do so \r\n\ 
   <a href='http://becode.local/src/Model/verifyuser.php?token={$token}&mail={$to}'></a><button>verify</button></p>";
 
-
 mail($to, $subject, $message, $headers);

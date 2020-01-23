@@ -1,5 +1,5 @@
 const ax = axios.create({
-    baseURL: 'http://becode.local/Schuimkraag-GroupProject/public/js/'
+    baseURL: 'http://becode.local/Schuimkraag-GroupProject/public/js'
 });
 
 let voornaamInput = document.querySelector('#first_name');
@@ -141,6 +141,24 @@ function firmaNameInputVerify() {
     }
 }
 
+function emailVerify() {
+
+    if (emailInput.value !== "") {
+        if (regmailCheck(emailInput.value)) {
+            emptyMessage(foutboodschapLogin);
+            emailInput.value = cleanemail(emailInput.value);
+        } else {
+            foutboodschapLogin.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschapLogin);
+        }
+    } else {
+        foutboodschapLogin.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
+        toggleErrorMessage(foutboodschapLogin);
+    }
+
+}
+
+
 function BTWnrInputVerify() {
     if (btwnrInput.value.match(/^\d+$/)) {
         if (btwnrInput.value.length === 10) {
@@ -212,14 +230,14 @@ function postalnumberVerify() {
             if (foutboodschap.className === "warning hide") {
                 var arrayGemeente = [];
 
-
-                target.innerHTML = "";
                 find_cities_with_same_postnr(ax, postnummerInput.value, arrayGemeente);
+                target.innerHTML = "";
+
                 setTimeout(() => {
 
                     arrayGemeente.forEach(buildtemplate(arrayGemeente));
 
-                }, 800);
+                }, 450);
             } else {
                 target.innerHTML = "";
                 console.log("fout");
@@ -355,7 +373,7 @@ function connect_with_json_file(ax, postnr) {
         .then((response) => {
             let result = response.data;
             for (let i = 0; i < result.length; i++) {
-                if (result[i].postnummer === postnr) {
+                if (result[i].postnummer == postnr) {
                     emptyMessage(foutboodschap);
                     return;
                 } else {
@@ -381,7 +399,7 @@ function buildtemplate(item) {
         var tmpl = document.createElement('option');
         tmpl.setAttribute("value", data[1]);
         tmpl.innerHTML = data[0];
-        target.appendChild(tmpl)
+        target.appendChild(tmpl);
     })
 }
 
@@ -390,19 +408,15 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
     ax.get("schuimkraag_gemeente.json")
         .then((response) => {
             let result = response.data;
-            console.log(result);
             for (let i = 0; i < result.length; i++) {
                 if (result[i].postnummer == postnr) {
                     console.log(result[i].gemeente);
                     console.log(typeof(result[i].gemeente));
-
-
-                    console.log(result[i].gemeenteconsole.log(typeof(result[i].gemeente)));
                     let gemeente = result[i].gemeente.toLowerCase();
-
+                    let gemeenteId = result[i].gemeente_ID;
                     let gemeenteFirstLetterCapitalize = gemeente.charAt(0).toUpperCase() + gemeente.slice(1);
 
-                    arrayGemeente.push([gemeenteFirstLetterCapitalize, result[i].gemeente_ID]);
+                    arrayGemeente.push([gemeenteFirstLetterCapitalize, gemeenteId]);
 
                     console.log(arrayGemeente);
                 }
@@ -415,19 +429,15 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
         });
 }
 
-function emailVerify() {
-    if (this.value !== "") {
-        if (regmailCheck(emailInput.value)) {
-            emptyMessage(foutboodschap);
-            emailInput.value = cleanemail(emailInput.value);
-        } else {
-            foutboodschap.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
-            toggleErrorMessage(foutboodschap);
-        }
-    } else {
-        foutboodschap.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
-        toggleErrorMessage(foutboodschap);
-    }
+function buildtemplate(item) {
+
+    item.forEach(data => {
+        var tmpl = document.createElement('option');
+        tmpl.setAttribute("value", data[1]);
+        tmpl.innerHTML = data[0];
+        target.appendChild(tmpl);
+    })
+
 }
 
 function CheckAll(event) {
@@ -441,7 +451,7 @@ function CheckAll(event) {
     if (foutboodschap.innerHTML !== "") {
         teller += 1
     }
-
+    emailVerify();
     if (foutboodschap.innerHTML !== "") {
         teller += 1
     }

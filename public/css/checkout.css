@@ -1,130 +1,202 @@
-@page {
-  bleed: 1cm;
-  size: A4 portrait;
-  size:  auto;   /* auto is the initial value */
-  margin-bottom: 50pt;
-  margin-top: 0cm;
-  font-size: 12pt;
 
-  #content, #page {
-  width: 100%;
-  margin: 0;
-  float: none;
-  }
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
 
-
-@media print {
-  .page {
-    border: initial;
-    border-radius: initial;
-    width: initial;
-    min-height: initial;
-    box-shadow: initial;
-    background: initial;
-    page-break-after: always;
-  }
-
-  table{
-    page-break-inside: auto;
-  }
-
-  tr.last-row {
-      background-color: #555!important;
-  }
-
-  tr.last-row > th, tr.last-row > td {
-    background-color: unset!important;
-  }
-
-  div.page-break{
-    page-break-before: auto;
-  }
+body {
+    background: #2B2B2B;
+    font-family: 'Rubik', sans-serif;
+    background-image: url('');
+    background-repeat: repeat-y;
+    background-size: 100%;
 }
 
-.gray{
-  color: #333;
+::selection {
+    background: #f31544;
+    color: #FFF;
 }
 
-.gray-ish{
-  color: #666;
+::moz-selection {
+    background: #f31544;
+    color: #FFF;
 }
 
-.almost-gray{
-  color: #999;
+h1 {
+    font-size: 1.5em;
+    color: #222;
 }
 
-body{
-  background-color: #eee;
-  padding-top: 25px;
-  -webkit-print-color-adjust: exact !important;
-  height: 100%;
-  margin-top: 40px;
+h2 {
+    font-size: .9em;
 }
 
-div.container{
-  background-color: white;
-  border-radius: 10px;
-  height: 100%;
-  position: relative;
-  margin-top: 50px;
+h3 {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 2em;
 }
 
-div.invoice-header{
-  background-color: #444;
-  color: white;
-  border-bottom: 3px solid rgb(255, 77, 77);
+p {
+    font-size: .7em;
+    color: #666;
+    line-height: 1.2em;
 }
 
-div.invoice-header > div > p{
-  font-size: 1.2rem;
-  font-weight: 350;
-}
-
-div.invoice-header > div > h1{
-  font-size: 4rem;
-}
-
-div.invoice-table{
-  border-top: 3px solid rgb(255, 77, 77);
-}
-
-div.invoice-table > table.table > thead, div.invoice-table > table.table > thead.thead > tr, div.invoice-table > table.table > thead.thead > tr > th {
-  border-top: none;
-}
-
-div.total-field{
-  position: relative;
-}
-
-h5.due-date{
-  position: absolute;
-  bottom: 10px;
-  right: 15px;
-}
-
-div.sub-table{
-  border-left: 3px solid rgb(255, 77, 77);
-  padding-left: 0;
-}
-
-div.sub-table > table{
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-tr.last-row{
-  margin-top: 25px;
-  background-color: #555;
-  color: white;
-  border-top: 3px solid rgb(255, 77, 77);
-}
-
-p.footer{
-    bottom: 0;
+#invoiceholder {
     width: 100%;
-    background-color: #333;
-    color: white;
-    padding-top: 15px;
-    border-top: 3px solid red;
+    height: 100%;
+    padding-top: 50px;
+}
+
+#headerimage {
+    z-index: -1;
+    position: relative;
+    top: -50px;
+    height: 350px;
+    background-image: url('../images/cheers.jpg');
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), inset 0 -2px 4px rgba(0, 0, 0, .15);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), inset 0 -2px 4px rgba(0, 0, 0, .15);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), inset 0 -2px 4px rgba(0, 0, 0, .15);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: 1920px 80%;
+    background-position: 50% -90%;
+}
+
+#invoice {
+    position: relative;
+    top: -290px;
+    margin: 0 auto;
+    width: 700px;
+    background: #FFF;
+}
+
+[id*='invoice-'] {
+    /* Targets all id with 'col-' */
+    border-bottom: 1px solid #EEE;
+    padding: 30px;
+}
+
+#invoice-top {
+    min-height: 120px;
+}
+
+#invoice-mid {
+    min-height: 120px;
+}
+
+#invoice-bot {
+    min-height: 250px;
+}
+
+.logo {
+    float: left;
+    height: 60px;
+    width: 60px;
+    background: url(http://michaeltruong.ca/images/logo1.png) no-repeat;
+    background-size: 60px 60px;
+}
+
+.clientlogo {
+    float: left;
+    height: 60px;
+    width: 60px;
+    background: url(http://michaeltruong.ca/images/client.jpg) no-repeat;
+    background-size: 60px 60px;
+    border-radius: 50px;
+}
+
+.info {
+    display: block;
+    float: left;
+    margin-left: 20px;
+}
+
+.title {
+    float: right;
+}
+
+.title p {
+    text-align: right;
+}
+
+#project {
+    margin-left: 52%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px 0 5px 15px;
+    border: 1px solid #EEE
+}
+
+.tabletitle {
+    padding: 5px;
+    background: #EEE;
+}
+
+.service {
+    border: 1px solid #EEE;
+}
+
+.item {
+    width: 50%;
+}
+
+.itemtext {
+    font-size: .9em;
+}
+
+#legalcopy {
+    margin-top: 30px;
+}
+
+form {
+    float: right;
+    margin-top: 30px;
+    text-align: right;
+}
+
+.effect2 {
+    position: relative;
+}
+
+.effect2:before,
+.effect2:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.effect2:after {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+
+.legal {
+    width: 70%;
 }

@@ -1,3 +1,9 @@
+let totaldiv = document.querySelector('.totalPrice');
+let totaalprijs = 0.00;
+let subtotaalprijs = 0.00;
+let aantal = 0;
+totaldiv.textContent = totaalprijs;
+
 $(document).ready(function() {
 
     $(".largeGrid").click(function() {
@@ -108,7 +114,7 @@ $(document).ready(function() {
     $('.add-cart-large').each(function(i, el) {
         $(el).click(function() {
             //  var carousel = $(this).parent().parent().find(".carousel-container");
-            var img = carousel.find('img').eq(carousel.attr("rel"))[0];
+            /*var img = carousel.find('img').eq(carousel.attr("rel"))[0];*/
             var position = $(img).offset();
 
             var productName = $(this).parent().find('h4').get(0).innerHTML;
@@ -126,7 +132,14 @@ $(document).ready(function() {
                 $("body").removeClass("MakeFloatingCart");
 
 
-                var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + img.src + "' alt='' /></div><span>" + productName + "</span><strong>$AAAAAA</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
+
+
+
+                var cartItem = "<div class='cart-item'><div class=\"number\">\n" +
+                    "\t<span id='minus' class=\"minus\">-</span>\n" +
+                    "\t<input type=\"text\" value=\"1\"/>\n" +
+                    "\t<span id='plus' class=\"plus\">+</span>\n" +
+                    "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " " + productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
 
                 $("#cart .empty").hide();
                 $("#cart").append(cartItem);
@@ -148,7 +161,6 @@ $(document).ready(function() {
                 }, 10);
 
             }, 1000);
-
 
         });
     })
@@ -229,7 +241,6 @@ $(document).ready(function() {
         var productImage = $(productCard).find('img').get(0).src;
         var productName = $(productCard).find('.product_name').get(0).innerHTML;
         var productPrice = $(productCard).find('.product_price').get(0).innerHTML;
-
         $("body").append('<div class="floating-cart"></div>');
         var cart = $('div.floating-cart');
         productCard.clone().appendTo(cart);
@@ -238,64 +249,23 @@ $(document).ready(function() {
         setTimeout(function() {
             $('div.floating-cart').remove();
             $("body").removeClass("MakeFloatingCart");
+            let prijs = productPrice.split(" ");
+            let niewTotaalPrijs = parseFloat(prijs[1]);
+            totaalprijs += niewTotaalPrijs;
+            totaldiv.textContent = totaalprijs;
+            var cartItem = "<div class='cart-item'><div class=\"number\">\n" +
+                "\t<span id='minus' class=\"minus\">-</span>\n" +
+                "\t<input type=\"text\" value=\"1\"/>\n" +
+                "\t<span id='plus' class=\"plus\">+</span>\n" +
+                "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " " + productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
 
-
-            var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
-            var testArray = [];
             var numberOfItems = [];
 
+            $("#cart .empty").hide();
+            $("#cart").append(cartItem);
+            numberOfItems.push([productName, productPrice]);
 
-                $("#cart .empty").hide();
-                $("#cart").append(cartItem);
-                sessionStorage.setItem("test", `${productName}, ${productPrice}`);
-                let Local = sessionStorage.getItem("test");
-            console.log(Local);
-            var test2array = [];
             $("#checkout").fadeIn(500);
-            numberOfItems.forEach(data => {
-                test2array.push(data)
-            });
-            var countCublicates = compressArray(test2array);
-            console.log(countCublicates);
-            countCublicates.forEach(data =>{
-                if (data["count"] >= 2) {
-                    console.log("shit");
-                }
-            });
-
-            function compressArray(original) {
-
-                var compressed = [];
-                // make a copy of the input array
-                var copy = original.slice(0);
-
-                // first loop goes over every element
-                for (var i = 0; i < original.length; i++) {
-
-                    var myCount = 0;
-                    // loop over every element in the copy and see if it's the same
-                    for (var w = 0; w < copy.length; w++) {
-                        if (original[i] == copy[w]) {
-                            // increase amount of times duplicate is found
-                            myCount++;
-                            // sets item to undefined
-                            delete copy[w];
-                        }
-                    }
-
-                    if (myCount > 0) {
-                        var a = new Object();
-                        a.value = original[i];
-                        a.count = myCount;
-                        compressed.push(a);
-                    }
-                }
-
-                return compressed;
-            };
-
-
-
             $("#cart .cart-item").last()
                 .addClass("flash")
                 .find(".delete-item").click(function() {
@@ -310,6 +280,38 @@ $(document).ready(function() {
             setTimeout(function() {
                 $("#cart .cart-item").last().removeClass("flash");
             }, 10);
+            let selectplus = document.getElementsByClassName('plus');
+            console.log(selectplus);
+                selectplus[selectplus.length - 1].addEventListener('click', function() {
+                    console.log(this.previousSibling.previousSibling , "etstete");
+                    let input = this.previousElementSibling;
+                    console.log(typeof(input.value));
+                    input.value = parseInt(input.value) + 1;
+                    console.log(input.value);
+                    var prijsInEuro = productPrice.split(' ');
+                    var eenheidsprijs = parseFloat(prijsInEuro[1]);
+                    aantal = input.value;
+                    subtotaalprijs = (eenheidsprijs * aantal);
+                    totaalprijs += eenheidsprijs;
+                    totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
+                } );
+
+            let selectMin = document.getElementsByClassName('minus');
+            selectMin[selectMin.length - 1].addEventListener('click', function() {
+                let input = this.nextSibling.nextSibling;
+                input.value = parseInt(input.value) - 1;
+                if (input.value >= 1) {
+                    var prijsInEuro = productPrice.split(' ');
+                    var eenheidsprijs = parseFloat(prijsInEuro[1]);
+                    aantal = input.value;
+                    totaalprijs -= eenheidsprijs;
+                    totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
+                }
+                else {
+                    input.value = 1;
+                }
+                // return false;
+            } );
 
         }, 1000);
     });

@@ -5,6 +5,9 @@
       <webServer id="d98c078a-dc0b-47b1-bf00-f711dd5c5bad" name="BeCode" url="http://becode.local/">
         <fileTransfer port="0" accessType="LOCAL" />
       </webServer>
+      <webServer id="5ff95dad-ec86-4bf7-ac73-a62d3e551ee4" name="mamp" url="http://localhost:8888/Schuimkraag-GroupProject">
+        <fileTransfer port="0" accessType="LOCAL" />
+      </webServer>
     </option>
   </component>
 </project>

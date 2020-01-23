@@ -38,6 +38,7 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
     )
   ");
 //$_SERVER['HTTP_HOST']
+
     header("Location: http://becode.local/src/Model/registrationMail.php?mail={$email}&naam={$firstname}&token={$mailtoken}");
     die();
 
