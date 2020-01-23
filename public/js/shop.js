@@ -284,14 +284,15 @@ $(document).ready(function() {
             let selectplus = document.querySelectorAll(".plus");
             //selectplus.forEach(addEventListener("click", plusklik));
 
-            selectplus.forEach(button => function(button){
-                button.addEventListener('click', plusclick)
+            selectplus.forEach((btn) =>{
+               btn.addEventListener('click',plusclick);
             });
               
 
             function plusclick() {
                 console.log(this);
                 let input = this.previousElementSibling;
+                console.log(input);
                 console.log(typeof(input.value));
                 input.value = parseInt(input.value) + 1;
                 console.log(input.value);
