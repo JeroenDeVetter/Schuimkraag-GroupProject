@@ -1,5 +1,5 @@
 <?php
-require '../../src/Model/connection.php';
+require 'local.php';
 echo "verifyuser";
 $mailparam= $_GET['mail'];
 $tokenparam= $_GET['token'];

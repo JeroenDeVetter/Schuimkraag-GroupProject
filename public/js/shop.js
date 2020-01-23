@@ -243,18 +243,17 @@ $(document).ready(function() {
             var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
             var testArray = [];
             var numberOfItems = [];
-            if (count < 1) {
-                count++;
+
+
                 $("#cart .empty").hide();
                 $("#cart").append(cartItem);
-                numberOfItems.push([productName , productPrice])
-            }
+                sessionStorage.setItem("test", `${productName}, ${productPrice}`);
+                let Local = sessionStorage.getItem("test");
+            console.log(Local);
             var test2array = [];
             $("#checkout").fadeIn(500);
-            allItems.forEach(data => {
-               var test =  data.textContent.split("€");
-               test2array.push(test[0]);
-
+            numberOfItems.forEach(data => {
+                test2array.push(data)
             });
             var countCublicates = compressArray(test2array);
             console.log(countCublicates);
