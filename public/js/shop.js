@@ -281,25 +281,33 @@ $(document).ready(function() {
                 $("#cart .cart-item").last().removeClass("flash");
             }, 10);
             //console.log('totaalprijs voor eerste klik op plus: ',totaalprijs);
-            $('.plus').click(function () {
-                //console.log("totaalprijs:", totaalprijs)
-                $input = $(this).parent().find('input');
-                //console.log("waarde voor change:", parseInt($input.val()));
-                $input.val(parseInt($input.val()) + 1);
-                $input.change();
-                //console.log("waarde na change:", parseInt($input.val()));
+            let selectplus = document.querySelectorAll(".plus");
+            //selectplus.forEach(addEventListener("click", plusklik));
+
+            selectplus.forEach(button => function(button){
+                button.addEventListener('click', plusclick)
+            });
+              
+
+            function plusclick() {
+                console.log(this);
+                let input = this.previousElementSibling;
+                console.log(typeof(input.value));
+                input.value = parseInt(input.value) + 1;
+                console.log(input.value);
+
                 var prijsInEuro = productPrice.split(' ');
                 var eenheidsprijs = parseFloat(prijsInEuro[1]);
                 //console.log("eenheidsprijs:", eenheidsprijs);
-                aantal = $input.val();
+                aantal = input.value;
                 //console.log("aantal:", aantal);
                 subtotaalprijs = (eenheidsprijs * aantal);
                 //console.log("subtotaalplus:", subtotaalprijs);
                 totaalprijs += eenheidsprijs;
                 //console.log("totaalprijs:", totaalprijs);
                 totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
-                return false;
-            });
+                // return false;
+            }
 
             //console.log('totaalprijs voor eerste klik op min: ',totaalprijs);
             $('.minus').click(function () {
