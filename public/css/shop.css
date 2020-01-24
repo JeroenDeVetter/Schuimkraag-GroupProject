@@ -1046,6 +1046,10 @@ body.MakeFloatingCart div.cart-icon-bottom {
     margin-right: 10px;
 }
 
+.delete-item {
+    color: red;
+}
+
 .cart-item:hover .delete-item {
     cursor: pointer
 }
@@ -1067,13 +1071,15 @@ body.MakeFloatingCart div.cart-icon-bottom {
 #info a {
     text-decoration: none;
 }
-
+.totaalPrijs {
+    width: 100%;
+}
 #checkout {
     border: 2px solid darkgreen;
     font-size: 13px;
     font-weight: 700;
     padding: 3px 9px;
-    position: absolute;
+    margin-right: 10px;
     top: 63px;
     left: 173px;
     color: #86c232;
@@ -1271,6 +1277,8 @@ span {cursor:pointer; }
 
 .total {
     color:white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     margin-top: 3em;
 }
 .totalPrice {

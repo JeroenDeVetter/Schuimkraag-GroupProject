@@ -1,5 +1,5 @@
 <?php
-require "david.php";
+require "local.php";
 
 function getBier()
 {

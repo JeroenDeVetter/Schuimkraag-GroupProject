@@ -12,9 +12,9 @@ body {
     -moz-font-smoothing: antialiased;
 }
 
-.container {
+/* .container {
     height: 100%;
-}
+} */
 
 .row {
     margin-top: 10rem;

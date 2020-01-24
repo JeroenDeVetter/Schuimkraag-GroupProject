@@ -132,14 +132,14 @@ $(document).ready(function() {
                 $("body").removeClass("MakeFloatingCart");
 
 
-                
+
 
 
                 var cartItem = "<div class='cart-item'><div class=\"number\">\n" +
-                "\t<span id='minus' class=\"minus\">-</span>\n" +
-                "\t<input type=\"text\" value=\"1\"/>\n" +
-                "\t<span id='plus' class=\"plus\">+</span>\n" +
-                "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " "+ productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
+                    "\t<span id='minus' class=\"minus\">-</span>\n" +
+                    "\t<input type=\"text\" value=\"1\"/>\n" +
+                    "\t<span id='plus' class=\"plus\">+</span>\n" +
+                    "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " " + productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
 
                 $("#cart .empty").hide();
                 $("#cart").append(cartItem);
@@ -149,8 +149,10 @@ $(document).ready(function() {
                     .addClass("flash")
                     .find(".delete-item").click(function() {
                         $(this).parent().fadeOut(300, function() {
+                            console(this, "logg2")
                             $(this).remove();
                             if ($("#cart .cart-item").size() == 0) {
+
                                 $("#cart .empty").fadeIn(500);
                                 $("#checkout").fadeOut(500);
                             }
@@ -257,19 +259,20 @@ $(document).ready(function() {
                 "\t<span id='minus' class=\"minus\">-</span>\n" +
                 "\t<input type=\"text\" value=\"1\"/>\n" +
                 "\t<span id='plus' class=\"plus\">+</span>\n" +
-                "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " "+ productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
+                "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " " + productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
 
-                var numberOfItems = [];
+            var numberOfItems = [];
 
             $("#cart .empty").hide();
-                $("#cart").append(cartItem);
-                numberOfItems.push([productName , productPrice]);
-      
-        $("#checkout").fadeIn(500);
+            $("#cart").append(cartItem);
+            numberOfItems.push([productName, productPrice]);
+
+            $("#checkout").fadeIn(500);
             $("#cart .cart-item").last()
                 .addClass("flash")
                 .find(".delete-item").click(function() {
                     $(this).parent().fadeOut(300, function() {
+                        console.log(this.children[2], "logg");
                         $(this).remove();
                         if ($("#cart .cart-item").size() == 0) {
                             $("#cart .empty").fadeIn(500);
@@ -281,43 +284,37 @@ $(document).ready(function() {
                 $("#cart .cart-item").last().removeClass("flash");
             }, 10);
             let selectplus = document.getElementsByClassName('plus');
-console.log(selectplus);
-selectplus[selectplus.length - 1].addEventListener('click', function() {
-console.log(this.previousSibling.previousSibling , "etstete");
-let input = this.previousElementSibling;
-console.log(typeof(input.value));
-input.value = parseInt(input.value) + 1;
-console.log(input.value);
-var prijsInEuro = productPrice.split(' ');
-var eenheidsprijs = parseFloat(prijsInEuro[1]);
-aantal = input.value;
-subtotaalprijs = (eenheidsprijs * aantal);
-totaalprijs += eenheidsprijs;
-totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
-} );
-
-        let selectMin = document.getElementsByClassName('minus');
-        selectMin[selectMin.length - 1].addEventListener('click', function() {
-            let input = this.nextSibling.nextSibling;
-            input.value = parseInt(input.value) - 1;
-            if (input.value >= 1) {
+            console.log(selectplus);
+            selectplus[selectplus.length - 1].addEventListener('click', function() {
+                console.log(this.previousSibling.previousSibling, "etstete");
+                let input = this.previousElementSibling;
+                console.log(typeof(input.value));
+                input.value = parseInt(input.value) + 1;
+                console.log(input.value);
                 var prijsInEuro = productPrice.split(' ');
                 var eenheidsprijs = parseFloat(prijsInEuro[1]);
                 aantal = input.value;
-                totaalprijs -= eenheidsprijs;
+                subtotaalprijs = (eenheidsprijs * aantal);
+                totaalprijs += eenheidsprijs;
                 totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
-            }
-            else {
-                input.value = 1;
-            }
-            // return false;
-        } );
+            });
 
+            let selectMin = document.getElementsByClassName('minus');
+            selectMin[selectMin.length - 1].addEventListener('click', function() {
+                let input = this.nextSibling.nextSibling;
+                input.value = parseInt(input.value) - 1;
+                if (input.value >= 1) {
+                    var prijsInEuro = productPrice.split(' ');
+                    var eenheidsprijs = parseFloat(prijsInEuro[1]);
+                    aantal = input.value;
+                    totaalprijs -= eenheidsprijs;
+                    totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
+                } else {
+                    input.value = 1;
+                }
+                // return false;
+            });
 
         }, 1000);
     });
-
-
 });
-
-

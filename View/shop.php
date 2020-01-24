@@ -1,5 +1,5 @@
 <?php
-require "../src/Model/connection.php";
+require "../src/Model/local.php";
 function createBierCards()
 {
     $sql = "SELECT bier_ID, biernaam, prijs, etiketafbeelding, bierstijlnaam FROM bier
@@ -93,11 +93,12 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
         </div>
         
         <div class="total">
-           Uw totaal: <span class= "totalPrice"></span> €
+            <div class="totaalPrijs">Uw totaal: <span class= "totalPrice"></span></div>
+            <div id="checkout">
+                CHECKOUT
+            </div>
         </div>
-        <div id="checkout">
-            CHECKOUT
-        </div>
+
 
     </div>
     <div id="grid">
@@ -110,6 +111,5 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 <script src="../public/js/shop.js"></script>
 <script src="../public/js/beerdetails.js"></script>
 <script src="../public/js/itemAddHide.js"></script>
-<script src="../public/js/calcTotal.js"></script>
 </body>
 </html>
