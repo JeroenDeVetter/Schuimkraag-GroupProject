@@ -156,7 +156,7 @@ h1 {
 
 .team-member .s-link a {
     margin: 0 10px;
-    color: darkgreen;
+    color: white;
     font-size: 18px;
 }
 
@@ -179,7 +179,11 @@ h1 {
 
 .team-title span {
     font-size: 18px;
-    color: white;
+    color:white;
     letter-spacing: 1px;
     text-align: center;
+}
+
+q{
+    color:black;
 }
