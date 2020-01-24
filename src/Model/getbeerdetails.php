@@ -1,5 +1,5 @@
 <?php
-include "connection.php";
+include "david.php";
 
 $bierId= $_REQUEST["q"];
 $sql = "SELECT * FROM bier WHERE bier_ID=:bierId";

@@ -20,11 +20,11 @@
     <title>home</title>
 </head>
 
-<body>
+<body> 
 
    <?php require "nav.php"?>
    
-    <div class="container">
+    <div class="container" id="container">
         <div class="row">
             <div class="heading-title text-center">
             </div>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="team-title">
                     <h5>Danny</h5>
-                    <span>Database, Back-end &amp; Solutions</span>
+                    <span>Database, Back-end</span>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">

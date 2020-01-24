@@ -152,6 +152,7 @@ body {
     height: 10em;
     animation-duration: 6000ms;
     animation-name: spinLeft;
+    
 }
 
 .svg-icon-small {
