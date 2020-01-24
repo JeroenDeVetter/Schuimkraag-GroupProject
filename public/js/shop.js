@@ -280,83 +280,40 @@ $(document).ready(function() {
             setTimeout(function() {
                 $("#cart .cart-item").last().removeClass("flash");
             }, 10);
-            //console.log('totaalprijs voor eerste klik op plus: ',totaalprijs);
-            let selectplus = document.querySelectorAll(".plus");
-            //selectplus.forEach(addEventListener("click", plusklik));
+            let selectplus = document.getElementsByClassName('plus');
+console.log(selectplus);
+selectplus[selectplus.length - 1].addEventListener('click', function() {
+console.log(this.previousSibling.previousSibling , "etstete");
+let input = this.previousElementSibling;
+console.log(typeof(input.value));
+input.value = parseInt(input.value) + 1;
+console.log(input.value);
+var prijsInEuro = productPrice.split(' ');
+var eenheidsprijs = parseFloat(prijsInEuro[1]);
+aantal = input.value;
+subtotaalprijs = (eenheidsprijs * aantal);
+totaalprijs += eenheidsprijs;
+totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
+} );
 
-            selectplus.forEach((btn) =>{
-               btn.addEventListener('click',plusclick);
-            });
-              
-
-            function plusclick() {
-                console.log(this);
-                let input = this.previousElementSibling;
-                console.log(input);
-                console.log(typeof(input.value));
-                input.value = parseInt(input.value) + 1;
-                console.log(input.value);
-
+        let selectMin = document.getElementsByClassName('minus');
+        selectMin[selectMin.length - 1].addEventListener('click', function() {
+            let input = this.nextSibling.nextSibling;
+            input.value = parseInt(input.value) - 1;
+            if (input.value >= 1) {
                 var prijsInEuro = productPrice.split(' ');
                 var eenheidsprijs = parseFloat(prijsInEuro[1]);
-                //console.log("eenheidsprijs:", eenheidsprijs);
                 aantal = input.value;
-                //console.log("aantal:", aantal);
-                subtotaalprijs = (eenheidsprijs * aantal);
-                //console.log("subtotaalplus:", subtotaalprijs);
-                totaalprijs += eenheidsprijs;
-                //console.log("totaalprijs:", totaalprijs);
+                totaalprijs -= eenheidsprijs;
                 totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
-                // return false;
             }
-
-            //console.log('totaalprijs voor eerste klik op min: ',totaalprijs);
-            $('.minus').click(function () {
-                //console.log("totaalprijs na klik op min:", totaalprijs)
-                 $input = $(this).parent().find('input');
-                 //if ($input.val(parseInt($input.val()))>1){
-                console.log(parseInt($input.val()));
-                if (parseInt($input.val()) > 1){
-                    $input.val(parseInt($input.val()) - 1);
-                 }
-                 let minusvalue = productPrice.split(' ');
-                 let eenheidsprijs = parseFloat(minusvalue[1])
+            else {
+                input.value = 1;
+            }
+            // return false;
+        } );
 
 
-                 //var count = parseInt($input.val()) - 1;
-                 //console.log("aantal na klik op min en aftrok van 1:", count);
-                 var subtotaalprijsmin = (eenheidsprijs * parseInt($input.val()));
-                 //console.log("subtotaal na aftrok: ", subtotaalprijsmin);
-                 //console.log('log van count in minus na click on min en aftrok van 1: ', count)
-                 //count = count < 1 ? 1 : count;
-                 //console.log('log van count in minus na click on min en eventueel gelijk gesteld aan 1: ', count);
-                
-                    
-
-                
-
-                
-                totaalprijs = subtotaalprijsmin;
-                
-                // if (count >1) {
-                //     console.log("in if structuur");
-                //     var test = productPrice.split(' ');
-                //     var eenheidsprijsmin = parseFloat(test[1]);
-                //     totaalprijs -= eenheidsprijsmin;
-                //     console.log(totaalprijs);
-                // }
-                // if ((count == 1)){
-                //     console.log("in if structuur2");
-                //     var test = productPrice.split(' ');
-                //     var eenheidsprijsmin = parseFloat(test[1]);
-
-                //     totaalprijs -= eenheidsprijsmin;
-                //     console.log(totaalprijs);
-                // }
-                totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
-            
-                return false;
-            });
         }, 1000);
     });
 

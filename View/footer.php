@@ -38,7 +38,7 @@
             "bier met liefde gebrouwen drink je met mate"
         </div>
         <div class="footer-bottom-wrapper">
-            <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Cookie beleid</a> | <a href="/cookie-policy.html" class="generic-anchor" rel="nofollow">Privacy beleid</a>
+            <a href="underconst.php" class="generic-anchor" rel="nofollow">Algemene voorwaarden</a> | <a href="underconst.php" class="generic-anchor" rel="nofollow">Cookie beleid</a> | <a href="underconst.php" class="generic-anchor" rel="nofollow">Privacy beleid</a>
         </div>
     </section>
 </footer>

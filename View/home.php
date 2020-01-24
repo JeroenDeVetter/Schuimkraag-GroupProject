@@ -22,6 +22,7 @@
 <body>
 
    <?php require "nav.php"?>
+   
     <div class="container">
         <div class="row">
             <div class="heading-title text-center">
@@ -164,13 +165,27 @@
             </div>
 
         </div>
-
+        <div class="overlay">
+       <div class="popup">
+           <h2>Hallo, deze site maakt gebruik van cookies!</h2>
+           <h1><span class="higher">&#x1F36A;</span><span class="lower">&#x1F36A;</span></h1>
+           <p>We gebuiken session en functionele cookies om uw bezoek aan de website zo aangenaam mogelijk te maken.</p>
+           <div class="btn-container">
+               <button class="btn" id="btnOK">Ik begrijp het</button>
+               <a href='https://www.freecodecamp.org/'><button class="btn">Meer info</button></a>
+               <button class="btn ghost" id="trick">
+                   Nee, Ik ben op dieet !
+                   <span>Niet op mij klikken &#128540;</span>
+               </button>
+           </div>
+       </div>
+   </div>
     </div>
     <?php require "footer.php"?>
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
-
+   <script src="../public/js/cookies.js"></script>
     <script src="../public/js/home.js"></script>
     <script src="../public/js/footer.js "></script>
 

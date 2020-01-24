@@ -1,39 +1,48 @@
-let emailInputLogin = document.querySelector('#email_login');
-let paswoordInputLogin = document.querySelector('#password_login');
+let paswoordInputControl = document.querySelector('#password_control');
+let paswoordInput = document.querySelector('#password');
 
-let foutboodschapLogin = document.querySelector('#error_message_login');
+let foutboodschap = document.querySelector('#error_message_password_reset');
 
-function emailVerifyLogin() {
 
-    if (emailInputLogin.value !== "") {
-        if (regmailCheck(emailInputLogin.value)) {
-            emptyMessage(foutboodschapLogin);
-            emailInputLogin.value = cleanemail(emailinput.value);
+function passwordVerify() {
+
+    if (paswoordInput.value !== "") {
+        if (regpasswordCheck(paswoordInput.value)) { // Second Change
+            emptyMessage(foutboodschap);
         } else {
-            foutboodschapLogin.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
-            toggleErrorMessage(foutboodschapLogin);
+            foutboodschap.innerHTML = "<div>Paswoord voldoet niet aan de regels. Minimaal 8 karakters. Min 1 hoofdletter, 1 kleine letter en 1 getal &nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschap);
         }
     } else {
-        foutboodschapLogin.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
-        toggleErrorMessage(foutboodschapLogin);
+        foutboodschap.innerHTML = "<div>Paswoord is vereist&nbsp;</div><div>&#x274C;</div>";
+        toggleErrorMessage(foutboodschap);
     }
 
 }
 
-function passwordVerifyLogin() {
-
-    if (paswoordInputLogin.value !== "") {
-        if (regpasswordCheck(paswoordInputLogin.value)) { // Second Change
-            emptyMessage(foutboodschapLogin);
+function passwordVerify2() {
+    if (paswoordInputControl.value !== "") {
+        if (regpasswordCheck(paswoordInputControl.value)) { // Second Change
+            emptyMessage(foutboodschap);
         } else {
-            foutboodschapLogin.innerHTML = "<div>Paswoord voldoet niet aan de regels. Minimaal 8 karakters. Min 1 hoofdletter, 1 kleine letter en 1 getal &nbsp;</div><div>&#x274C</div>";
-            toggleErrorMessage(foutboodschapLogin);
+            foutboodschap.innerHTML = "<div>Herhaalpaswoord voldoet niet aan de regels. Minimaal 8 karakters. Min 1 hoofdletter, 1 kleine letter en 1 getal &nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschap);
         }
     } else {
-        foutboodschapLogin.innerHTML = "<div>Paswoord is vereist&nbsp;</div><div>&#x274C;</div>";
-        toggleErrorMessage(foutboodschapLogin);
+        foutboodschap.innerHTML = "<div>Paswoord is vereist&nbsp;</div><div>&#x274C;</div>";
+        toggleErrorMessage(foutboodschap);
     }
-
+    if ((paswoordInput.value === paswoordInputControl.value) && (paswoordInput.value.length > 7)) {
+        emptyMessage(foutboodschap);
+    } else {
+        if (paswoordInput.value !== paswoordInputControl.value) {
+            foutboodschap.innerHTML = "<div>Wachtwoorden zijn niet gelijk&nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschap);
+        } else {
+            foutboodschap.innerHTML = "<div>Paswoorden voldoen niet aan de regels. Minimaal 8 karakters. Min 1 hoofdletter, 1 kleine letter en 1 getal &nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschap);
+        }
+    }
 }
 
 function regpasswordCheck(passwordCheck) {
@@ -43,25 +52,19 @@ function regpasswordCheck(passwordCheck) {
 
 }
 
-function regmailCheck(mailCheck) {
 
-    let emailRegex = /^(([\-\w]+)\.?)+@(([\-\w]+)\.?)+\.[a-zA-Z]{2,6}$/;
-    return (emailRegex.test(mailCheck));
+function emptyMessage(foutboodschap) {
 
-}
-
-function emptyMessage(foutboodschapLogin) {
-
-    foutboodschapLogin.innerHTML = "";
-    foutboodschapLogin.classList.remove("show");
-    foutboodschapLogin.classList.add('hide');
+    foutboodschap.innerHTML = "";
+    foutboodschap.classList.remove("show");
+    foutboodschap.classList.add('hide');
 
 }
 
-function toggleErrorMessage(foutboodschapLogin) {
+function toggleErrorMessage(foutboodschap) {
 
-    foutboodschapLogin.classList.remove("hide");
-    foutboodschapLogin.classList.add("show");
+    foutboodschap.classList.remove("hide");
+    foutboodschap.classList.add("show");
 
 }
 
@@ -72,21 +75,28 @@ function removeErrorMessage() {
 
 }
 
-emailInputLogin.addEventListener('blur', emailVerifyLogin);
-paswoordInputLogin.addEventListener('blur', passwordVerifyLogin);
+paswoordInputControl.addEventListener('blur', passwordVerify2);
+paswoordInput.addEventListener('blur', passwordVerify);
 
-foutboodschapLogin.addEventListener("click", removeErrorMessage);
+foutboodschap.addEventListener("click", removeErrorMessage);
 
-//form.addEventListener('submit', CheckAllLogin);
+form.addEventListener('submit', CheckAllLogin);
 
 function CheckAllLogin(event) {
-
-    passwordVerifyLogin();
-    emailVerifyLogin();
-    console.log(foutboodschapLogin.innerHTML)
-    if (foutboodschapLogin.innerHTML !== "") {
-
+    let teller = 0;
+    passwordVerify();
+    if (foutboodschap.innerHTML !== "") {
+        teller += 1;
+    }
+    passwordVerify2();
+    if (foutboodschap.innerHTML !== "") {
+        teller += 1;
+    }
+    if (teller > 0 || (foutboodschap.innerHTML !== "")) {
+        console.log("in foutboodschap div");
+        foutboodschapContact.innerHTML = "<div>De input-waarden zijn niet correct &nbsp;</div><div>&#x274C</div>";
+        console.log(foutboodschapContact);
+        toggleErrorMessage(foutboodschapContact);
         event.preventDefault();
     }
-
 }
