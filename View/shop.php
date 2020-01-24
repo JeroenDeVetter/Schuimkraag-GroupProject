@@ -93,7 +93,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
         </div>
         
         <div class="total">
-            <div class="totaalPrijs">Uw totaal: <span class= "totalPrice"></span></div>
+            <div class="totaalPrijs">Uw totaal: <span class= "totalPrice"></span> €</div>
             <div id="checkout">
                 CHECKOUT
             </div>
