@@ -16,17 +16,16 @@
     <link rel="stylesheet" href="../public/css/contact.css">
     <link rel="stylesheet" href="../public/css/footer.css">
     <link rel="stylesheet" href="../public/css/home.css">
+    <link rel="stylesheet" href="../public/css/cookies.css">
+    
+
     <title>home</title>
 </head>
 
-<body> <?php require "nav.php"?>
+<body> 
 
-<<<<<<< HEAD
-  
-=======
    <?php require "nav.php"?>
    
->>>>>>> 0d6c5a6d2396d1f14ce7431bba715a950d26e79a
     <div class="container">
         <div class="row">
             <div class="heading-title text-center">
@@ -184,6 +183,7 @@
            </div>
        </div>
    </div>
+   
     </div>
     <?php require "footer.php"?>
     <script src="//code.jquery.com/jquery-1.11.3.min.js "></script>

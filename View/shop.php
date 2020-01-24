@@ -66,7 +66,8 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <meta name="keywords" content="Webdevelopment, DeSchuimkraag, Bier, E-shop">
     <meta name="description" content="Shop pagina">
     <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">

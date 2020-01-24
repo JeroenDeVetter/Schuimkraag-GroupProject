@@ -30,15 +30,7 @@
                     <div class="under-text text-right font-size-xl color-primary bg-color-white padding-h-2x padding-v-1x text-uppercase">Under</div>
                     <div class="const-text text-uppercase font-size-xl font-w-10 color-white">Construction</div>
                 </div>
-                <div class="socials">
-                    <ul class="links">
-                        <li><a href="#!"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
-                        <li><a href="#!"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#!"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
+               
             </div>
         </div>
     </div>
