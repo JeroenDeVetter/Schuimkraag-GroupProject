@@ -70,11 +70,7 @@
                 </div>
                 <div class="team-title">
                     <h5>Danny</h5>
-<<<<<<< HEAD
-                    <span>Database &amp; Back-end</span>
-=======
                     <span>Database &amp Back-end </span>
->>>>>>> 8b19e054d4a639c52d91c877cf833758812c9379
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">
