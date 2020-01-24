@@ -1,5 +1,5 @@
 <?php
-require "../src/Model/david.php";
+require "../src/Model/connection.php";
 function createBierCards()
 {
     $sql = "SELECT bier_ID, biernaam, prijs, etiketafbeelding, bierstijlnaam FROM bier
@@ -72,7 +72,7 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
     <meta name="author" content="Danny, David, Geert, Kristel Jeroen,">
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
+    type='text/css'>
     <link rel="stylesheet" href="../public/css/navbar.css">
     <link rel="stylesheet" href="../public/css/shop.css">
     <link rel="stylesheet" href="../public/css/footer.css">
@@ -90,6 +90,10 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
         <div id="cart">
             <span class="empty">Nog geen bier in mandje.</span>
         </div>
+        
+        <div class="total">
+           Uw totaal: <span class= "totalPrice"></span> €
+        </div>
         <div id="checkout">
             CHECKOUT
         </div>
@@ -99,9 +103,12 @@ JOIN  bierstijl ON  bierstijl.bierstijl_ID = bier.bierstijl_id";
         <?php createBierCards(); ?>
     </div>
 </div>
+
 <?php require 'footer.php'?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="../public/js/shop.js"></script>
 <script src="../public/js/beerdetails.js"></script>
+<script src="../public/js/itemAddHide.js"></script>
+<script src="../public/js/calcTotal.js"></script>
 </body>
 </html>
