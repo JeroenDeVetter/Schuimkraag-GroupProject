@@ -16,11 +16,7 @@
 .product_alco {
     color: white;
     position: relative;
-<<<<<<< HEAD
-    bottom: 155px;
-=======
     bottom: 160px;
->>>>>>> 0d6c5a6d2396d1f14ce7431bba715a950d26e79a
 }
 
 body {
@@ -1271,25 +1267,6 @@ p {
     color: white;
 }
 
-<<<<<<< HEAD
-@media only screen and (max-width: 300px) {
-    #grid {
-        width: 300px;
-        position: absolute;
-        left: 550px;
-        height: 1024px;
-        top: 180px;
-    }
-
-    #sidebar {
-        float: left;
-        background: black;
-        width: 100px;
-        height: 1024px;
-
-    }
-}
-=======
 span {cursor:pointer; }
 
 .total {
@@ -1328,4 +1305,3 @@ input {
 .verberg{
     display: none;
 }
->>>>>>> 0d6c5a6d2396d1f14ce7431bba715a950d26e79a

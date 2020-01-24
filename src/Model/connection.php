@@ -3,7 +3,7 @@ function openConnection()
 {
     $dbhost = "localhost";
     $dbuser = "root";
-    $dbpass = "root";
+    $dbpass = "050360586";
     $db = "schuimkraag";
 
     $pdo = new PDO('mysql:host=' . $dbhost . ';dbname=' . $db, $dbuser, $dbpass);
