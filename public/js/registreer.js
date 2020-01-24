@@ -146,7 +146,7 @@ function emailVerify() {
     if (emailInput.value !== "") {
         if (regmailCheck(emailInput.value)) {
             emptyMessage(foutboodschapLogin);
-            emailInput.value = cleanemail(emailinput.value);
+            emailInput.value = cleanemail(emailInput.value);
         } else {
             foutboodschapLogin.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
             toggleErrorMessage(foutboodschapLogin);
@@ -373,7 +373,7 @@ function connect_with_json_file(ax, postnr) {
         .then((response) => {
             let result = response.data;
             for (let i = 0; i < result.length; i++) {
-                if (result[i].postnummer === postnr) {
+                if (result[i].postnummer == postnr) {
                     emptyMessage(foutboodschap);
                     return;
                 } else {
@@ -399,7 +399,7 @@ function buildtemplate(item) {
         var tmpl = document.createElement('option');
         tmpl.setAttribute("value", data[1]);
         tmpl.innerHTML = data[0];
-        target.appendChild(tmpl)
+        target.appendChild(tmpl);
     })
 }
 
@@ -409,14 +409,14 @@ function find_cities_with_same_postnr(ax, postnr, arrayGemeente) {
         .then((response) => {
             let result = response.data;
             for (let i = 0; i < result.length; i++) {
-                if (result[i].postnummer === postnr) {
+                if (result[i].postnummer == postnr) {
                     console.log(result[i].gemeente);
                     console.log(typeof(result[i].gemeente));
                     let gemeente = result[i].gemeente.toLowerCase();
                     let gemeenteId = result[i].gemeente_ID;
                     let gemeenteFirstLetterCapitalize = gemeente.charAt(0).toUpperCase() + gemeente.slice(1);
 
-                    arrayGemeente.push([gemeenteFirstLetterCapitalize, result[i].gemeente_ID]);
+                    arrayGemeente.push([gemeenteFirstLetterCapitalize, gemeenteId]);
 
                     console.log(arrayGemeente);
                 }

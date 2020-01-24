@@ -469,20 +469,38 @@ element {
 
 .alert{
     border-radius: none !important;
+<<<<<<< HEAD
     }
     
     .alert-success{
+=======
+}
+
+.alert-success{
+>>>>>>> 0d6c5a6d2396d1f14ce7431bba715a950d26e79a
     color: #86c232;
     background: none;
     border: solid 1px #86c232;
     border-radius: none;
+<<<<<<< HEAD
     }
     .alert-danger{
+=======
+}
+.alert-danger{
+>>>>>>> 0d6c5a6d2396d1f14ce7431bba715a950d26e79a
     color: red;
     background: none;
     border: solid 1px red;
     border-radius: none;
+<<<<<<< HEAD
     }
     h3 {
     margin-top: 10px!important;
     }
+=======
+}
+h3 {
+    margin-top: 10px!important;
+}
+>>>>>>> 0d6c5a6d2396d1f14ce7431bba715a950d26e79a

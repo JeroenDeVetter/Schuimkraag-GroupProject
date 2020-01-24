@@ -110,14 +110,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                     <div class="col-sm-9">
                                         <div class="form-group">
                                             <label> Straatnaam <span class="req">*</span> </label>
-                                            <input type="street" name="streedName" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
+                                            <input type="text" name="streedName" class="form-control" id="street" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label> Huisnummer <span class="req">*</span> </label>
-                                            <input type="street" name="houseNum" class="form-control" id="streetnumber" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
+                                            <input type="text" name="houseNum" class="form-control" id="streetnumber" required data-validation-required-message="Gelieve hier Uw straatnaam en huisnummer in te geven." autocomplete="off">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -126,14 +126,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                 <div class="row">
                                     <div class="form-group col-sm-3">
                                         <label> Postcode <span class="req">*</span> </label>
-                                        <input type="PC" name="postcode" class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." maxlength ="4" autocomplete="off">
+                                        <input type="text" name="postcode" class="form-control" id="postcode" required data-validation-required-message="Gelieve hier Uw Postcode in te geven." maxlength ="4" autocomplete="off">
                                         <p class="help-block text-danger"></p>
                                     </div>
 
                                     <div class="form-group col-sm-9">
                                         <select name="gemeente" class="form-control" maxlength="4" id="target" {# style="background-color:rgba(90, 90, 90, 0.5);border-width: 1.25px;opacity:75%;border-color: white;color: whitesmoke;overflow-x: hidden;margin-top: 25px;height: 43px;" #}>
                                         </select>
-
                                     </div>
 
 
@@ -181,7 +180,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                     </button>
                                 </div>
                                 <div class="link">
-                                    <a href="#">Wachtwoord vergeten?</a>
+                                    <a href="resetpw.php">Wachtwoord vergeten?</a>
                                 </div>
                             </form>
 

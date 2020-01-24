@@ -1,5 +1,4 @@
 const viewDetailsButtons = document.querySelectorAll(".view_details");
-console.log(viewDetailsButtons);
 
 viewDetailsButtons.forEach(function(detailbutton) {
     detailbutton.addEventListener('click', async function(e) {

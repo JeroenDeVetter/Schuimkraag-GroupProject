@@ -1,4 +1,5 @@
-<?php?>
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +28,7 @@
             <div class="col-lg-6">
                 <div id="userform">
                     <div class="tab-content">
-                        <div class="tab-pane fade active in" id="signup">
+                        <div class="" id="signup">
                             <h2 class="text-uppercase text-center">Contacteer Ons</h2>
 
                             <div class="warning hide" id="error_message_contact">

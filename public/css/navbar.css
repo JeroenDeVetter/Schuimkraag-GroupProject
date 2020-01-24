@@ -13,6 +13,11 @@
     font-size: 1.2rem
 }
 
+.activ{
+    border: solid 1px #86c232;
+
+}
+
 .navbar-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.open>a,
 .navbar-inverse .navbar-nav>.open>a,
