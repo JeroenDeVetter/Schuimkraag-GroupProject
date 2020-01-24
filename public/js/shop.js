@@ -130,11 +130,16 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('div.floating-cart').remove();
                 $("body").removeClass("MakeFloatingCart");
+
+
+
+
+
                 var cartItem = "<div class='cart-item'><div class=\"number\">\n" +
-                "\t<span id='minus' class=\"minus\">-</span>\n" +
-                "\t<input type=\"text\" value=\"1\"/>\n" +
-                "\t<span id='plus' class=\"plus\">+</span>\n" +
-                "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " "+ productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
+                    "\t<span id='minus' class=\"minus\">-</span>\n" +
+                    "\t<input type=\"text\" value=\"1\"/>\n" +
+                    "\t<span id='plus' class=\"plus\">+</span>\n" +
+                    "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " " + productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
 
                 $("#cart .empty").hide();
                 $("#cart").append(cartItem);
@@ -144,8 +149,10 @@ $(document).ready(function() {
                     .addClass("flash")
                     .find(".delete-item").click(function() {
                         $(this).parent().fadeOut(300, function() {
+                            console(this, "logg2")
                             $(this).remove();
                             if ($("#cart .cart-item").size() == 0) {
+
                                 $("#cart .empty").fadeIn(500);
                                 $("#checkout").fadeOut(500);
                             }
@@ -247,48 +254,46 @@ $(document).ready(function() {
             let prijs = productPrice.split(" ");
             let niewTotaalPrijs = parseFloat(prijs[1]);
             totaalprijs += niewTotaalPrijs;
-            totaldiv.textContent = totaalprijs;
+            totaldiv.textContent = totaalprijs.toFixed(2);
             var cartItem = "<div class='cart-item'><div class=\"number\">\n" +
                 "\t<span id='minus' class=\"minus\">-</span>\n" +
                 "\t<input type=\"text\" value=\"1\"/>\n" +
                 "\t<span id='plus' class=\"plus\">+</span>\n" +
-                "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " "+ productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
+                "</div><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>" + " " + productPrice + "</strong><div class='cart-item-border'></div><div class='delete-item'>&#10060;</div></div>";
 
-                var numberOfItems = [];
+            var numberOfItems = [];
 
             $("#cart .empty").hide();
-                $("#cart").append(cartItem);
-                numberOfItems.push([productName , productPrice]);
-      
-        $("#checkout").fadeIn(500);
+            $("#cart").append(cartItem);
+            numberOfItems.push([productName, productPrice]);
+
+            $("#checkout").fadeIn(500);
             $("#cart .cart-item").last()
                 .addClass("flash")
                 .find(".delete-item").click(function() {
                     $(this).parent().fadeOut(300, function() {
-                        let removedElement = this.children[2].innerText;
+                        let removedElement =  this.children[2].innerText;
                         let allItems = document.querySelectorAll('.product-front');
                         allItems.forEach(data => {
-                        let test = data.children[5].children;
-                        let test2 = test[0].children;
-                        if (test2[1].innerHTML === removedElement) {
-                        data.children[3].classList.remove('verberg');
-                        }
+                           let test = data.children[5].children;
+                            let test2 = test[0].children;
+                            if (test2[1].innerHTML === removedElement) {
+                                data.children[3].classList.remove('verberg');
+                            }
                         });
                         $(this).remove();
                         var prijs = (this.children[3].innerHTML).split(' ');
-                        console.log(this);
                         eenheidsprijs = parseFloat(prijs[2]);
                         if (aantal > 1) {
                             totaalprijs -= eenheidsprijs * aantal;
                             let totaalrounded = Math.round(totaalprijs * 100) / 100;
                             totaldiv.textContent = totaalrounded.toFixed(2);
-                            }
-                            if(aantal <= 1) {
+                        }
+                        if(aantal <= 1)  {
                             totaalprijs -= eenheidsprijs;
                             let totaalrounded = Math.round(totaalprijs * 100) / 100;
                             totaldiv.textContent = totaalrounded.toFixed(2);
-                            }
-                            
+                        }
                         if ($("#cart .cart-item").size() == 0) {
                             $("#cart .empty").fadeIn(500);
                             $("#checkout").fadeOut(500);
@@ -301,41 +306,37 @@ $(document).ready(function() {
             let selectplus = document.getElementsByClassName('plus');
             console.log(selectplus);
             selectplus[selectplus.length - 1].addEventListener('click', function() {
-            console.log(this.previousSibling.previousSibling , "etstete");
-            let input = this.previousElementSibling;
-            console.log(typeof(input.value));
-            input.value = parseInt(input.value) + 1;
-            console.log(input.value);
-            var prijsInEuro = productPrice.split(' ');
-            var eenheidsprijs = parseFloat(prijsInEuro[1]);
-            aantal = input.value;
-            subtotaalprijs = (eenheidsprijs * aantal);
-            totaalprijs += eenheidsprijs;
-            totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
-            } );
-
-        let selectMin = document.getElementsByClassName('minus');
-        selectMin[selectMin.length - 1].addEventListener('click', function() {
-            let input = this.nextSibling.nextSibling;
-            input.value = parseInt(input.value) - 1;
-            if (input.value >= 1) {
+                console.log(this.previousSibling.previousSibling, "etstete");
+                let input = this.previousElementSibling;
+                console.log(typeof(input.value));
+                input.value = parseInt(input.value) + 1;
+                console.log(input.value);
                 var prijsInEuro = productPrice.split(' ');
                 var eenheidsprijs = parseFloat(prijsInEuro[1]);
                 aantal = input.value;
-                totaalprijs -= eenheidsprijs;
-                totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
-            }
-            else {
-                input.value = 1;
-            }
-            // return false;
-        } );
+                subtotaalprijs = (eenheidsprijs * aantal);
+                totaalprijs += eenheidsprijs;
+                let totaalrounded = Math.round(totaalprijs * 100) / 100;
+                totaldiv.textContent = totaalrounded.toFixed(2);
+            });
 
+            let selectMin = document.getElementsByClassName('minus');
+            selectMin[selectMin.length - 1].addEventListener('click', function() {
+                let input = this.nextSibling.nextSibling;
+                input.value = parseInt(input.value) - 1;
+                if (input.value >= 1) {
+                    var prijsInEuro = productPrice.split(' ');
+                    var eenheidsprijs = parseFloat(prijsInEuro[1]);
+                    aantal = input.value;
+                    totaalprijs -= eenheidsprijs;
+                    let totaalrounded = Math.round(totaalprijs * 100) / 100;
+                    totaldiv.textContent = totaalrounded.toFixed(2);
+                } else {
+                    input.value = 1;
+                }
+                // return false;
+            });
 
         }, 1000);
     });
-
-
 });
-
-

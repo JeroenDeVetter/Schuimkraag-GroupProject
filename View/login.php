@@ -37,7 +37,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 </head>
 
 <body>
-
 <?php require 'nav.php'?>
     <!--========================-->
     <div id="form">

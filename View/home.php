@@ -20,7 +20,7 @@
     <title>home</title>
 </head>
 
-<body>
+<body> 
 
    <?php require "nav.php"?>
    

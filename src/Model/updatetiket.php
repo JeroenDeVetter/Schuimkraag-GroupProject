@@ -1,5 +1,5 @@
 <?php
-require '../../src/Model/connection.php';
+require 'local.php';
 for ($i=1; $i<36 ; $i++){
     $sql1 = "SELECT etiketafbeelding FROM bier WHERE bier_ID=:bierId";
     $stmt =  openConnection()->prepare($sql1);

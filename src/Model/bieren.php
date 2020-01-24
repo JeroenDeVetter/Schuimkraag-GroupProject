@@ -1,5 +1,5 @@
 <?php
-require "connection.php";
+require "connnection.php";
 
 function getBier()
 {

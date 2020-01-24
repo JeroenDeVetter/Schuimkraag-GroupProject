@@ -6,11 +6,11 @@ error_reporting(E_ALL);
 
 //change to your local host name
 if (isset($_COOKIE['PHPSESSID'])) {
-    header("Location: http://localhost:8888/Schuimkraag-GroupProject/View/shop.php");
+    header("Location: http://localhost/Schuimkraag/Schuimkraag-GroupProject/View/shop.php");
     die();
 }
 //change to your local host name
 else {
-    header("Location: http://localhost:8888/Schuimkraag-GroupProject/View/fillbeer.php");
+    header("Location: http://localhost/Schuimkraag/Schuimkraag-GroupProject/View/fillbeer.php");
     die();
 }
