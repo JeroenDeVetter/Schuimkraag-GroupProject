@@ -1250,6 +1250,20 @@ div.sku strong {
         padding: 11px 0px 5px 80px;
         width: 188px;
     }
+} 
+
+@media screen and (max-width: 768px) {
+    #grid {
+        width:77%;
+    margin-right: -400px;}
+    #sidebar {
+        width:20%; margin-left:3%;}
+    #footer.flex-rw {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    }
 }
 
 h1 {
@@ -1300,3 +1314,5 @@ input {
 .verberg{
     display: none;
 }
+
+

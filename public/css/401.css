@@ -16,7 +16,7 @@ body {
     box-sizing: border-box;
     height: 100vh;
     background-color: #000000;
-    background-image: radial-gradient(#11581E, #041607), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+    background-image: radial-gradient(#11581E, #041607);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Rubik', sans-serif;
@@ -117,7 +117,7 @@ a::after {
 }
 
 header {
-    margin: 10rem 0;
+    margin-top: 10%;
 }
 
 h1 {

@@ -130,11 +130,6 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('div.floating-cart').remove();
                 $("body").removeClass("MakeFloatingCart");
-
-
-                
-
-
                 var cartItem = "<div class='cart-item'><div class=\"number\">\n" +
                 "\t<span id='minus' class=\"minus\">-</span>\n" +
                 "\t<input type=\"text\" value=\"1\"/>\n" +
@@ -270,7 +265,30 @@ $(document).ready(function() {
                 .addClass("flash")
                 .find(".delete-item").click(function() {
                     $(this).parent().fadeOut(300, function() {
+                        let removedElement = this.children[2].innerText;
+                        let allItems = document.querySelectorAll('.product-front');
+                        allItems.forEach(data => {
+                        let test = data.children[5].children;
+                        let test2 = test[0].children;
+                        if (test2[1].innerHTML === removedElement) {
+                        data.children[3].classList.remove('verberg');
+                        }
+                        });
                         $(this).remove();
+                        var prijs = (this.children[3].innerHTML).split(' ');
+                        console.log(this);
+                        eenheidsprijs = parseFloat(prijs[2]);
+                        if (aantal > 1) {
+                            totaalprijs -= eenheidsprijs * aantal;
+                            let totaalrounded = Math.round(totaalprijs * 100) / 100;
+                            totaldiv.textContent = totaalrounded.toFixed(2);
+                            }
+                            if(aantal <= 1) {
+                            totaalprijs -= eenheidsprijs;
+                            let totaalrounded = Math.round(totaalprijs * 100) / 100;
+                            totaldiv.textContent = totaalrounded.toFixed(2);
+                            }
+                            
                         if ($("#cart .cart-item").size() == 0) {
                             $("#cart .empty").fadeIn(500);
                             $("#checkout").fadeOut(500);
@@ -281,20 +299,20 @@ $(document).ready(function() {
                 $("#cart .cart-item").last().removeClass("flash");
             }, 10);
             let selectplus = document.getElementsByClassName('plus');
-console.log(selectplus);
-selectplus[selectplus.length - 1].addEventListener('click', function() {
-console.log(this.previousSibling.previousSibling , "etstete");
-let input = this.previousElementSibling;
-console.log(typeof(input.value));
-input.value = parseInt(input.value) + 1;
-console.log(input.value);
-var prijsInEuro = productPrice.split(' ');
-var eenheidsprijs = parseFloat(prijsInEuro[1]);
-aantal = input.value;
-subtotaalprijs = (eenheidsprijs * aantal);
-totaalprijs += eenheidsprijs;
-totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
-} );
+            console.log(selectplus);
+            selectplus[selectplus.length - 1].addEventListener('click', function() {
+            console.log(this.previousSibling.previousSibling , "etstete");
+            let input = this.previousElementSibling;
+            console.log(typeof(input.value));
+            input.value = parseInt(input.value) + 1;
+            console.log(input.value);
+            var prijsInEuro = productPrice.split(' ');
+            var eenheidsprijs = parseFloat(prijsInEuro[1]);
+            aantal = input.value;
+            subtotaalprijs = (eenheidsprijs * aantal);
+            totaalprijs += eenheidsprijs;
+            totaldiv.textContent = Math.round(totaalprijs * 100) / 100;
+            } );
 
         let selectMin = document.getElementsByClassName('minus');
         selectMin[selectMin.length - 1].addEventListener('click', function() {
