@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("../images/home-image.jpg");
+    background-image: url("../images/ons.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -13,11 +13,11 @@ body {
     -moz-font-smoothing: antialiased;
 }
 
-.container{
+.container {
     height: 100%;
 }
 
-.row{
+.row {
     margin-top: 10rem;
 }
 
@@ -26,10 +26,10 @@ body {
 }
 
 h1 {
-    color: darkgreen;
+    color: #fff;
     margin-bottom: 100px;
     text-align: center;
-    border: 2px solid darkgreen;
+    border: 2px solid #fff;
 }
 
 .heading-title {
@@ -86,8 +86,10 @@ h1 {
     bottom: 0;
     right: 0;
     margin: 0;
-    border: 20px solid darkgreen;
-    background-color: #86c232;
+    border: 1px solid black;
+    color: black !important;
+    /* background-color: #86c232; */
+    background-color:orange;
     opacity: 0;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -157,7 +159,7 @@ h1 {
 
 .team-member .s-link a {
     margin: 0 10px;
-    color: darkgreen;
+    color: white;
     font-size: 18px;
 }
 
@@ -167,12 +169,12 @@ h1 {
     display: inline-block;
     letter-spacing: 2px;
     width: 100%;
+    text-align: center;
 }
 
 .team-title h5 {
     margin-bottom: 0px;
     display: block;
-    text-align: center;
     text-transform: uppercase;
     font-size: 22px;
     color: #86c232;
@@ -180,7 +182,11 @@ h1 {
 
 .team-title span {
     font-size: 18px;
-    text-transform: uppercase;
-    color: darkgreen;
+    color:white;
     letter-spacing: 1px;
+    text-align: center;
+}
+
+q{
+    color:black;
 }
