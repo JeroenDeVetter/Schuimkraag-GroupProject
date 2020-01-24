@@ -149,8 +149,10 @@ $(document).ready(function() {
                     .addClass("flash")
                     .find(".delete-item").click(function() {
                         $(this).parent().fadeOut(300, function() {
+                            console(this , "logg2")
                             $(this).remove();
                             if ($("#cart .cart-item").size() == 0) {
+
                                 $("#cart .empty").fadeIn(500);
                                 $("#checkout").fadeOut(500);
                             }
@@ -270,6 +272,7 @@ $(document).ready(function() {
                 .addClass("flash")
                 .find(".delete-item").click(function() {
                     $(this).parent().fadeOut(300, function() {
+                        console.log(this.children[2],"logg");
                         $(this).remove();
                         if ($("#cart .cart-item").size() == 0) {
                             $("#cart .empty").fadeIn(500);

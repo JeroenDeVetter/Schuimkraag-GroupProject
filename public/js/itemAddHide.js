@@ -6,7 +6,7 @@ function hideAddButton(){
 
 addbutton.forEach(btn => {
   btn.addEventListener('click',hideAddButton);
-})
+});
 
 
 
