@@ -28,9 +28,7 @@ body {
 .noise {
     pointer-events: none;
     position: absolute;
-    width: 100vw;
     height: 100vh;
-    background-image: url("../images/401.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
@@ -40,6 +38,7 @@ body {
 .overlay {
     pointer-events: none;
     position: absolute;
+    background-image: url("../images/401.jpg");
     width: 100vw;
     height: 100vh;
     background: repeating-linear-gradient( 180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
