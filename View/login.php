@@ -179,7 +179,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
                                     </button>
                                 </div>
                                 <div class="link">
-                                    <a href="#">Wachtwoord vergeten?</a>
+                                    <a href="resetpw.php">Wachtwoord vergeten?</a>
                                 </div>
                             </form>
 

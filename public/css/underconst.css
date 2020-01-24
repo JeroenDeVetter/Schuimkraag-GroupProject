@@ -53,7 +53,7 @@ body {
 }
 
 .bg-color-white {
-    background-color: green;
+    background-color: #86c232;
     color: white;
 }
 
@@ -167,11 +167,11 @@ body {
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-    fill: green;
+    fill: #86c232;
 }
 
 .svg-icon-small path {
-    stroke: green;
+    stroke: #86c232;
     stroke-width: .3;
 }
 

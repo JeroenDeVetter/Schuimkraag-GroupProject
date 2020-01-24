@@ -466,3 +466,23 @@ element {
     color: white;
     opacity: 100%!important;
 }
+
+.alert{
+    border-radius: none !important;
+}
+
+.alert-success{
+    color: #86c232;
+    background: none;
+    border: solid 1px #86c232;
+    border-radius: none;
+}
+.alert-danger{
+    color: red;
+    background: none;
+    border: solid 1px red;
+    border-radius: none;
+}
+h3 {
+    margin-top: 10px!important;
+}
