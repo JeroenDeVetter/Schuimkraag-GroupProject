@@ -1,0 +1,138 @@
+.flex-rw {
+    display: flex;
+    flex-flow: row wrap;
+    bottom: 0;
+    position: relative;
+}
+
+* html #footer {
+    position: absolute;
+    /* top: expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight: document.body.clientHeight)+(ignoreMe=document.documentElement.scrollTop ? document.documentElement.scrollTop: document.body.scrollTop))+'px');*/
+} 
+
+footer {
+    background: rgb(55, 94, 9);
+    /* opacity: 80%; */
+    width: 100%;
+    text-align: center;
+}
+
+.footer-list-top {
+    width: 33.333%
+}
+
+.footer-list-top>li {
+    text-align: center;
+    padding-bottom: 10px
+}
+
+.footer-list-header {
+    font-size: 1.75em;
+    padding: 10px 0 5px 0;
+    color: #fff;
+}
+
+.footer-list-anchor {
+    color: #86c232 !important;
+    font-size: 1.25em;
+}
+
+.footer-bottom-section {
+    background-color: #222;
+    width: 100%;
+    padding: 10px;
+    border-top: solid 0.25px gray;
+}
+
+.footer-bottom-section>div:first-child {
+    margin-right: auto
+}
+
+.footer-bottom-wrapper {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-address {
+    display: inline;
+    font-style: normal;
+    text-align: center;
+    color: white;
+}
+
+.warning-message {
+    font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-list-header {
+        font-size: 2em
+    }
+    .footer-list-anchor {
+        font-size: 1.1em;
+        color: white;
+    }
+    .footer-bottom-wrapper {
+        font-size: 1.3em;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    main {
+        font-size: 5em
+    }
+    .footer-list-top {
+        width: 100%
+    }
+    .footer-list-header {
+        font-size: 3em;
+    }
+    .footer-list-anchor {
+        font-size: 1.5em
+    }
+    .footer-bottom-section {
+        padding: 0 5px 10px 5px
+    }
+    .footer-bottom-wrapper {
+        text-align: center;
+        width: 100%;
+        margin-top: 30px
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-bottom-rights {
+        display: block
+    }
+    .footer-bottom-wrapper {
+        text-align: center;
+        width: 100%;
+        margin-top: 30px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .footer-list-header {
+        font-size: 2.2em
+    }
+    .footer-list-anchor {
+        font-size: 1.2em
+    }
+    .footer-bottom-wrapper {
+        font-size: 1.3em;
+        width: 100%;
+    }
+}
+
+a:hover,
+a:focus {
+    color: black !important;
+    text-decoration: none;
+}
+
+.generic-anchor {
+    color: #86c232 !important;
+}
