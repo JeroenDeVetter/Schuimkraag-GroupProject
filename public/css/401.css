@@ -1,0 +1,165 @@
+html,
+body,
+div,
+span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #000000;
+    background-image: radial-gradient(#11581E, #041607);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    overflow: hidden;
+    color: rgba(128, 255, 128, 0.8);
+    text-shadow: 0 0 1ex rgba(51, 255, 51, 1), 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.noise {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/401.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 70%;
+}
+
+.overlay {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient( 180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+    background-size: auto 3px;
+    z-index: 1;
+    opacity: 70%;
+}
+
+.overlay::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( 0deg, transparent 0%, rgba(32, 128, 32, 0.2) 2%, rgba(32, 128, 32, 0.8) 3%, rgba(32, 128, 32, 0.2) 3%, transparent 100%);
+    background-repeat: no-repeat;
+    animation: scan 7.5s linear 0s infinite;
+}
+
+@keyframes scan {
+    0% {
+        background-position: 0 -100vh;
+    }
+    35%,
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+.terminal {
+    box-sizing: inherit;
+    position: absolute;
+    margin-left: 15%;
+    width: 75%;
+    max-width: 100%;
+    padding: 3rem;
+    text-transform: uppercase;
+}
+
+.output {
+    color: whitesmoke;
+    text-shadow: 0 0 1px rgba(51, 255, 51, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
+    margin-left: 37%;
+    text-align: right;
+    max-width: 100vh;
+    line-height: 2rem;
+}
+
+.output::before {
+    content: "> ";
+}
+
+a {
+    color: #fff;
+    border: solid 3px rgba(51, 255, 51, 0.4);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+}
+
+a:hover {
+    background-color: rgba(51, 255, 51, 0.4);
+}
+
+a::before {
+    content: "[";
+}
+
+a::after {
+    content: "]";
+}
+
+header {
+    margin-top: 5%;
+}
+
+h1 {
+    text-align: right;
+    font-size: 16vh;
+    line-height: 3rem;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        margin: 5rem 0;
+    }
+    h1 {
+        font-size: 10vh;
+        line-height: 1rem;
+    }
+    body {
+        font-size: 1.15em;
+    }
+    .output {
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .terminal {
+        width: 95%;
+        margin-left: 0;
+    }
+    header {
+        margin: 3rem 0;
+    }
+    h1 {
+        font-size: 7vh;
+        line-height: 1rem;
+    }
+    body {
+        font-size: 1em;
+    }
+    .output {
+        margin-left: 5%;
+    }
+}

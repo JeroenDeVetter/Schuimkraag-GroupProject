@@ -1,0 +1,120 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(253, 254, 249);
+    font-family: 'Rubik', sans-serif;
+}
+
+.popup {
+    background-color: #86c232;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.75);
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 500px;
+    margin: auto;
+}
+
+.popup p {
+    color: #555;
+    margin-bottom: 1.25em;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #333;
+    color: #86c232;
+    border: solid 1px #86c232;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    white-space: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 1em 2em;
+    position: relative;
+    margin: 0.75em;
+}
+
+.btn:hover{
+    background-color: rgb(55, 94, 9);
+    color: #fff;
+
+}
+.higher::before {
+    content: "\01F36A ";
+    position: absolute;
+    top: 0.35em;
+    right: -0.5em;
+  }
+.lower::after {
+    content: "\01F36A ";
+    position: absolute;
+    top: 0.35em;
+    right: -0.5em;
+    }
+
+.higher, .lower{
+    position: relative;
+}
+
+.btn:active {
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn.ghost {
+    background-color:#333;
+    color: rgb(253, 254, 249);
+    box-shadow: none;
+}
+
+.btn.ghost span {
+    background-color: rgb(253, 254, 249);
+    border: 0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    color:  red;;
+    font-size: 10px;
+    padding: 3px 7px;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    transform: rotate(10deg);
+}
+
+h2,h1{
+    text-align: center;
+    margin-bottom: 0.25em;
+}
+
+h1{
+    font-size: 3.5em;
+    margin-top: 0;
+    margin-bottom: 0.5em!important;
+    border: none!important;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 50ms;
+  }
+  

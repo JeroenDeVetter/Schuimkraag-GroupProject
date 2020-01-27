@@ -1,3 +1,2 @@
 <?php
-
-phpinfo();
+header("Location: ./View/home.php");
