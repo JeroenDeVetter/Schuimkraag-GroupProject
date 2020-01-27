@@ -1,5 +1,5 @@
 <?php
-require "connection.php";
+require "local.php";
 function updateUserPass($userToken)
 {
     $hashedPass = password_hash($_POST['pass'], PASSWORD_DEFAULT);

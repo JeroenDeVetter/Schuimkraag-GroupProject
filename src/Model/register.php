@@ -2,7 +2,7 @@
 
 
 
-require 'connection.php';
+require 'local.php';
 
 function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $straatNo , $gemeenteId , $email , $phoneNo , $pass) {
     $db = openConnection();
@@ -39,7 +39,7 @@ function registerUser($firmanaam ,$firstname , $lastname , $btNo , $straat , $st
   ");
 //$_SERVER['HTTP_HOST']
 
-    header("Location: http://becode.local/src/Model/registrationMail.php?mail={$email}&naam={$firstname}&token={$mailtoken}");
+    header("Location: http://becode.local/Schuimkraag-GroupProject/src/Model/registrationMail.php?mail={$email}&naam={$firstname}&token={$mailtoken}");
     die();
 
 }

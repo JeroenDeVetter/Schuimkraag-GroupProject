@@ -145,15 +145,15 @@ function emailVerify() {
 
     if (emailInput.value !== "") {
         if (regmailCheck(emailInput.value)) {
-            emptyMessage(foutboodschapLogin);
+            emptyMessage(foutboodschap);
             emailInput.value = cleanemail(emailInput.value);
         } else {
-            foutboodschapLogin.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
-            toggleErrorMessage(foutboodschapLogin);
+            foutboodschap.innerHTML = "<div>Email heeft verkeerd formaat&nbsp;</div><div>&#x274C</div>";
+            toggleErrorMessage(foutboodschap);
         }
     } else {
-        foutboodschapLogin.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
-        toggleErrorMessage(foutboodschapLogin);
+        foutboodschap.innerHTML = "<div>Email is vereist&nbsp;</div><div>&#x274C;</div>";
+        toggleErrorMessage(foutboodschap);
     }
 
 }

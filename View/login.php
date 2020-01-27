@@ -1,4 +1,3 @@
-
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
@@ -37,6 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
 </head>
 
 <body>
+
 <?php require 'nav.php'?>
     <!--========================-->
     <div id="form">
@@ -197,7 +197,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['logIN']))
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../public/js/input.js "></script>
     <script src="../public/js/footer.js "></script>
-    <script src="../public/js/registreer.js "></script>
+    <script src="../public/js/registreer.js"></script>
     <script src="../public/js/login.js"></script>
 
 </body>

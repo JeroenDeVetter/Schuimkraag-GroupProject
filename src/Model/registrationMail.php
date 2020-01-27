@@ -1,6 +1,7 @@
 <?php
-echo "**********************************";
-var_dump($_REQUEST);
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 $to = $_GET["mail"];
 $naam = $_GET["naam"];
 $token= $_GET["token"];
@@ -16,8 +17,10 @@ $headers .= "Reply-To: info@deschuimkraag.local" . "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-$message = "<p><strong>Dear {$naam}</strong>, \r\n 
- thank you for registering.  Once we verifier your emailadres, you will be able to login. Please click the link to do so \r\n\ 
-  <a href='http://becode.local/src/Model/verifyuser.php?token={$token}&mail={$to}'></a><button>verify</button></p>";
+$message = "<p><strong>Dear {$naam}</strong>, <br><br>" .
+          "Thank you for registering on the <strong>Schuimkraag</strong>. Once we verified your emailadres, you will be able to login. Please click the link to do so. <br><br>" .
+          "<a href=\"http://becode.local/Schuimkraag-GroupProject/src/Model/verifyuser.php?token={$token}&mail={$to}\"><button>verify</button></a></p>";
+
+
 
 mail($to, $subject, $message, $headers);
